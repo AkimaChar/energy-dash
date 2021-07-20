@@ -1,0 +1,302 @@
+$screen-width: 1920;
+
+@function px-to-vw($value) {
+    @return $value * 100 / $screen-width+vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-style: normal;
+    color: #fff;
+    user-select: none;
+}
+
+.stack-graph-body {
+    height: px-to-vw(350);
+    width: px-to-vw(330);
+    padding: px-to-vw(30) px-to-vw(45);
+    background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+    box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    top: px-to-vw(-20);
+}
+
+.stack-graph {
+    display: flex;
+    justify-self: center;
+    width: px-to-vw(370);
+    justify-content: center;
+    background: linear-gradient(93.58deg, rgba(62, 66, 182, 0.5) -19.17%, rgba(32, 34, 105, 0.5) 95.81%);
+    border-radius: 15px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: px-to-vw(15);
+}
+
+h2,
+h3 {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+    margin-bottom: px-to-vw(40);
+}
+
+.draws_container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.current-round-info {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid #2C2E78;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: px-to-vw(35) px-to-vw(40);
+
+
+    .curren-pot {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pot-tickets-container {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+}
+
+.total-energy-img {
+    width: px-to-vw(50);
+    height: px-to-vw(56);
+    margin-right: px-to-vw(20);
+}
+
+.pot-title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.tickets-button {
+    padding: px-to-vw(16) px-to-vw(44);
+    border-radius: 15px;
+    min-width: px-to-vw(185);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: px-to-vw(10);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.view-tickets {
+    background: #00A3FF;
+    margin-left: px-to-vw(15);
+}
+
+.buy-ticket {
+    border: 1px solid #FFA114;
+    color: #FFA114;
+}
+
+.collect-energy {
+    width: px-to-vw(300);
+    height: px-to-vw(90);
+    margin: 0;
+    margin-bottom: px-to-vw(-10);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.total-energy-amount,
+.tickets-amount {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 55px;
+}
+
+
+.total-energy-mount {
+    div {
+        display: flex;
+        align-items: center;
+        margin: px-to-vw(15) 0;
+
+    }
+}
+
+.round-end-time-container {
+    margin: 0 auto;
+    top: px-to-vw(-170);
+    left: px-to-vw(-5);
+    position: relative;
+    margin-bottom: px-to-vw(-150);
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.total-amount {
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+
+    span {
+
+        color: #00A3FF;
+    }
+}
+
+.pools_container .pools_card_list .pool_card .card-pool-stack {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+
+
+.last_rounds_container {
+    .pool_card.total-round-card {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(25px);
+        border-radius: 15px;
+    }
+
+    .card-title {
+        background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+        border-radius: 15px 15px 0px 0px;
+
+        span {
+            margin: auto;
+        }
+    }
+
+    .total-lottery-number {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        padding: 0 px-to-vw(40);
+        background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+
+        .lottery-number--digit {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(45px);
+            border-radius: 15px;
+            height: px-to-vw(70);
+            width: px-to-vw(70);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 37px;
+                color: #FFA114;
+            }
+        }
+    }
+}
+
+.total-energy-mount {
+    margin: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        margin: 0;
+        margin-bottom: px-to-vw(15);
+    }
+}
+
+.pool_card {
+    border: 1px solid #2C2E78;
+
+}
+
+.total-coincidence {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: px-to-vw(25) 0;
+
+    .coincidence-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:nth-of-type(2) {
+            margin: 0 px-to-vw(40);
+        }
+
+        .pot-title {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 20px;
+            /* or 133% */
+            width: px-to-vw(82);
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.3;
+        }
+
+        .number-of-coincidences {
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 30px;
+
+            color: #00A3FF;
+        }
+    }
+}

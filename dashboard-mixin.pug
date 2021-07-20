@@ -1,0 +1,377 @@
+mixin _dashboard
+    section.page_main_content
+        section.slider
+            .slider-items
+                #1-item.item.active_item
+                #2-item.item
+                #3-item.item
+                #4-item.item 
+            .slider-navigation
+                button#left.nav__button_left.nav__button(onclick = " slider_switch(this)")
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                    </svg>
+                .nav-planks
+                    #1-plank.item_plank.active_plank
+                    #2-plank.item_plank
+                    #3-plank.item_plank
+                    #4-plank.item_plank
+                button#right.nav__button_right.nav__button(onclick = " slider_switch(this)")
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                    </svg>
+        section.dashboard_container
+            .stack_stat
+                .stack-title
+                    .stack-cash
+                        p
+                            |TVL: 
+                            span  $ 
+                            span.cash_mount {{stack.cash}}
+                    hr.title_hr
+                    .token
+                        img.token-img(src="../img/gex.png" alt="energy-icon")
+                        span {{null}}
+                        p.token_price
+                            |$ 
+                            span {{NaN}}
+                .stack-graph
+                    .graph-info
+                        span.graph-title Yield
+                        hr.title-hr_half
+                        .graph-worth
+                            | Net worth
+                            p
+                                |$ 
+                                span {{stack.net.worth}}
+                        .graph-pending
+                            | Pending
+                            p
+                                |$ 
+                                span {{stack.pending}}
+                        button.graph-button.shaded-button Harvest all
+                    .graph-body
+                        canvas#myChart
+                .energy_account-container
+                    .energy-actions
+                        .token-cont
+                            img.token-img(src="../img/gex.png" alt="")
+                            div
+                                span Energy
+                                p
+                                    | $ NaN 
+                                    span  (NaN %) 
+                        .token-pocket
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.45 0C2.535 0 1.65748 0.365977 1.01048 1.01742C0.363481 1.66886 0 2.55241 0 3.47368V18.5263C0 19.4476 0.363481 20.3311 1.01048 20.9826C1.65748 21.634 2.535 22 3.45 22H18.4C19.315 22 20.1925 21.634 20.8395 20.9826C21.4865 20.3311 21.85 19.4476 21.85 18.5263V16.4768C22.2109 16.1518 22.4998 15.7539 22.698 15.309C22.8961 14.8642 22.999 14.3823 23 13.8947V8.10526C22.999 7.61771 22.8961 7.13583 22.698 6.69096C22.4998 6.24609 22.2109 5.84819 21.85 5.52316V3.47368C21.85 2.55241 21.4865 1.66886 20.8395 1.01742C20.1925 0.365977 19.315 0 18.4 0H3.45ZM3.45 1.15789H18.4C19.01 1.15789 19.595 1.40188 20.0263 1.83617C20.4577 2.27047 20.7 2.8595 20.7 3.47368V4.83305C20.3308 4.70061 19.9419 4.63248 19.55 4.63158H12.65C11.735 4.63158 10.8575 4.99756 10.2105 5.649C9.56348 6.30044 9.2 7.18398 9.2 8.10526V13.8947C9.2 14.816 9.56348 15.6996 10.2105 16.351C10.8575 17.0024 11.735 17.3684 12.65 17.3684H19.55C19.9419 17.3675 20.3308 17.2994 20.7 17.1669V18.5263C20.7 19.1405 20.4577 19.7295 20.0263 20.1638C19.595 20.5981 19.01 20.8421 18.4 20.8421H3.45C2.84 20.8421 2.25499 20.5981 1.82365 20.1638C1.39232 19.7295 1.15 19.1405 1.15 18.5263V3.47368C1.15 2.8595 1.39232 2.27047 1.82365 1.83617C2.25499 1.40188 2.84 1.15789 3.45 1.15789ZM12.65 5.78947H19.55C20.16 5.78947 20.745 6.03346 21.1763 6.46775C21.6077 6.90205 21.85 7.49108 21.85 8.10526V13.8947C21.85 14.5089 21.6077 15.098 21.1763 15.5322C20.745 15.9665 20.16 16.2105 19.55 16.2105H12.65C12.04 16.2105 11.455 15.9665 11.0237 15.5322C10.5923 15.098 10.35 14.5089 10.35 13.8947V8.10526C10.35 7.49108 10.5923 6.90205 11.0237 6.46775C11.455 6.03346 12.04 5.78947 12.65 5.78947ZM15.525 8.10526C14.7625 8.10526 14.0312 8.41024 13.4921 8.95311C12.9529 9.49598 12.65 10.2323 12.65 11C12.65 11.7677 12.9529 12.504 13.4921 13.0469C14.0312 13.5898 14.7625 13.8947 15.525 13.8947C16.2875 13.8947 17.0188 13.5898 17.5579 13.0469C18.0971 12.504 18.4 11.7677 18.4 11C18.4 10.2323 18.0971 9.49598 17.5579 8.95311C17.0188 8.41024 16.2875 8.10526 15.525 8.10526ZM15.525 9.26316C15.7515 9.26316 15.9758 9.30808 16.1851 9.39537C16.3944 9.48265 16.5846 9.61059 16.7448 9.77187C16.9049 9.93315 17.032 10.1246 17.1187 10.3353C17.2054 10.5461 17.25 10.7719 17.25 11C17.25 11.2281 17.2054 11.4539 17.1187 11.6647C17.032 11.8754 16.9049 12.0669 16.7448 12.2281C16.5846 12.3894 16.3944 12.5173 16.1851 12.6046C15.9758 12.6919 15.7515 12.7368 15.525 12.7368C15.0675 12.7368 14.6287 12.5539 14.3052 12.2281C13.9817 11.9024 13.8 11.4606 13.8 11C13.8 10.5394 13.9817 10.0976 14.3052 9.77187C14.6287 9.44615 15.0675 9.26316 15.525 9.26316Z" fill="#00A3FF"/>
+                            </svg>
+                            span NaN
+                        .token-price
+                            p
+                                span $ 
+                                | NaN
+                        form.token-action-btns
+                            button.shaded-button.orange(type="submit" value="sell") Sell
+                            button.shaded-button.blue(type="submit" value="buy") Buy
+                    .energy-spot
+                        .spot-body
+                            span Total Spot This Round
+                            div.spot-wrapper
+                                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.45 0C2.535 0 1.65748 0.365977 1.01048 1.01742C0.363481 1.66886 0 2.55241 0 3.47368V18.5263C0 19.4476 0.363481 20.3311 1.01048 20.9826C1.65748 21.634 2.535 22 3.45 22H18.4C19.315 22 20.1925 21.634 20.8395 20.9826C21.4865 20.3311 21.85 19.4476 21.85 18.5263V16.4768C22.2109 16.1518 22.4998 15.7539 22.698 15.309C22.8961 14.8642 22.999 14.3823 23 13.8947V8.10526C22.999 7.61771 22.8961 7.13583 22.698 6.69096C22.4998 6.24609 22.2109 5.84819 21.85 5.52316V3.47368C21.85 2.55241 21.4865 1.66886 20.8395 1.01742C20.1925 0.365977 19.315 0 18.4 0H3.45ZM3.45 1.15789H18.4C19.01 1.15789 19.595 1.40188 20.0263 1.83617C20.4577 2.27047 20.7 2.8595 20.7 3.47368V4.83305C20.3308 4.70061 19.9419 4.63248 19.55 4.63158H12.65C11.735 4.63158 10.8575 4.99756 10.2105 5.649C9.56348 6.30044 9.2 7.18398 9.2 8.10526V13.8947C9.2 14.816 9.56348 15.6996 10.2105 16.351C10.8575 17.0024 11.735 17.3684 12.65 17.3684H19.55C19.9419 17.3675 20.3308 17.2994 20.7 17.1669V18.5263C20.7 19.1405 20.4577 19.7295 20.0263 20.1638C19.595 20.5981 19.01 20.8421 18.4 20.8421H3.45C2.84 20.8421 2.25499 20.5981 1.82365 20.1638C1.39232 19.7295 1.15 19.1405 1.15 18.5263V3.47368C1.15 2.8595 1.39232 2.27047 1.82365 1.83617C2.25499 1.40188 2.84 1.15789 3.45 1.15789ZM12.65 5.78947H19.55C20.16 5.78947 20.745 6.03346 21.1763 6.46775C21.6077 6.90205 21.85 7.49108 21.85 8.10526V13.8947C21.85 14.5089 21.6077 15.098 21.1763 15.5322C20.745 15.9665 20.16 16.2105 19.55 16.2105H12.65C12.04 16.2105 11.455 15.9665 11.0237 15.5322C10.5923 15.098 10.35 14.5089 10.35 13.8947V8.10526C10.35 7.49108 10.5923 6.90205 11.0237 6.46775C11.455 6.03346 12.04 5.78947 12.65 5.78947ZM15.525 8.10526C14.7625 8.10526 14.0312 8.41024 13.4921 8.95311C12.9529 9.49598 12.65 10.2323 12.65 11C12.65 11.7677 12.9529 12.504 13.4921 13.0469C14.0312 13.5898 14.7625 13.8947 15.525 13.8947C16.2875 13.8947 17.0188 13.5898 17.5579 13.0469C18.0971 12.504 18.4 11.7677 18.4 11C18.4 10.2323 18.0971 9.49598 17.5579 8.95311C17.0188 8.41024 16.2875 8.10526 15.525 8.10526ZM15.525 9.26316C15.7515 9.26316 15.9758 9.30808 16.1851 9.39537C16.3944 9.48265 16.5846 9.61059 16.7448 9.77187C16.9049 9.93315 17.032 10.1246 17.1187 10.3353C17.2054 10.5461 17.25 10.7719 17.25 11C17.25 11.2281 17.2054 11.4539 17.1187 11.6647C17.032 11.8754 16.9049 12.0669 16.7448 12.2281C16.5846 12.3894 16.3944 12.5173 16.1851 12.6046C15.9758 12.6919 15.7515 12.7368 15.525 12.7368C15.0675 12.7368 14.6287 12.5539 14.3052 12.2281C13.9817 11.9024 13.8 11.4606 13.8 11C13.8 10.5394 13.9817 10.0976 14.3052 9.77187C14.6287 9.44615 15.0675 9.26316 15.525 9.26316Z" fill="#00A3FF"/>
+                                </svg>
+                                div
+                                    span.token-mount NaN
+                                    //"Energy" - pseudo
+                                    p
+                                        span $ 
+                                        |NaN
+                        a.spot-button(href="#")
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.7" d="M0.888749 -3.88485e-08L8 7.5L0.88875 15L-4.09722e-08 14.0627L6.2225 7.5L-6.14699e-07 0.937333L0.888749 -3.88485e-08Z" fill="#FFA114"/>
+                            </svg>
+            .pools_container
+                .line-article-container
+                    span.article_text Pools
+                    hr.title_hr
+                    .active_pools-cont
+                        span.show-active.pools-article_button.active_article_btn Active 
+                        | / 
+                        span.show-non-active.pools-article_button Non active 
+                .pools_card_list
+                    .pool_card
+                        .card-title
+                            .card-title-token
+                                img.token-img(src="../img/gex.png")
+                                | BNB
+                                .token-fox-tag +
+                                    img(src="../img/foxy.png")
+                            button.shaded-button.full-blue Buy a coin 
+                        .card-token-progress
+                            .token-profit
+                                .profit-title    
+                                    p Profit for 
+                                        span 15 days
+                                    span.stat-with-turbo (-152,2% with Turbo)
+                                .profit-percents 122,5 
+                                    span %
+                            .pool-progress
+                                progress.progress-bar(value="63" max="100")
+                                .card-pool-left
+                                    span.left-time Left 13d 4h 54m 32s
+                                    p.left-percents 63 
+                                        span %
+                        .card-pool-multipliers
+                            .multiplier
+                                div
+                                    p.multiplier-level M1
+                                    | + 0.3% per day
+                                .mult-counter 
+                                    | 0.3% x 1 =  
+                                    span.end-bonus  +0.3%
+                            .multiplier
+                                div
+                                    p.multiplier-level M2
+                                    | + 0.5% per day 
+                                .mult-counter 
+                                    | 0.5% x 0 = 
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level M3
+                                    | + 0.7% per day 
+                                .mult-counter 
+                                    |0.7% x 0 =
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level Turbo
+                                    | + 0.2% per day 
+                                span.end-bonus +0.2%
+                        .card-pool-stack
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Stacked
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$1.445,23)
+                            button.shaded-button.orange(value="Turbo") Turbo
+                        .card-pool-earned
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Earn
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$245,23)
+                            button.shaded-button.full-blue(value="Turbo") Turbo
+                        button.details-button.opened 
+                            span Details
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                            </svg>
+                    .pool_card
+                        .card-title
+                            .card-title-token
+                                img.token-img(src="../img/gex.png")
+                                | BNB
+                                .token-fox-tag +
+                                    img(src="../img/foxy.png")
+                            button.shaded-button.full-blue Buy a coin 
+                        .card-token-progress
+                            .token-profit
+                                .profit-title    
+                                    p Profit for 
+                                        span 15 days
+                                    span.stat-with-turbo (-152,2% with Turbo)
+                                .profit-percents 122,5 
+                                    span %
+                            .pool-progress
+                                progress.progress-bar(value="63" max="100")
+                                .card-pool-left
+                                    span.left-time Left 13d 4h 54m 32s
+                                    p.left-percents 63 
+                                        span %
+                        .card-pool-multipliers
+                            .multiplier
+                                div
+                                    p.multiplier-level M1
+                                    | + 0.3% per day
+                                .mult-counter 
+                                    | 0.3% x 1 =  
+                                    span.end-bonus  +0.3%
+                            .multiplier
+                                div
+                                    p.multiplier-level M2
+                                    | + 0.5% per day 
+                                .mult-counter 
+                                    | 0.5% x 0 = 
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level M3
+                                    | + 0.7% per day 
+                                .mult-counter 
+                                    |0.7% x 0 =
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level Turbo
+                                    | + 0.2% per day 
+                                span.end-bonus +0.2%
+                        .card-pool-stack
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Stacked
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$1.445,23)
+                            button.shaded-button.orange(value="Turbo") Turbo
+                        .card-pool-earned
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Earn
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$245,23)
+                            button.shaded-button.full-blue(value="Turbo") Turbo
+                        button.details-button.opened 
+                            span Details
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                            </svg>
+                    .pool_card(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
+                        .card-title
+                            .card-title-token
+                                img.token-img(src="../img/gex.png")
+                                | BNB
+                                .token-fox-tag +
+                                    img(src="../img/foxy.png")
+                            button.shaded-button.full-blue Buy a coin 
+                        .card-token-progress
+                            .token-profit
+                                .profit-title    
+                                    p Profit for 
+                                        span 15 days
+                                    span.stat-with-turbo (-152,2% with Turbo)
+                                .profit-percents 122,5 
+                                    span %
+                            .pool-progress
+                                progress.progress-bar(value="63" max="100")
+                                .card-pool-left
+                                    span.left-time Left 13d 4h 54m 32s
+                                    p.left-percents 63 
+                                        span %
+                        .card-pool-multipliers
+                            .multiplier
+                                div
+                                    p.multiplier-level M1
+                                    | + 0.3% per day
+                                .mult-counter 
+                                    | 0.3% x 1 =  
+                                    span.end-bonus  +0.3%
+                            .multiplier
+                                div
+                                    p.multiplier-level M2
+                                    | + 0.5% per day 
+                                .mult-counter 
+                                    | 0.5% x 0 = 
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level M3
+                                    | + 0.7% per day 
+                                .mult-counter 
+                                    |0.7% x 0 =
+                                    span.end-bonus +0.0%
+                            .multiplier
+                                div
+                                    p.multiplier-level Turbo
+                                    | + 0.2% per day 
+                                span.end-bonus +0.2%
+                        .card-pool-stack
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Stacked
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$1.445,23)
+                            button.shaded-button.orange(value="Turbo") Turbo
+                        .card-pool-earned
+                            .stack-desc
+                                .token-stack-name 
+                                    span BNB 
+                                    | Earn
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$245,23)
+                            button.shaded-button.full-blue(value="Turbo") Turbo
+                        button.details-button.opened 
+                            span Details
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                            </svg>
+            .assigments_container
+                .line-article-container
+                    p.article_text Assignments 
+                        span.active-assigments(style="color: #00A3FF;") (5)
+                    hr.title_hr
+                    .active_pools-cont All tasks in the lottery are written here
+                .assigments-block
+                    button.change-list-visibility 
+                        <svg width="8" class="svg-arrow" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                        </svg>
+                    .assigments-list
+                        .assigment-item
+                            .as-title
+                                .as-title--img
+                                    .title-circle 1
+                                span.as-title--name Second Stake in any coin poo
+                            .as-description
+                                p.as-description--text Make the very first purchase in the coin pool
+                            .as-prize
+                                <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7617 1.625H10.7873H10.7617ZM10.7617 1.625L8.9208 11.248L15.6197 11.2734L6.51739 24.3242L8.3583 13.7363L1.65944 13.7109L10.7617 1.625ZM10.7617 0H10.6339C10.4975 0.0169271 10.3782 0.0465495 10.2759 0.0888672C10.1736 0.131185 10.0586 0.194661 9.93075 0.279297C9.8029 0.363932 9.68785 0.465495 9.58557 0.583984C9.56853 0.600911 9.55575 0.617839 9.54722 0.634766C9.5387 0.651693 9.52592 0.66862 9.50887 0.685547L0.329892 12.7207C-0.0621535 13.2624 -0.104767 13.8294 0.202051 14.4219C0.253187 14.5234 0.317108 14.6208 0.393812 14.7139C0.470517 14.807 0.555744 14.8916 0.649494 14.9678C0.743244 15.0439 0.845517 15.1074 0.956312 15.1582C1.06711 15.209 1.18216 15.2471 1.30148 15.2725C1.4208 15.2979 1.54012 15.3105 1.65944 15.3105L6.38955 15.3359L4.88103 24.0449C4.81285 24.4173 4.87251 24.7686 5.06001 25.0986C5.24751 25.4287 5.51171 25.6699 5.85262 25.8223C5.95489 25.873 6.06143 25.9069 6.17222 25.9238C6.28302 25.9408 6.39807 25.9492 6.51739 25.9492C7.01171 25.9492 7.42932 25.7292 7.77023 25.2891L16.9492 12.2383C17.3413 11.6966 17.3839 11.1296 17.0771 10.5371C16.7702 9.94466 16.2844 9.64844 15.6197 9.64844H10.8896L12.3725 2.00586C12.3896 1.93815 12.4023 1.87467 12.4109 1.81543C12.4194 1.75618 12.4236 1.69271 12.4236 1.625C12.4236 1.47266 12.4023 1.32878 12.3597 1.19336C12.3171 1.05794 12.2617 0.93099 12.1935 0.8125C12.1253 0.69401 12.0444 0.583984 11.9506 0.482422C11.8569 0.380859 11.7503 0.296224 11.631 0.228516C11.5117 0.160807 11.3839 0.105794 11.2475 0.0634766C11.1111 0.0211589 10.9748 0 10.8384 0H10.7617Z" fill="#FFA114"/>
+                                </svg>
+                                span.as-prize--mount 10
+                        .assigment-item
+                            .as-title
+                                .as-title--img
+                                    .title-circle 3
+                                span.as-title--name Third Stake in any coin pool
+                            .as-description
+                                p.as-description--text Make the third trade in the coin pool
+                            .as-prize
+                                <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7617 1.625H10.7873H10.7617ZM10.7617 1.625L8.9208 11.248L15.6197 11.2734L6.51739 24.3242L8.3583 13.7363L1.65944 13.7109L10.7617 1.625ZM10.7617 0H10.6339C10.4975 0.0169271 10.3782 0.0465495 10.2759 0.0888672C10.1736 0.131185 10.0586 0.194661 9.93075 0.279297C9.8029 0.363932 9.68785 0.465495 9.58557 0.583984C9.56853 0.600911 9.55575 0.617839 9.54722 0.634766C9.5387 0.651693 9.52592 0.66862 9.50887 0.685547L0.329892 12.7207C-0.0621535 13.2624 -0.104767 13.8294 0.202051 14.4219C0.253187 14.5234 0.317108 14.6208 0.393812 14.7139C0.470517 14.807 0.555744 14.8916 0.649494 14.9678C0.743244 15.0439 0.845517 15.1074 0.956312 15.1582C1.06711 15.209 1.18216 15.2471 1.30148 15.2725C1.4208 15.2979 1.54012 15.3105 1.65944 15.3105L6.38955 15.3359L4.88103 24.0449C4.81285 24.4173 4.87251 24.7686 5.06001 25.0986C5.24751 25.4287 5.51171 25.6699 5.85262 25.8223C5.95489 25.873 6.06143 25.9069 6.17222 25.9238C6.28302 25.9408 6.39807 25.9492 6.51739 25.9492C7.01171 25.9492 7.42932 25.7292 7.77023 25.2891L16.9492 12.2383C17.3413 11.6966 17.3839 11.1296 17.0771 10.5371C16.7702 9.94466 16.2844 9.64844 15.6197 9.64844H10.8896L12.3725 2.00586C12.3896 1.93815 12.4023 1.87467 12.4109 1.81543C12.4194 1.75618 12.4236 1.69271 12.4236 1.625C12.4236 1.47266 12.4023 1.32878 12.3597 1.19336C12.3171 1.05794 12.2617 0.93099 12.1935 0.8125C12.1253 0.69401 12.0444 0.583984 11.9506 0.482422C11.8569 0.380859 11.7503 0.296224 11.631 0.228516C11.5117 0.160807 11.3839 0.105794 11.2475 0.0634766C11.1111 0.0211589 10.9748 0 10.8384 0H10.7617Z" fill="#FFA114"/>
+                                </svg>
+                                span.as-prize--mount 10
+                        .assigment-item
+                            .as-title
+                                .as-title--img
+                                    .title-circle 
+                                        <svg width="18" height="26" viewBox="0 0 18 26" fill="#00A3FF" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.7617 1.625H10.7873H10.7617ZM10.7617 1.625L8.9208 11.248L15.6197 11.2734L6.51739 24.3242L8.3583 13.7363L1.65944 13.7109L10.7617 1.625ZM10.7617 0H10.6339C10.4975 0.0169271 10.3782 0.0465495 10.2759 0.0888672C10.1736 0.131185 10.0586 0.194661 9.93075 0.279297C9.8029 0.363932 9.68785 0.465495 9.58557 0.583984C9.56853 0.600911 9.55575 0.617839 9.54722 0.634766C9.5387 0.651693 9.52592 0.66862 9.50887 0.685547L0.329892 12.7207C-0.0621535 13.2624 -0.104767 13.8294 0.202051 14.4219C0.253187 14.5234 0.317108 14.6208 0.393812 14.7139C0.470517 14.807 0.555744 14.8916 0.649494 14.9678C0.743244 15.0439 0.845517 15.1074 0.956312 15.1582C1.06711 15.209 1.18216 15.2471 1.30148 15.2725C1.4208 15.2979 1.54012 15.3105 1.65944 15.3105L6.38955 15.3359L4.88103 24.0449C4.81285 24.4173 4.87251 24.7686 5.06001 25.0986C5.24751 25.4287 5.51171 25.6699 5.85262 25.8223C5.95489 25.873 6.06143 25.9069 6.17222 25.9238C6.28302 25.9408 6.39807 25.9492 6.51739 25.9492C7.01171 25.9492 7.42932 25.7292 7.77023 25.2891L16.9492 12.2383C17.3413 11.6966 17.3839 11.1296 17.0771 10.5371C16.7702 9.94466 16.2844 9.64844 15.6197 9.64844H10.8896L12.3725 2.00586C12.3896 1.93815 12.4023 1.87467 12.4109 1.81543C12.4194 1.75618 12.4236 1.69271 12.4236 1.625C12.4236 1.47266 12.4023 1.32878 12.3597 1.19336C12.3171 1.05794 12.2617 0.93099 12.1935 0.8125C12.1253 0.69401 12.0444 0.583984 11.9506 0.482422C11.8569 0.380859 11.7503 0.296224 11.631 0.228516C11.5117 0.160807 11.3839 0.105794 11.2475 0.0634766C11.1111 0.0211589 10.9748 0 10.8384 0H10.7617Z" fill="#00A3FF"/>
+                                        </svg>
+                                span.as-title--name First Stake in Energy pool 
+                            .as-description
+                                p.as-description--text Use the coin in the energy pool
+                            .as-prize
+                                span.lottery-ticket-mount +5
+                                span.as-prize--mount lottery Ticket
+            .news_container
+                .line-article-container
+                    span.article_text Twitter news 
+                    hr.title_hr(style="width:80%;max-width:unset;")
+                .news-list
+                    .news-item
+                        img.news-item--img(scr="../img/news.jpg" alt="news-image")
+                        .news-item--info
+                            span.info-create-date 11 May 2021
+                            p.info-title Bitcoin is an open source censorship-resistant peer-to-peer immutable network. 
+                            a.link-button(href="https://twitter.com") Read
+                    .news-item
+                        img.news-item--img(scr="../img/news.jpg" alt="news-image")
+                        .news-item--info
+                            span.info-create-date 11 May 2021
+                            p.info-title Bitcoin is an open source censorship-resistant peer-to-peer immutable network. 
+                            a.link-button(href="https://twitter.com") Read
