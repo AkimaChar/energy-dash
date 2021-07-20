@@ -271,12 +271,13 @@
   padding: 0.4166666667vw 0.4166666667vw;
   color: #00A3FF;
 }
-.lvl-card-list .level-card .lvl-ref-mount {
+
+.lvl-ref-mount {
   padding: 0.5208333333vw 1.25vw;
   display: flex;
   flex-direction: column;
 }
-.lvl-card-list .level-card .lvl-ref-mount span:first-of-type {
+.lvl-ref-mount span:first-of-type {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -359,4 +360,93 @@ h4 {
   margin-top: 5px;
   margin-left: 2.0833333333vw;
   background: linear-gradient(270deg, rgba(19, 16, 69, 0) 2.15%, #FFA114 91.53%);
+}
+
+.available-rewards_container {
+  display: flex;
+  flex-direction: column;
+}
+.available-rewards_container .rewards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.available-rewards_container .rewards-list .rew-card {
+  margin-bottom: 0.78125vw;
+  transition: 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.available-rewards_container .rewards-list .rew-card:not(:last-of-type) {
+  margin-right: 0.78125vw;
+}
+.available-rewards_container .rewards-list .rew-card:hover {
+  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+}
+.available-rewards_container .rewards-list .rew-card:hover .info-ref-amount {
+  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+  box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+}
+.available-rewards_container .rewards-list .rew-card .rew-card-info {
+  display: flex;
+  align-items: center;
+}
+.available-rewards_container .rewards-list .rew-card .rew-card-info .info-token-amount {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.6770833333vw;
+  padding-left: 1.0416666667vw;
+  padding-right: 1.1979166667vw;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.available-rewards_container .rewards-list .rew-card .rew-card-info .info-token-amount span:first-of-type {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+}
+.available-rewards_container .rewards-list .rew-card .pot-title {
+  margin-bottom: 0.5208333333vw;
+}
+.available-rewards_container .rewards-list .rew-card .info-ref-amount {
+  padding: 0;
+  padding-top: 0.6770833333vw;
+  padding-left: 1.1979166667vw;
+  padding-right: 1.25vw;
+}
+.available-rewards_container .rewards-list .rew-card .info-ref-amount span:first-of-type {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+}
+.available-rewards_container .rewards-list .rew-card .pot-title {
+  font-size: 15px;
+}
+.available-rewards_container .rewards-list .rew-card .withdraw-button-cont {
+  padding: 0.8854166667vw 1.0416666667vw;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.available-rewards_container .rewards-list .rew-card .withdraw-button-cont button {
+  padding: 1.0416666667vw 2.9166666667vw;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  transition: 0.2s ease;
+  width: 100%;
+}
+.available-rewards_container .rewards-list .rew-card .withdraw-button-cont button:hover {
+  border-color: #FFA114;
+  cursor: pointer;
+}
+.available-rewards_container .rewards-list .rew-card .withdraw-button-cont button:active {
+  position: relative;
+  top: 1px;
 }

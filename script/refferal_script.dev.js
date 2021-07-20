@@ -4,7 +4,8 @@
 document.querySelectorAll('.nav_button').forEach(function (el) {
   el.classList.remove('active');
 });
-document.querySelector('.refferals').classList.add('active');
+document.querySelector('.refferals').classList.add('active'); // copy on click script
+
 var ref_link = document.querySelector('.ref-link');
 
 function copyLink() {
@@ -25,7 +26,8 @@ function setStyleToHead() {
   style.type = 'text/css';
   style.appendChild(document.createTextNode(css));
   head.appendChild(style);
-}
+} // set param to gradient line
+
 
 window.onload = setStyleToHead();
 
