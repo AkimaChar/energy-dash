@@ -121,4 +121,15 @@ var details_block = document.querySelector(".energy_details__info");
 details_button.addEventListener("click", function (e) {
   details_button.classList.toggle("active");
   details_block.classList.toggle("active");
-});
+}); // change input width on type
+
+var input = document.getElementById("pay");
+console.log(input);
+
+input.onkeyup = function (e) {
+  input.setAttribute("size", e.target.value.length);
+};
+
+input.onload = function (e) {
+  input.setAttribute("size", e.target.value.length);
+};

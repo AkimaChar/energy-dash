@@ -168,14 +168,23 @@ $screen-width: 1920;
           align-items: center;
           justify-content: space-between;
           &__payed {
-            font-weight: 500;
-            font-size: px-to-vw(25);
-            line-height: px-to-vw(30);
             span {
               font-size: px-to-vw(12);
               line-height: px-to-vw(15);
-              margin-left: px-to-vw(5);
               opacity: 0.2;
+            }
+            display: flex;
+            align-items: flex-end;
+            gap: px-to-vw(5);
+            input {
+              background: none;
+              max-width: px-to-vw(150);
+              border: none;
+              font-weight: 500;
+              font-size: px-to-vw(25);
+              line-height: px-to-vw(30);
+              outline: none;
+              width: fit-content;
             }
           }
           &__dollars {
@@ -501,21 +510,21 @@ $screen-width: 1920;
     font-size: px-to-vw(15);
     line-height: 120%;
     color: #ffa114;
-		transition: 0.3s;
+    transition: 0.3s;
     svg {
       width: px-to-vw(8);
       height: px-to-vw(15);
       transform: rotate(-90deg) scaleX(1) translateX(px-to-vw(2));
-			transition: 0.3s;
+      transition: 0.3s;
     }
     &.active svg {
       transform: rotate(-90deg) scaleX(-1) translateX(px-to-vw(-2));
     }
   }
   &__info {
-		display: none;
+    display: none;
     &.active {
-			display: flex;
+      display: flex;
     }
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(px-to-vw(25));
