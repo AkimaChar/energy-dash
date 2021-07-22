@@ -5,6 +5,8 @@
   font-style: normal;
   color: #fff;
   user-select: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -33,10 +35,11 @@ body {
   z-index: 0;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 html {
-  background: linear-gradient(109.62deg, #181A44 7.6%, #18194D 93.12%);
+  background: linear-gradient(109.62deg, #181a44 7.6%, #18194d 93.12%);
   background-repeat: no-repeat;
 }
 
@@ -44,6 +47,7 @@ body {
   background-image: url(../img/bg-img.jpg);
   background-repeat: no-repeat;
   overflow-x: hidden;
+  background-size: cover;
 }
 
 .krug {
@@ -52,7 +56,7 @@ body {
   height: 136px;
   left: 50.4166666667vw;
   top: -10.5729166667vw;
-  background: #00A3FF;
+  background: #00a3ff;
   filter: blur(300px);
 }
 
@@ -93,13 +97,13 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .header div .user_info-short div .user_account {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .header .user_avatar {
   height: 3.125vw;
@@ -188,10 +192,10 @@ body {
 }
 .container aside .nav_button:hover {
   /* Add blured background to a non-active button
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(25px);
-  border-radius: 15px;
-  */
+          background: rgba(255, 255, 255, 0.02);
+          backdrop-filter: blur(25px);
+          border-radius: 15px;
+          */
   padding: 1.0416666667vw;
   padding-right: 1.5625vw;
 }
@@ -215,7 +219,7 @@ body {
   color: #fff;
 }
 .container aside .nav_button.active .button_icon {
-  background: linear-gradient(132.67deg, #4600FF -2.2%, #449ED1 102.2%);
+  background: linear-gradient(132.67deg, #4600ff -2.2%, #449ed1 102.2%);
   border: none;
 }
 .container aside .nav_button.active .button_icon svg path {
@@ -247,7 +251,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #FFA114;
+  color: #ffa114;
   margin-left: 14px;
 }
 .container aside .user_medals-container * {
@@ -256,11 +260,11 @@ body {
   line-height: 24px;
 }
 .container aside .user_medals-container p {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 .container aside .user_medals-container .user_medal-count {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .container aside .user_medals-container .received_medals-title {
   font-style: normal;
@@ -303,7 +307,7 @@ body {
   transition: 0.2s ease;
 }
 .container aside .social_media_links-container .link:hover svg path {
-  fill: #00A3FF;
+  fill: #00a3ff;
 }
 .container aside .social_media_links-container .whatsapp svg path,
 .container aside .social_media_links-container .youtube svg path {
@@ -339,7 +343,7 @@ body {
   max-width: 36.4583333333vw;
   width: 23.4375vw;
   min-width: 10.4166666667vw;
-  background: linear-gradient(270deg, rgba(19, 16, 69, 0) 2.15%, #FFA114 47.35%, rgba(19, 16, 69, 0) 97.52%);
+  background: linear-gradient(270deg, rgba(19, 16, 69, 0) 2.15%, #ffa114 47.35%, rgba(19, 16, 69, 0) 97.52%);
   border: none;
 }
 
@@ -355,10 +359,10 @@ body {
 }
 
 .orange {
-  border: 1px solid #FFA114;
+  border: 1px solid #ffa114;
   padding: 0.78125vw 2.0833333333vw;
   margin-right: 0.78125vw;
-  color: #FFA114;
+  color: #ffa114;
 }
 .orange::before {
   background-color: rgba(255, 161, 20, 0.3);
@@ -366,7 +370,7 @@ body {
 }
 
 .blue {
-  border: 1px solid #00A3FF;
+  border: 1px solid #00a3ff;
   padding: 0.78125vw 3.125vw;
 }
 
@@ -385,7 +389,7 @@ body {
   color: rgba(255, 255, 255, 0.2);
 }
 .stack_stat .stack-title .stack-cash p span:first-of-type {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .stack_stat .stack-title .token {
   font-weight: 500;
@@ -395,7 +399,7 @@ body {
   align-items: center;
 }
 .stack_stat .stack-title .token .token_price {
-  color: #00A3FF;
+  color: #00a3ff;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 15px;
   padding: 1.09375vw 2.3958333333vw;
@@ -408,7 +412,7 @@ body {
   margin: 0 auto;
   margin-top: 1.0416666667vw;
   padding: 1.5625vw 2.34375vw;
-  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+  background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
   box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   position: relative;
@@ -442,7 +446,7 @@ body {
 }
 .stack_stat .stack-graph .graph-info .title-hr_half {
   margin: 0.9375vw 0;
-  background: linear-gradient(90deg, #FA9C4C 0%, rgba(33, 35, 94, 0) 112.26%);
+  background: linear-gradient(90deg, #fa9c4c 0%, rgba(33, 35, 94, 0) 112.26%);
   height: 1px;
   width: 8.0729166667vw;
   border: none;
@@ -462,17 +466,17 @@ body {
   margin-bottom: 15px;
   font-size: 20px;
   line-height: 24px;
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .stack_stat .stack-graph .graph-info .graph-pending p span,
 .stack_stat .stack-graph .graph-info .graph-worth p span {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .stack_stat .stack-graph .graph-info button.graph-button {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  border: 1px solid #00A3FF;
+  border: 1px solid #00a3ff;
   border-radius: 15px;
   padding: 0.8854166667vw 2.5vw;
   transition: 0.2s ease;
@@ -536,7 +540,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .stack_stat .energy_account-container .energy-actions .token-pocket {
   margin-left: 1.25vw;
@@ -558,7 +562,7 @@ body {
   font-weight: normal;
 }
 .stack_stat .energy_account-container .energy-actions .token-price p span {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .stack_stat .energy_account-container .energy-actions .token-price,
 .stack_stat .energy_account-container .energy-actions .token-pocket {
@@ -576,7 +580,7 @@ body {
 }
 .stack_stat .energy_account-container .energy-spot {
   margin-left: 1.0416666667vw;
-  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+  background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
   border-radius: 15px;
   max-width: 21.6145833333vw;
   display: flex;
@@ -624,10 +628,10 @@ body {
   margin: 0;
 }
 .stack_stat .energy_account-container .energy-spot .spot-body .spot-wrapper div p span {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .stack_stat .energy_account-container .energy-spot .spot-button {
-  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+  background: linear-gradient(94.9deg, #292b76 0.81%, #1a1c52 95.55%);
   border-radius: 0px 15px 15px 0px;
   padding: 0 1.9270833333vw;
   display: flex;
@@ -642,7 +646,7 @@ body {
   margin-left: 15px;
   position: absolute;
   content: "Go to";
-  color: #FFA114;
+  color: #ffa114;
   transition: 0.2s ease;
   text-decoration: none;
   overflow: none;
@@ -722,7 +726,7 @@ body {
 }
 .slider .slider-navigation .nav-planks .active_plank {
   width: 1.8229166667vw;
-  background-color: #FFA114;
+  background-color: #ffa114;
 }
 .slider .slider-navigation .nav__button_right svg {
   transform: rotate(180deg);
@@ -755,7 +759,7 @@ body {
 }
 
 .full-blue {
-  background: #00A3FF;
+  background: #00a3ff;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -816,7 +820,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+  background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
   border-radius: 0.78125vw;
 }
 .pools_container .pools_card_list .pool_card .card-title {
@@ -840,8 +844,8 @@ body {
   align-items: center;
   text-align: center;
   margin-left: 0.5208333333vw;
-  color: #FFA114;
-  border: 1px solid #FFA114;
+  color: #ffa114;
+  border: 1px solid #ffa114;
   box-sizing: border-box;
   padding: 0.1041666667vw 0.625vw;
   border-radius: 0.78125vw;
@@ -852,7 +856,7 @@ body {
 }
 .pools_container .pools_card_list .pool_card .card-token-progress {
   padding: 1.0416666667vw 1.1979166667vw;
-  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+  background: linear-gradient(94.9deg, #292b76 0.81%, #1a1c52 95.55%);
 }
 .pools_container .pools_card_list .pool_card .card-token-progress .profit-title {
   font-weight: 300;
@@ -866,7 +870,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 .pools_container .pools_card_list .pool_card .card-token-progress .profit-title p span {
-  color: #FFA114;
+  color: #ffa114;
 }
 .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
   font-weight: normal;
@@ -874,7 +878,7 @@ body {
   line-height: 43px;
 }
 .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents span {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 .pools_container .pools_card_list .pool_card .token-profit {
   display: flex;
@@ -891,7 +895,7 @@ body {
   line-height: 17px;
 }
 .pools_container .pools_card_list .pool_card .pool-progress .left-percents span {
-  color: #FFA114;
+  color: #ffa114;
 }
 .pools_container .pools_card_list .pool_card .pool-progress .left-time {
   font-weight: 500;
@@ -923,7 +927,7 @@ body {
 }
 .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .multiplier-level {
   padding: 0.4166666667vw 0.5729166667vw;
-  background: #00A3FF;
+  background: #00a3ff;
   border-radius: 15px;
   margin-right: 0.5208333333vw;
 }
@@ -966,11 +970,11 @@ body {
   border-radius: 0.78125vw;
 }
 .pools_container .pools_card_list .pool_card .progress-bar::-webkit-progress-value {
-  background: #00A3FF;
+  background: #00a3ff;
   border-radius: 0.78125vw;
 }
 .pools_container .pools_card_list .pool_card .progress-bar::-moz-progress-bar {
-  background: #00A3FF;
+  background: #00a3ff;
   border-radius: 0.78125vw;
 }
 .pools_container .pools_card_list .pool_card .card-pool-stack {
@@ -1001,20 +1005,20 @@ body {
   padding: 1.3020833333vw 0;
   border-radius: 0 0 0.78125vw 0.78125vw;
   align-self: center;
-  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+  background: linear-gradient(94.9deg, #292b76 0.81%, #1a1c52 95.55%);
 }
 .pools_container .pools_card_list .pool_card button.details-button svg {
   transform: rotate(-90deg);
   margin-left: 0.5208333333vw;
 }
 .pools_container .pools_card_list .pool_card button.details-button svg path {
-  fill: #FFA114;
+  fill: #ffa114;
 }
 .pools_container .pools_card_list .pool_card button.details-button span {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #FFA114;
+  color: #ffa114;
 }
 .pools_container .pools_card_list .stack-amount {
   font-weight: normal;
@@ -1027,7 +1031,7 @@ body {
   font-size: 12px;
   line-height: 22px;
   /* or 183% */
-  color: #FFA114;
+  color: #ffa114;
 }
 .pools_container .pools_card_list .stack-desc {
   display: flex;
@@ -1040,7 +1044,7 @@ body {
   line-height: 15px;
 }
 .pools_container .pools_card_list .token-stack-name span {
-  color: #00A3FF;
+  color: #00a3ff;
 }
 
 .assigments_container {
@@ -1092,9 +1096,9 @@ body {
   font-size: 15px;
   line-height: 18px;
   padding: 0 2.0833333333vw;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 1.1979166667vw;
-  border: 1px solid #2C2E7780;
+  border: 1px solid #2c2e7780;
   transition: 0.2s ease;
 }
 .assigments_container .assigment-item::before {
@@ -1106,7 +1110,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #2C2E77 17.36%, #191A51 95.81%);
+  background: linear-gradient(93.58deg, #3c3f98 -19.17%, #2c2e77 17.36%, #191a51 95.81%);
 }
 .assigments_container .assigment-item:hover {
   cursor: pointer;
@@ -1119,7 +1123,7 @@ body {
   color: #fff;
 }
 .assigments_container .assigment-item:hover .as-title .as-title--img .title-circle {
-  border: 1px solid #FFA114;
+  border: 1px solid #ffa114;
 }
 .assigments_container .assigment-item .as-description {
   width: 22.3958333333vw;
@@ -1158,13 +1162,13 @@ body {
   justify-content: center;
   height: 1.5625vw;
   width: 1.5625vw;
-  border: 1px solid #00A3FF;
+  border: 1px solid #00a3ff;
   border-radius: 50%;
   padding-top: 1.1458333333vw;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #00A3FF;
+  color: #00a3ff;
   transition: 0.2s ease;
 }
 .assigments_container .assigment-item .as-title .as-title--img .title-circle svg {
@@ -1192,7 +1196,7 @@ body {
   box-shadow: 0px 0px 20px rgba(255, 161, 20, 0.8);
 }
 .assigments_container .assigment-item .as-prize span.lottery-ticket-mount {
-  color: #FFA114;
+  color: #ffa114;
 }
 
 .news_container {
@@ -1209,7 +1213,7 @@ body {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 1.0416666667vw;
-  border: 1px solid #2C2E7780;
+  border: 1px solid #2c2e7780;
 }
 .news_container .news-item .news-item--img {
   width: 22.96875vw;
@@ -1236,7 +1240,7 @@ body {
   font-weight: 300;
   font-size: 30px;
   content: "·";
-  color: #FFA114;
+  color: #ffa114;
 }
 .news_container .news-item .news-item--info .info-title {
   font-weight: 500;
@@ -1247,7 +1251,7 @@ body {
 .news_container .news-item .news-item--info .link-button {
   margin-top: 1.5625vw;
   align-self: flex-start;
-  border: 1px solid #00A3FF;
+  border: 1px solid #00a3ff;
   border-radius: 15px;
   font-weight: 500;
   font-size: 15px;

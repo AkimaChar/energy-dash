@@ -1,0 +1,95 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        link(rel="stylesheet" href="../styles/style.css")   
+        link(rel="stylesheet" href="../styles/fomo_style.css")   
+        title BSC Energy
+    body
+        .krug
+        .wrapper
+            .container 
+                img(src="../img/gex.png" alt="")
+                nav 
+                    div NFT
+                    .active Farm
+                    div Staking + Vesting
+                    div Game
+                    div Docs
+                    div Stats
+                p How to play?
+                h1 The Fomo Game
+                .game 
+                    .game__header 
+                        .section
+                            .title Round 
+                            .value 
+                                span #
+                                |0
+                        .section
+                            .title Keys burnt 
+                            .value 31789.0435
+                        .section
+                            .title Joined 
+                            .value 83
+                    .game__value 
+                        h1 $ 6512.34
+                            span ( 14.98 QUICK )
+                        p Last key sold to 
+                            span 0XCC...D7EF
+                    .game__body 
+                        .time 
+                            span Ending in 
+                            p 22:21:23
+                        .actions 
+                            button Claim quick
+                            button Claim keys:
+                                span 0.000 Keys
+                        .reset 
+                            span Invest keys to reset timer
+                            p ~ 0
+                        hr
+                    .game__actions 
+                        button Approve
+                        button Buy keys
+                .leaderboard
+                    h2 Leaderboard
+                    .leaderboard__table
+                        .column.head Wallet
+                        .column.head Invested
+                        .column.head Round-End Prize
+                        .column.active 
+                            span.number 1
+                            |Me
+                        .column.active 0.00 Keys
+                        .column.active 
+                            span $
+                            |.00
+                        .column 
+                            span.number 2
+                            |Joker
+                        .column 38321.00 Keys
+                        .column 
+                            span $
+                            | 1069.00
+                        .column 
+                            span.number 3
+                            |Pelloti
+                        .column 340.00 Keys
+                        .column 
+                            span $
+                            | 419.00
+                        .column 
+                            span.number 4
+                            |Harmony
+                        .column 31240.00 Keys
+                        .column 
+                            span $
+                            | 321.00
+        script(src="../script/fomo_script.dev.js" defer) 
+
