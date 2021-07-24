@@ -1,5 +1,5 @@
 doctype html
-html(lang="ru")
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -7,14 +7,12 @@ html(lang="ru")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        link(rel="stylesheet" href="../styles/style.css")   
-
-
+        link(rel="stylesheet" href="../styles/style.css")
+        link(rel="stylesheet" href="../styles/mobile.css")
         title BSC Energy
     body
         include dashboard-mixin.pug 
         include base-mixin.pug
-        .krug
         .wrapper
             +_header
             .container
