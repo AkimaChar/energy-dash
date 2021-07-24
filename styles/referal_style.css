@@ -258,6 +258,10 @@
   padding: 1.0416666667vw 1.25vw;
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.lvl-card-list .level-card .lvl-title .pot-title {
+  font-size: 0.9375vw;
 }
 .lvl-card-list .level-card .lvl-percent {
   display: flex;

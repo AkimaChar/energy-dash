@@ -1,0 +1,36 @@
+{
+    "Dashboard-page": [
+        {
+            "graph": [
+                {
+                    "Yield": "Доход",
+                    "Net worth": "Личный доход",
+                    "Pending": "Ожидаемый",
+                    "Harvest all": "Получить"
+                }
+            ],
+            "Energy": [
+                {
+                    "Sell": "Продать",
+                    "Buy": "Купить"
+                }
+            ],
+            "Pocket": [
+                {
+                    "Total pot this round": "Общий выигрыш в раунде"
+                }
+            ],
+            "Pools": [
+                {
+                    "Pools": "Пулы",
+                    "Profit for": "Прибыль за",
+                    "days": "дней",
+                    "with Turbo": "с Турбо",
+                    "Left": "Осталось",
+                    "Turbo": "Турбо",
+                     
+                }
+            ]
+        }
+    ]
+}

@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+.user_medals-container {
+  margin-top: 1.0416666667vw;
+}
+
 a {
   overflow: none;
   text-decoration: none;
@@ -31,23 +35,18 @@ button:hover {
 
 html,
 body {
-  position: relative;
   z-index: 0;
-  margin: 0;
   padding: 0;
   min-height: 100vh;
 }
 
 html {
-  background: linear-gradient(109.62deg, #181a44 7.6%, #18194d 93.12%);
-  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 body {
-  background-image: url(../img/bg-img.jpg);
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  background-size: cover;
+  position: relative;
+  background-color: #181a44;
 }
 
 .krug {
