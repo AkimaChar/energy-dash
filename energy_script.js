@@ -123,3 +123,13 @@ details_button.addEventListener("click", (e) => {
   details_button.classList.toggle("active");
   details_block.classList.toggle("active");
 });
+
+// change input width on type
+const input = document.getElementById("pay");
+console.log(input);
+input.onkeyup = (e) => {
+  input.setAttribute("size", e.target.value.length);
+};
+input.onload = (e) => {
+  input.setAttribute("size", e.target.value.length);
+};

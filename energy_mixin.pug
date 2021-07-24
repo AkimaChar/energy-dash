@@ -33,7 +33,8 @@ mixin _energy
                     .action
                         p.title You pay
                         .count 
-                            p.count__payed 23.1234
+                            p.count__payed 
+                                input(type="text" id="pay" value="0" maxlength="9" size="1")
                                 span BNB
                             p.count__dollars
                                 span
@@ -162,7 +163,7 @@ mixin _energy
                             span 0.00192834 BNB
                                 span (-$1.2334)
                     p.text Energy Pool Volume Factor:
-                            span 0.9345%
+                        span 0.9345%
                 .block
                     p.text The Base rate changes depending on the amount of token user staking
                     div 
@@ -181,4 +182,3 @@ mixin _energy
                         p.text
                             span 0.5%
                             span.text - Daily for amounts from 250.000+
-            
