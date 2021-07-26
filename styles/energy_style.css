@@ -422,7 +422,7 @@
   padding-left: 1.9270833333vw;
 }
 .energy_info_blocks__reward__block {
-  background: linear-gradient(266.42deg, #3c3f98 -19.17%, #191a51 95.81%);
+  background: linear-gradient(94deg, #3c3f98 -19.17%, #191a51 95.81%);
   box-shadow: 0 0 2.34375vw rgba(0, 0, 0, 0.25);
   border-radius: 0.78125vw;
 }
@@ -433,7 +433,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(94.9deg, #1a1c52 0.81%, #292b76 95.55%);
+  background: linear-gradient(265.1deg, #1a1c52 0.81%, #292b76 95.55%);
   border-radius: 0.78125vw 0.78125vw 0 0;
   font-weight: 300;
   font-size: 1.0416666667vw;
@@ -512,17 +512,30 @@
   border-left: 0.0520833333vw solid rgba(255, 255, 255, 0.05);
   border-right: 0.0520833333vw solid rgba(255, 255, 255, 0.05);
 }
+.energy_details__info .column {
+  width: 25%;
+}
 .energy_details__info .column .block:first-of-type {
   border-bottom: 0.0520833333vw solid rgba(255, 255, 255, 0.05);
 }
 .energy_details__info > .block:last-of-type {
   width: 38%;
 }
+.energy_details__info > .block:last-of-type > .text {
+  margin-bottom: 0.625vw;
+}
+.energy_details__info > .block:last-of-type div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625vw;
+}
 .energy_details__info > .block:last-of-type div p span {
   margin: 0 0.1041666667vw 0 0;
 }
 .energy_details__info > .block:last-of-type div p span.text {
+  margin: 0;
   color: #fff;
+  font-weight: 300;
 }
 .energy_details__info > .block:last-of-type div p span.text::first-letter {
   margin-right: 4ch;

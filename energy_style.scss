@@ -445,7 +445,7 @@ $screen-width: 1920;
     padding-bottom: px-to-vw(35);
     padding-left: px-to-vw(37);
     &__block {
-      background: linear-gradient(266.42deg, #3c3f98 -19.17%, #191a51 95.81%);
+      background: linear-gradient(94deg, #3c3f98 -19.17%, #191a51 95.81%);
       box-shadow: 0 0 px-to-vw(45) rgba(0, 0, 0, 0.25);
       border-radius: px-to-vw(15);
       > div {
@@ -455,7 +455,7 @@ $screen-width: 1920;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: linear-gradient(94.9deg, #1a1c52 0.81%, #292b76 95.55%);
+        background: linear-gradient(265.1deg, #1a1c52 0.81%, #292b76 95.55%);
         border-radius: px-to-vw(15) px-to-vw(15) 0 0;
         font-weight: 300;
         font-size: px-to-vw(20);
@@ -536,18 +536,31 @@ $screen-width: 1920;
       border-left: px-to-vw(1) solid rgba(255, 255, 255, 0.05);
       border-right: px-to-vw(1) solid rgba(255, 255, 255, 0.05);
     }
-    .column .block:first-of-type {
-      border-bottom: px-to-vw(1) solid rgba(255, 255, 255, 0.05);
+    .column {
+      width: 25%;
+      .block:first-of-type {
+        border-bottom: px-to-vw(1) solid rgba(255, 255, 255, 0.05);
+      }
     }
     > .block:last-of-type {
       width: 38%;
-      div p {
-        span {
-          margin: 0 px-to-vw(2) 0 0;
-          &.text {
-            color: #fff;
-            &::first-letter {
-              margin-right: 4ch;
+      > .text {
+        margin-bottom: px-to-vw(12);
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(12);
+        p {
+          span {
+            margin: 0 px-to-vw(2) 0 0;
+            &.text {
+              margin: 0;
+              color: #fff;
+              font-weight: 300;
+              &::first-letter {
+                margin-right: 4ch;
+              }
             }
           }
         }
