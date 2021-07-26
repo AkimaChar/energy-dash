@@ -25,7 +25,7 @@ mixin _rules
                 p.text On the 4th day - the internal liquidity pool becomes available for everyoneand the initial price is ~ 1$ (0.0019 BNB)
         hr.orange_line
         .withdraw
-            .withdraw__block 
+            form.withdraw__block 
                 .withdraw__block__header 
                     .title Phase 2
                     .time
@@ -44,13 +44,13 @@ mixin _rules
                     .value 0.011
                         span BNB
                 .withdraw__block__footer 
-                    .count 100
+                    input.count(type="number" value="100")
                     button.withdraw_button Withdraw all
                     .maximum 
                         span Maximum you can buy:
                         p 1000 Energy
                             span (~10 BNB)
-            .withdraw__block 
+            form.withdraw__block 
                 .withdraw__block__back
                 .withdraw__block__block 
                     .withdraw__block__header 
@@ -71,13 +71,13 @@ mixin _rules
                         .value 0.011
                             span BNB
                     .withdraw__block__footer 
-                        .count 100
+                        input.count(type="number" value="100")
                         button.withdraw_button Withdraw all
                         .maximum 
                             span Maximum you can buy:
                             p 1000 Energy
                                 span (~10 BNB)
-            .withdraw__block 
+            form.withdraw__block 
                 .withdraw__block__back
                 .withdraw__block__block 
                     .withdraw__block__header 
@@ -98,7 +98,7 @@ mixin _rules
                         .value 0.013
                             span BNB
                     .withdraw__block__footer 
-                        .count 100
+                        input.count(type="number" value="100")
                         button.withdraw_button Withdraw all
                         .maximum 
                             span Maximum you can buy:

@@ -1,0 +1,292 @@
+$screen-width: 1920;
+
+@function px-to-vw($value) {
+    @return $value * 100 / $screen-width+vw;
+}
+
+@media screen and (max-width: 1880px) and (min-width: 1600px) {
+    .container aside .nav_button .button_icon svg {
+        margin-top: 0;
+        margin-left: 1px;
+    }
+
+    .container aside .dashboard .button_icon svg {
+        margin-top: -2px;
+        margin-left: 1px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1366px) {
+    .container aside .nav_button {
+        &.stacking {
+            svg {
+                margin-top: px-to-vw(1);
+            }
+        }
+
+        &.energy {
+            svg {
+                height: px-to-vw(28);
+                margin-left: px-to-vw(-0.5);
+            }
+        }
+
+        &.refferals {
+            svg {
+                margin-top: px-to-vw(1);
+            }
+        }
+
+        &.achievements {
+            svg {
+                height: px-to-vw(28);
+                margin-left: px-to-vw(0.5);
+                margin-top: px-to-vw(0.5);
+            }
+        }
+
+        &.wiki {
+            svg {
+                height: px-to-vw(25);
+                margin-left: px-to-vw(0.5);
+                margin-top: px-to-vw(0.5);
+            }
+        }
+
+        .button_icon {
+            border-radius: 10px;
+
+            svg {
+                width: px-to-vw(24);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1366px) {
+    .social_media_links-container {
+        justify-content: space-between;
+        width: 90%;
+        padding-right: 0;
+
+        .link {
+            svg {
+                width: 20px;
+            }
+        }
+    }
+
+    .container aside {
+        padding-top: 0;
+
+        .nav_button.active {
+            border-radius: 10px;
+            width: 90%;
+        }
+
+        .user_medals-container * {
+            font-size: 15px;
+        }
+
+        .nav_button {
+            .button_icon {
+                border-radius: 10px;
+
+                svg {
+                    width: px-to-vw(24);
+                }
+            }
+        }
+    }
+
+    .container {
+        grid-template-columns: 15vw auto;
+
+        aside .nav_button {
+            .button_icon {
+                width: px-to-vw(15);
+                height: px-to-vw(15);
+                border-radius: 50%;
+
+                svg {
+                    display: none;
+                }
+            }
+
+            .button_title {
+                margin-left: px-to-vw(18);
+                font-weight: 400;
+            }
+        }
+    }
+
+    .container aside .user_medals-container .received_medals-title {
+        font-size: 12px;
+    }
+
+    .container aside .user_medals-container {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .change_lang-container {
+        margin-top: -10px;
+    }
+
+    .container aside .social_media_links-container {
+        margin-top: 10px;
+        padding-right: 0;
+    }
+
+    .header {
+        margin-bottom: px-to-vw(20);
+
+        .user_avatar {
+            width: px-to-vw(90);
+            height: px-to-vw(90);
+            border-radius: 50%;
+        }
+    }
+
+    .header div {
+        button {
+            width: px-to-vw(90);
+            height: px-to-vw(90);
+            align-self: center;
+            border-radius: px-to-vw(15);
+        }
+
+        .user_info-short {
+            margin-right: px-to-vw(30);
+
+            div {
+                p {
+
+                    span,
+                    .user_account {
+                        font-size: 15px;
+                    }
+                }
+
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container aside .nav_button .button_icon {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 18vw auto;
+    }
+
+    .header {
+        a {
+            img {
+                width: px-to-vw(400);
+            }
+        }
+    }
+
+    .change_lang-btn {
+        margin-left: px-to-vw(30);
+
+    }
+
+    .container aside .change_lang-container button.change_lang-btn span.lang-title {
+        font-size: px-to-vw(35);
+        margin-left: px-to-vw(20);
+    }
+
+    .container aside .change_lang-container {
+        padding-bottom: 20px;
+    }
+
+    .user_medals-container {
+        span {
+            display: none;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+    }
+
+    .container aside .user_medals-container .medals {
+        width: 100%;
+        margin: 0;
+        margin-top: px-to-vw(20);
+
+    }
+
+    .container aside .user_medals-container .medals {
+        padding: px-to-vw(70) px-to-vw(20);
+        border-radius: px-to-vw(10);
+
+        img[alt=medal] {
+            width: px-to-vw(90);
+            height: px-to-vw(90);
+        }
+    }
+
+    .social_media_links-container {
+        width: 100%;
+    }
+
+    .container aside .social_media_links-container {
+        margin: auto;
+        width: 90%;
+        margin-top: px-to-vw(20);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0 px-to-vw(50);
+    }
+    aside.aside {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        border-right: none;
+
+        .page_main_content {
+            max-width: px-to-vw(1800);
+        }
+    }
+
+    .header {
+        padding: px-to-vw(150) 0;
+        div button {
+            height: px-to-vw(200);
+            width: px-to-vw(200);
+            border: none;
+        }
+        a img {
+            width: px-to-vw(750);
+        }
+
+        .user_info-short {
+            .user_avatar {
+                height: px-to-vw(200);
+                width: px-to-vw(200);
+            }
+            
+            div *{
+                display: none;
+
+            }
+        }
+    }
+}

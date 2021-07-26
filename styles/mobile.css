@@ -1,0 +1,219 @@
+@media screen and (max-width: 1880px) and (min-width: 1600px) {
+  .container aside .nav_button .button_icon svg {
+    margin-top: 0;
+    margin-left: 1px;
+  }
+
+  .container aside .dashboard .button_icon svg {
+    margin-top: -2px;
+    margin-left: 1px;
+  }
+}
+@media screen and (max-width: 1600px) and (min-width: 1366px) {
+  .container aside .nav_button.stacking svg {
+    margin-top: 0.0520833333vw;
+  }
+  .container aside .nav_button.energy svg {
+    height: 1.4583333333vw;
+    margin-left: -0.0260416667vw;
+  }
+  .container aside .nav_button.refferals svg {
+    margin-top: 0.0520833333vw;
+  }
+  .container aside .nav_button.achievements svg {
+    height: 1.4583333333vw;
+    margin-left: 0.0260416667vw;
+    margin-top: 0.0260416667vw;
+  }
+  .container aside .nav_button.wiki svg {
+    height: 1.3020833333vw;
+    margin-left: 0.0260416667vw;
+    margin-top: 0.0260416667vw;
+  }
+  .container aside .nav_button .button_icon {
+    border-radius: 10px;
+  }
+  .container aside .nav_button .button_icon svg {
+    width: 1.25vw;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .social_media_links-container {
+    justify-content: space-between;
+    width: 90%;
+    padding-right: 0;
+  }
+  .social_media_links-container .link svg {
+    width: 20px;
+  }
+
+  .container aside {
+    padding-top: 0;
+  }
+  .container aside .nav_button.active {
+    border-radius: 10px;
+    width: 90%;
+  }
+  .container aside .user_medals-container * {
+    font-size: 15px;
+  }
+  .container aside .nav_button .button_icon {
+    border-radius: 10px;
+  }
+  .container aside .nav_button .button_icon svg {
+    width: 1.25vw;
+  }
+
+  .container {
+    grid-template-columns: 15vw auto;
+  }
+  .container aside .nav_button .button_icon {
+    width: 0.78125vw;
+    height: 0.78125vw;
+    border-radius: 50%;
+  }
+  .container aside .nav_button .button_icon svg {
+    display: none;
+  }
+  .container aside .nav_button .button_title {
+    margin-left: 0.9375vw;
+    font-weight: 400;
+  }
+
+  .container aside .user_medals-container .received_medals-title {
+    font-size: 12px;
+  }
+
+  .container aside .user_medals-container p {
+    margin-bottom: 0;
+  }
+
+  .change_lang-container {
+    margin-top: -10px;
+  }
+
+  .container aside .social_media_links-container {
+    margin-top: 10px;
+    padding-right: 0;
+  }
+
+  .header {
+    margin-bottom: 1.0416666667vw;
+  }
+  .header .user_avatar {
+    width: 4.6875vw;
+    height: 4.6875vw;
+    border-radius: 50%;
+  }
+
+  .header div button {
+    width: 4.6875vw;
+    height: 4.6875vw;
+    align-self: center;
+    border-radius: 0.78125vw;
+  }
+  .header div .user_info-short {
+    margin-right: 1.5625vw;
+  }
+  .header div .user_info-short div p span,
+.header div .user_info-short div p .user_account {
+    font-size: 15px;
+  }
+  .header div .user_info-short div span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container aside .nav_button .button_icon {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 18vw auto;
+  }
+
+  .header a img {
+    width: 20.8333333333vw;
+  }
+
+  .change_lang-btn {
+    margin-left: 1.5625vw;
+  }
+
+  .container aside .change_lang-container button.change_lang-btn span.lang-title {
+    font-size: 1.8229166667vw;
+    margin-left: 1.0416666667vw;
+  }
+
+  .container aside .change_lang-container {
+    padding-bottom: 20px;
+  }
+
+  .user_medals-container span {
+    display: none;
+  }
+  .user_medals-container p {
+    text-align: center;
+  }
+
+  .container aside .user_medals-container .medals {
+    width: 100%;
+    margin: 0;
+    margin-top: 1.0416666667vw;
+  }
+
+  .container aside .user_medals-container .medals {
+    padding: 3.6458333333vw 1.0416666667vw;
+    border-radius: 0.5208333333vw;
+  }
+  .container aside .user_medals-container .medals img[alt=medal] {
+    width: 4.6875vw;
+    height: 4.6875vw;
+  }
+
+  .social_media_links-container {
+    width: 100%;
+  }
+
+  .container aside .social_media_links-container {
+    margin: auto;
+    width: 90%;
+    margin-top: 1.0416666667vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    padding: 0 2.6041666667vw;
+  }
+
+  aside.aside {
+    display: none;
+  }
+
+  .container {
+    display: block;
+    border-right: none;
+  }
+  .container .page_main_content {
+    max-width: 93.75vw;
+  }
+
+  .header {
+    padding: 7.8125vw 0;
+  }
+  .header div button {
+    height: 10.4166666667vw;
+    width: 10.4166666667vw;
+    border: none;
+  }
+  .header a img {
+    width: 39.0625vw;
+  }
+  .header .user_info-short .user_avatar {
+    height: 10.4166666667vw;
+    width: 10.4166666667vw;
+  }
+  .header .user_info-short div * {
+    display: none;
+  }
+}

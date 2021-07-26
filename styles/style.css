@@ -5,7 +5,6 @@
   font-style: normal;
   color: #fff;
   user-select: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -315,7 +314,7 @@ body {
 
 .page_main_content {
   max-width: 67.1875vw;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   margin-top: 1.5625vw;
 }

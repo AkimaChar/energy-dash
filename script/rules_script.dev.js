@@ -4,4 +4,4 @@
 document.querySelectorAll(".nav_button").forEach(function (el) {
   el.classList.remove("active");
 });
-document.querySelector(".lottery").classList.add("active");
+document.querySelector(".wiki").classList.add("active");
