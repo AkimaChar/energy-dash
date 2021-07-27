@@ -1,10 +1,15 @@
 $screen-width: 1920;
+$screen-height: 1080;
 
-@function px-to-vw($value) {
-    @return $value * 100 / $screen-width+vw;
+@function px-to-vw($value-width) {
+  @return $value-width * 100 / $screen-width + vw;
 }
 
-@media screen and (max-width: 1880px) and (min-width: 1600px) {
+@function vh($value-height) {
+  @return $value-height * 100 / $screen-height + vh;
+}
+
+@media (max-width: 1880px) and (min-width: 1600px) {
     .container aside .nav_button .button_icon svg {
         margin-top: 0;
         margin-left: 1px;
@@ -16,7 +21,7 @@ $screen-width: 1920;
     }
 }
 
-@media screen and (max-width: 1600px) and (min-width: 1366px) {
+@media (max-width: 1600px) and (min-width: 1366px) {
     .container aside .nav_button {
         &.stacking {
             svg {
@@ -64,7 +69,7 @@ $screen-width: 1920;
 
 }
 
-@media screen and (max-width: 1366px) {
+@media (max-width: 1366px) {
     .social_media_links-container {
         justify-content: space-between;
         width: 90%;
@@ -178,7 +183,7 @@ $screen-width: 1920;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .container aside .nav_button .button_icon {
         display: none;
     }
@@ -249,10 +254,11 @@ $screen-width: 1920;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
     body {
         padding: 0 px-to-vw(50);
     }
+
     aside.aside {
         display: none;
     }
@@ -268,11 +274,13 @@ $screen-width: 1920;
 
     .header {
         padding: px-to-vw(150) 0;
+
         div button {
             height: px-to-vw(200);
             width: px-to-vw(200);
             border: none;
         }
+
         a img {
             width: px-to-vw(750);
         }
@@ -282,8 +290,8 @@ $screen-width: 1920;
                 height: px-to-vw(200);
                 width: px-to-vw(200);
             }
-            
-            div *{
+
+            div * {
                 display: none;
 
             }

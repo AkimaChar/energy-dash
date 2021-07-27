@@ -1,7 +1,12 @@
 $screen-width: 1920;
+$screen-height: 1080;
 
-@function px-to-vw($value) {
-    @return $value * 100 / $screen-width+vw;
+@function px-to-vw($value-width) {
+    @return $value-width * 100 / $screen-width+vw;
+}
+
+@function vh($value-height) {
+    @return $value-height * 100 / $screen-height+vh;
 }
 
 * {
@@ -140,14 +145,14 @@ h3 {
     margin: 0;
     margin-bottom: px-to-vw(-10);
     font-weight: 500;
-    font-size: 20px;
+    font-size: px-to-vw(20);
     line-height: 24px;
 }
 
 .total-energy-amount,
 .tickets-amount {
     font-weight: 500;
-    font-size: 45px;
+    font-size: px-to-vw(45);
     line-height: 55px;
 }
 
@@ -175,7 +180,7 @@ h3 {
 
         span {
             font-weight: 300;
-            font-size: 18px;
+            font-size: px-to-vw(18);
             line-height: 24px;
         }
     }
@@ -298,5 +303,109 @@ h3 {
 
             color: #00A3FF;
         }
+    }
+}
+
+.line-article-container .article_text {
+    white-space: nowrap;
+}
+
+@media (max-width: 1650px) {
+    .round-end-time-container {
+        margin-left: px-to-vw(400);
+    }
+
+    .pools_container .pools_card_list {
+        flex-wrap: unset;
+    }
+}
+
+@media (max-width: 1366px) {
+    .round-end-time-container {
+        top: unset;
+        left: unset;
+        margin: unset;
+    }
+
+    .tickets-actions {
+        display: flex;
+        position: absolute;
+        top: vh(310);
+        left: 85px;
+        margin: 0 auto;
+
+
+    }
+
+    .current-round-info {
+        &>div {
+            width: 50%;
+        }
+
+        align-items: flex-start;
+
+        .pot-title {
+            text-align: center;
+        }
+
+        .curren-pot {
+            * {
+                text-align: center;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .current-round-info .pot-tickets-container {
+        align-items: center;
+        display: flex;
+    }
+
+    .current_round_container>div:last-child {
+        display: flex;
+        align-items: center;
+
+        justify-content: space-around;
+    }
+
+    
+    .pools_container .pools_card_list .pool_card {
+        width: px-to-vw(400);
+    }
+
+    .total-coincidence .coincidence-item .pot-title {
+        font-size: px-to-vw(17);
+        line-height: 125%;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .pools_container {
+        margin-top: px-to-vw(100);
+    }
+    .round-end-time-container div span {
+        font-size: px-to-vw(25);
+    }
+    .total-amount {
+        font-size: px-to-vw(40);
+    }
+    .total-energy-mount div {
+        margin-bottom: 0;
+    }
+    .current-round-info .curren-pot {
+        .total-energy-mount {
+            margin: unset;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tickets-actions {
+        top: 26.703704vh;
+        margin: 0 auto ;
     }
 }

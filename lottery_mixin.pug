@@ -6,30 +6,31 @@ mixin _lottery
                     h1 The Energy Lottery
                     h2 Spend ENERGY to buy tickets, contributing to the lorrery pot
                     h3 Win prizes if 2,3, or 4 of your tickets numbers match the winning numbers and their exact order!
-                .current-round-info
-                    .curren-pot
-                        span.pot-title Total pot
-                        .total-energy-mount
+                div
+                    .current-round-info
+                        .curren-pot
+                            span.pot-title Total pot
+                            .total-energy-mount
+                                div
+                                    img.total-energy-img(src="../img/gex.png", alt="energy-token-icon"
+                                    )
+                                    span.total-energy-amount 51,32
+                                p.total-amount
+                                    span $ 
+                                    | 132.253,523
+                        .pot-tickets-container
+                            span.pot-title Your tickets for this round
+                            span.tickets-amount 16
+                            .tickets-actions
+                                button.tickets-button.buy-ticket Buy Tickets
+                                button.tickets-button.view-tickets View Tickets
+                    .stack-graph.round-end-time-container
+                        div.stack-graph-body
+                            span.round-number.pot-title Round #25
                             div
-                                img.total-energy-img(src="../img/gex.png", alt="energy-token-icon"
-                                )
-                                span.total-energy-amount 51,32
-                            p.total-amount
-                                span $ 
-                                | 132.253,523
-                    .pot-tickets-container
-                        span.pot-title Your tickets for this round
-                        span.tickets-amount 16
-                        .tickets-actions
-                            button.tickets-button.buy-ticket Buy Tickets
-                            button.tickets-button.view-tickets View Tickets
-                .stack-graph.round-end-time-container
-                    div.stack-graph-body
-                        span.round-number.pot-title Round #25
-                        div
-                            p.tickets-amount 21h 49m
-                            span Until Lottery Draw
-                        button.collect-energy.tickets-button.view-tickets Collect 151,32 Energy
+                                p.tickets-amount 21h 49m
+                                span Until Lottery Draw
+                            button.collect-energy.tickets-button.view-tickets Collect 151,32 Energy
 
             .pools_container.last_rounds_container
                 .line-article-container

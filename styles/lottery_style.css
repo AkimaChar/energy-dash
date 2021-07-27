@@ -128,14 +128,14 @@ h3 {
   margin: 0;
   margin-bottom: -0.5208333333vw;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.0416666667vw;
   line-height: 24px;
 }
 
 .total-energy-amount,
 .tickets-amount {
   font-weight: 500;
-  font-size: 45px;
+  font-size: 2.34375vw;
   line-height: 55px;
 }
 
@@ -159,7 +159,7 @@ h3 {
 }
 .round-end-time-container div span {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 0.9375vw;
   line-height: 24px;
 }
 
@@ -262,4 +262,102 @@ h3 {
   font-size: 25px;
   line-height: 30px;
   color: #00A3FF;
+}
+
+.line-article-container .article_text {
+  white-space: nowrap;
+}
+
+@media (max-width: 1650px) {
+  .round-end-time-container {
+    margin-left: 20.8333333333vw;
+  }
+
+  .pools_container .pools_card_list {
+    flex-wrap: unset;
+  }
+}
+@media (max-width: 1366px) {
+  .round-end-time-container {
+    top: unset;
+    left: unset;
+    margin: unset;
+  }
+
+  .tickets-actions {
+    display: flex;
+    position: absolute;
+    top: 28.7037037037vh;
+    left: 85px;
+    margin: 0 auto;
+  }
+
+  .current-round-info {
+    align-items: flex-start;
+  }
+  .current-round-info > div {
+    width: 50%;
+  }
+  .current-round-info .pot-title {
+    text-align: center;
+  }
+  .current-round-info .curren-pot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .current-round-info .curren-pot * {
+    text-align: center;
+  }
+
+  .current-round-info .pot-tickets-container {
+    align-items: center;
+    display: flex;
+  }
+
+  .current_round_container > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 20.8333333333vw;
+  }
+
+  .total-coincidence .coincidence-item .pot-title {
+    font-size: 0.8854166667vw;
+    line-height: 125%;
+  }
+}
+@media (max-width: 1080px) {
+  .pools_container {
+    margin-top: 5.2083333333vw;
+  }
+
+  .round-end-time-container div span {
+    font-size: 1.3020833333vw;
+  }
+
+  .total-amount {
+    font-size: 2.0833333333vw;
+  }
+
+  .total-energy-mount div {
+    margin-bottom: 0;
+  }
+
+  .current-round-info .curren-pot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .current-round-info .curren-pot .total-energy-mount {
+    margin: unset;
+  }
+
+  .tickets-actions {
+    top: 26.703704vh;
+    margin: 0 auto;
+  }
 }

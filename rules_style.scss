@@ -331,13 +331,13 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@media screen and (max-width: 1880px) and (min-width: 1600px) {
+@media (max-width: 1880px) and (min-width: 1600px) {
   .rules_info__block ul li {
     font-size: px-to-vw(13);
   }
 }
 
-@media screen and (max-width: 1600px) and (min-width: 1366px) {
+@media (max-width: 1600px) and (min-width: 1366px) {
   .rules_info__block ul li {
     white-space: nowrap;
     font-size: px-to-vw(16);
@@ -363,7 +363,7 @@ input::-webkit-inner-spin-button {
 
 }
 
-@media screen and (max-width: 1366px) {
+@media (max-width: 1366px) {
   .wrapper {
     max-width: 936px;
   }
@@ -465,7 +465,7 @@ input::-webkit-inner-spin-button {
 
 }
 
-@media screen and (max-width: 800px) {
+@media  (max-width: 800px) {
   .rules_info__text .title {
     font-size: px-to-vw(50);
   }
@@ -553,7 +553,7 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   .rules_info__text .title {
     font-size: px-to-vw(120);
     margin-top: px-to-vw(50);

@@ -1256,3 +1256,128 @@ body {
   line-height: 18px;
   padding: 0.8854166667vw 3.2291666667vw;
 }
+
+.slider .slider-items .item {
+  background-size: contain;
+}
+
+@media (max-width: 1366px) {
+  .stack_stat .stack-title .stack-cash p,
+.line-article-container .article_text {
+    white-space: nowrap;
+  }
+
+  .stack_stat .stack-title .stack-cash p {
+    font-size: 2.0833333333vw;
+  }
+
+  .stack_stat .stack-graph .graph-body canvas#myChart {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .title-hr_half {
+    display: none;
+  }
+
+  .stack_stat .stack-graph .graph-info .graph-pending p,
+.stack_stat .stack-graph .graph-info .graph-worth p {
+    font-size: 1.5625vw;
+    margin: 0;
+  }
+
+  .stack_stat .stack-graph .graph-info .graph-pending,
+.stack_stat .stack-graph .graph-info .graph-worth {
+    display: flex;
+    align-items: center;
+  }
+
+  .graph-title {
+    margin: 0;
+  }
+
+  .stack_stat .stack-graph {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+  .stack_stat .stack-graph .graph-info {
+    margin-top: 2.6041666667vw;
+    flex-direction: row;
+    white-space: nowrap;
+    align-items: center;
+  }
+  .stack_stat .stack-graph .graph-info button.graph-button {
+    padding: 1.0416666667vw;
+  }
+  .stack_stat .stack-graph .graph-body {
+    order: 1;
+    height: 20.8333333333vw;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+  .stack_stat .stack-graph::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -1.5625vw;
+    z-index: -100;
+    width: 67.1875vw;
+    height: 36.1111111111vh;
+    background: linear-gradient(93.58deg, rgba(62, 66, 182, 0.5) -19.17%, rgba(32, 34, 105, 0.5) 95.81%);
+    border-radius: 15px;
+  }
+
+  .stack_stat .energy_account-container {
+    flex-direction: column;
+  }
+  .stack_stat .energy_account-container .energy-spot {
+    margin-left: 0;
+    margin-top: 1.0416666667vw;
+    max-width: unset;
+  }
+  .stack_stat .energy_account-container .energy-spot .spot-button {
+    height: 8vw;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    max-width: 32.354167vw;
+    border-radius: 1.78125vw;
+    margin-bottom: 2.6041666667vw;
+  }
+
+  .pools_container .pools_card_list .pool_card button.details-button {
+    border-radius: 0 0 1.78125vw 1.78125vw;
+  }
+
+  .assigments_container .assigment-item {
+    font-size: 13px;
+  }
+
+  .as-description--text {
+    font-size: 11px;
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 14px;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle {
+    padding-top: 0;
+    font-size: 11px;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img {
+    width: 4.125vw;
+  }
+
+  .news_container .news-item .news-item--info .info-title {
+    font-size: 14px;
+  }
+
+  .line-article-container .title_hr {
+    position: relative;
+    top: 2px;
+  }
+}

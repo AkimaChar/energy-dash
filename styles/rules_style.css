@@ -260,12 +260,12 @@ input::-webkit-inner-spin-button {
   font-weight: inherit;
 }
 
-@media screen and (max-width: 1880px) and (min-width: 1600px) {
+@media (max-width: 1880px) and (min-width: 1600px) {
   .rules_info__block ul li {
     font-size: 0.6770833333vw;
   }
 }
-@media screen and (max-width: 1600px) and (min-width: 1366px) {
+@media (max-width: 1600px) and (min-width: 1366px) {
   .rules_info__block ul li {
     white-space: nowrap;
     font-size: 0.8333333333vw;
@@ -288,7 +288,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0.78125vw;
   }
 }
-@media screen and (max-width: 1366px) {
+@media (max-width: 1366px) {
   .wrapper {
     max-width: 936px;
   }
@@ -369,7 +369,7 @@ input::-webkit-inner-spin-button {
     margin: 3.125vw 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .rules_info__text .title {
     font-size: 2.6041666667vw;
   }
@@ -443,7 +443,7 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   .rules_info__text .title {
     font-size: 6.25vw;
     margin-top: 2.6041666667vw;

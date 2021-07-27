@@ -1,4 +1,4 @@
-@media screen and (max-width: 1880px) and (min-width: 1600px) {
+@media (max-width: 1880px) and (min-width: 1600px) {
   .container aside .nav_button .button_icon svg {
     margin-top: 0;
     margin-left: 1px;
@@ -9,7 +9,7 @@
     margin-left: 1px;
   }
 }
-@media screen and (max-width: 1600px) and (min-width: 1366px) {
+@media (max-width: 1600px) and (min-width: 1366px) {
   .container aside .nav_button.stacking svg {
     margin-top: 0.0520833333vw;
   }
@@ -37,7 +37,7 @@
     width: 1.25vw;
   }
 }
-@media screen and (max-width: 1366px) {
+@media (max-width: 1366px) {
   .social_media_links-container {
     justify-content: space-between;
     width: 90%;
@@ -123,7 +123,7 @@
     font-size: 18px;
   }
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .container aside .nav_button .button_icon {
     display: none;
   }
@@ -181,7 +181,7 @@
     margin-top: 1.0416666667vw;
   }
 }
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   body {
     padding: 0 2.6041666667vw;
   }
