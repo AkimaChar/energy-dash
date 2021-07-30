@@ -289,10 +289,6 @@ input::-webkit-inner-spin-button {
   }
 }
 @media (max-width: 1366px) {
-  .wrapper {
-    max-width: 936px;
-  }
-
   .rules_info__block ul li {
     font-size: 1.1458333333vw;
     line-height: 100%;

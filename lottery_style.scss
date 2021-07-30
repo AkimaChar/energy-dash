@@ -330,7 +330,8 @@ h3 {
     .tickets-actions {
         display: flex;
         position: absolute;
-        top: vh(310);
+        top: px-to-vw(270);
+
         left: 85px;
         margin: 0 auto;
 
@@ -371,7 +372,7 @@ h3 {
         justify-content: space-around;
     }
 
-    
+
     .pools_container .pools_card_list .pool_card {
         width: px-to-vw(400);
     }
@@ -387,25 +388,194 @@ h3 {
     .pools_container {
         margin-top: px-to-vw(100);
     }
+
     .round-end-time-container div span {
         font-size: px-to-vw(25);
     }
+
     .total-amount {
         font-size: px-to-vw(40);
     }
+
     .total-energy-mount div {
         margin-bottom: 0;
     }
+
     .current-round-info .curren-pot {
         .total-energy-mount {
             margin: unset;
         }
+
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .tickets-actions {
-        top: 26.703704vh;
-        margin: 0 auto ;
+
+        top: px-to-vw(255);
+        margin: 0 auto;
+    }
+
+    .last_rounds_container .total-lottery-number .lottery-number--digit span {
+        font-size: px-to-vw(40);
+    }
+}
+
+@media (max-width: 935px) {
+    .tickets-actions {
+        top: px-to-vw(280);
+    }
+}
+
+@media (max-width: 880px) {
+    h1 {
+        font-size: px-to-vw(60);
+    }
+
+    h2,
+    h3 {
+        font-size: px-to-vw(30);
+    }
+
+    .tickets-actions {
+        top: 80px;
+        flex-direction: column;
+        left: unset;
+
+        .tickets-button {
+            padding: 1.833333vw 4.291667vw;
+            margin-top: 0.920833vw;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .current_round_container>div:last-child {
+        flex-direction: column;
+    }
+
+    .current-round-info {
+        width: 80%;
+    }
+
+    .round-end-time-container {
+        margin-top: px-to-vw(150);
+    }
+
+    .current-round-info .pot-title {
+        font-size: px-to-vw(30);
+    }
+
+    .tickets-amount {
+        line-height: 35px;
+    }
+
+    .stack-graph {
+        width: 25.270833vw;
+    }
+
+    .pools_container .pools_card_list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .pools_container .pools_card_list .pool_card {
+        width: px-to-vw(500);
+    }
+
+    .stack-graph-body {
+        height: 25.229167vw;
+        width: 23.1875vw;
+
+        .tickets-amount {
+            font-size: px-to-vw(70);
+        }
+
+        .collect-energy {
+            width: 17.625vw;
+            height: 5.6875vw;
+            margin: 0;
+            margin-bottom: 0.479167vw;
+            font-weight: 400;
+            font-size: 1.241667vw;
+            line-height: 24px;
+        }
+
+        .round-number {
+            font-size: px-to-vw(40);
+        }
+    }
+
+    .total-coincidence {
+        padding: px-to-vw(30) px-to-vw(40);
+        justify-content: space-around;
+
+        .coincidence-item {
+            margin: 0;
+
+            .pot-title {
+                text-align: center;
+                font-size: px-to-vw(23);
+                width: initial;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 785px) {
+    .line-article-container .article_text {
+        font-size: 3.125vw;
+    }
+
+    h2,
+    h3 {
+        font-size: 1.74375vw;
+    }
+
+    h1 {
+        font-size: px-to-vw(85);
+    }
+
+    .round-end-time-container {
+        margin-top: 11.8125vw;
+    }
+
+    .total-energy-amount,
+    .tickets-amount {
+        font-size: px-to-vw(50);
+    }
+
+    .current-round-info .curren-pot .total-energy-amount {
+        font-size: 3.604167vw;
+    }
+
+    .current-round-info .pot-title {
+        font-size: 11px;
+        text-align-last: right;
+    }
+}
+
+@media (max-width: 690px) {
+
+    .current-round-info .curren-pot {
+        margin-left: 30px;
+        align-items: flex-start;
+
+        & .total-energy-mount {
+            align-items: flex-start;
+        }
+    }
+
+    .tickets-amount {
+        font-size: 4vw;
+        align-self: flex-end;
+    }
+
+    .pot-tickets-container .pot-title {
+        align-self: flex-end;
+
     }
 }

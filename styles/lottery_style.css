@@ -287,7 +287,7 @@ h3 {
   .tickets-actions {
     display: flex;
     position: absolute;
-    top: 28.7037037037vh;
+    top: 14.0625vw;
     left: 85px;
     margin: 0 auto;
   }
@@ -357,7 +357,154 @@ h3 {
   }
 
   .tickets-actions {
-    top: 26.703704vh;
+    top: 13.28125vw;
     margin: 0 auto;
+  }
+
+  .last_rounds_container .total-lottery-number .lottery-number--digit span {
+    font-size: 2.0833333333vw;
+  }
+}
+@media (max-width: 935px) {
+  .tickets-actions {
+    top: 14.5833333333vw;
+  }
+}
+@media (max-width: 880px) {
+  h1 {
+    font-size: 3.125vw;
+  }
+
+  h2,
+h3 {
+    font-size: 1.5625vw;
+  }
+
+  .tickets-actions {
+    top: 80px;
+    flex-direction: column;
+    left: unset;
+  }
+  .tickets-actions .tickets-button {
+    padding: 1.833333vw 4.291667vw;
+    margin-top: 0.920833vw;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .current_round_container > div:last-child {
+    flex-direction: column;
+  }
+
+  .current-round-info {
+    width: 80%;
+  }
+
+  .round-end-time-container {
+    margin-top: 7.8125vw;
+  }
+
+  .current-round-info .pot-title {
+    font-size: 1.5625vw;
+  }
+
+  .tickets-amount {
+    line-height: 35px;
+  }
+
+  .stack-graph {
+    width: 25.270833vw;
+  }
+
+  .pools_container .pools_card_list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 26.0416666667vw;
+  }
+
+  .stack-graph-body {
+    height: 25.229167vw;
+    width: 23.1875vw;
+  }
+  .stack-graph-body .tickets-amount {
+    font-size: 3.6458333333vw;
+  }
+  .stack-graph-body .collect-energy {
+    width: 17.625vw;
+    height: 5.6875vw;
+    margin: 0;
+    margin-bottom: 0.479167vw;
+    font-weight: 400;
+    font-size: 1.241667vw;
+    line-height: 24px;
+  }
+  .stack-graph-body .round-number {
+    font-size: 2.0833333333vw;
+  }
+
+  .total-coincidence {
+    padding: 1.5625vw 2.0833333333vw;
+    justify-content: space-around;
+  }
+  .total-coincidence .coincidence-item {
+    margin: 0;
+  }
+  .total-coincidence .coincidence-item .pot-title {
+    text-align: center;
+    font-size: 1.1979166667vw;
+    width: initial;
+  }
+}
+@media (max-width: 785px) {
+  .line-article-container .article_text {
+    font-size: 3.125vw;
+  }
+
+  h2,
+h3 {
+    font-size: 1.74375vw;
+  }
+
+  h1 {
+    font-size: 4.4270833333vw;
+  }
+
+  .round-end-time-container {
+    margin-top: 11.8125vw;
+  }
+
+  .total-energy-amount,
+.tickets-amount {
+    font-size: 2.6041666667vw;
+  }
+
+  .current-round-info .curren-pot .total-energy-amount {
+    font-size: 3.604167vw;
+  }
+
+  .current-round-info .pot-title {
+    font-size: 11px;
+    text-align-last: right;
+  }
+}
+@media (max-width: 690px) {
+  .current-round-info .curren-pot {
+    margin-left: 30px;
+    align-items: flex-start;
+  }
+  .current-round-info .curren-pot .total-energy-mount {
+    align-items: flex-start;
+  }
+
+  .tickets-amount {
+    font-size: 4vw;
+    align-self: flex-end;
+  }
+
+  .pot-tickets-container .pot-title {
+    align-self: flex-end;
   }
 }

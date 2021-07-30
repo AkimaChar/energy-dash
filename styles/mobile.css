@@ -55,7 +55,7 @@
     width: 90%;
   }
   .container aside .user_medals-container * {
-    font-size: 15px;
+    font-size: 13px;
   }
   .container aside .nav_button .button_icon {
     border-radius: 10px;
@@ -65,7 +65,7 @@
   }
 
   .container {
-    grid-template-columns: 15vw auto;
+    grid-template-columns: 17vw auto;
   }
   .container aside .nav_button .button_icon {
     width: 0.78125vw;
@@ -81,7 +81,7 @@
   }
 
   .container aside .user_medals-container .received_medals-title {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .container aside .user_medals-container p {
@@ -180,8 +180,42 @@
     width: 90%;
     margin-top: 1.0416666667vw;
   }
+
+  .container aside .user_medals-container p {
+    margin-bottom: 1.0416666667vw;
+  }
+  .container aside .user_medals-container .medals {
+    margin: auto;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5208333333vw;
+  }
+  .container aside .user_medals-container .medals img {
+    margin: 0.5208333333vw;
+  }
+
+  .container aside .nav_button .button_title {
+    font-size: 1.8229166667vw;
+  }
+
+  .social_media_links-container {
+    flex-direction: column;
+  }
+
+  .header div .user_info-short div span {
+    font-size: 2.0833333333vw;
+  }
+
+  .header div .user_info-short div p span, .header div .user_info-short div p .user_account {
+    font-size: 1.8229166667vw;
+  }
 }
-@media (max-width: 400px) {
+.header div .user_info-short {
+  align-items: center;
+}
+
+@media (max-width: 600px) {
   body {
     padding: 0 2.6041666667vw;
   }

@@ -2,11 +2,11 @@ $screen-width: 1920;
 $screen-height: 1080;
 
 @function px-to-vw($value-width) {
-  @return $value-width * 100 / $screen-width + vw;
+    @return $value-width * 100 / $screen-width+vw;
 }
 
 @function vh($value-height) {
-  @return $value-height * 100 / $screen-height + vh;
+    @return $value-height * 100 / $screen-height+vh;
 }
 
 @media (max-width: 1880px) and (min-width: 1600px) {
@@ -91,7 +91,7 @@ $screen-height: 1080;
         }
 
         .user_medals-container * {
-            font-size: 15px;
+            font-size: 13px;
         }
 
         .nav_button {
@@ -106,7 +106,7 @@ $screen-height: 1080;
     }
 
     .container {
-        grid-template-columns: 15vw auto;
+        grid-template-columns: 17vw auto;
 
         aside .nav_button {
             .button_icon {
@@ -127,7 +127,7 @@ $screen-height: 1080;
     }
 
     .container aside .user_medals-container .received_medals-title {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .container aside .user_medals-container {
@@ -252,9 +252,42 @@ $screen-height: 1080;
         width: 90%;
         margin-top: px-to-vw(20);
     }
+
+    .container aside .user_medals-container {
+        p {
+            margin-bottom: px-to-vw(20);
+        }
+
+        .medals {
+            margin: auto;
+            flex-direction: column;
+            height: fit-content;
+            width: fit-content;
+            padding: px-to-vw(10);
+
+            img {
+                margin: px-to-vw(10);
+            }
+        }
+    }.container aside .nav_button .button_title {
+        font-size: px-to-vw(35);
+    }
+    .social_media_links-container {
+        flex-direction: column;
+    }
+    .header div .user_info-short div span {
+        font-size: px-to-vw(40);
+    }
+    .header div .user_info-short div p span, .header div .user_info-short div p .user_account {
+        font-size: px-to-vw(35);
+    }
+
+}
+.header div .user_info-short {
+    align-items: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     body {
         padding: 0 px-to-vw(50);
     }
