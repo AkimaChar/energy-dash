@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: Montserrat;
@@ -331,12 +332,20 @@ h3 {
   }
 }
 @media (max-width: 1080px) {
+  .pot-tickets-container .pot-title {
+    font-size: 15px;
+  }
+
   .pools_container {
+    margin-top: 6.302083vw;
+  }
+
+  а .pools_container {
     margin-top: 5.2083333333vw;
   }
 
   .round-end-time-container div span {
-    font-size: 1.3020833333vw;
+    font-size: 1.25vw;
   }
 
   .total-amount {
@@ -413,7 +422,7 @@ h3 {
   }
 
   .stack-graph {
-    width: 25.270833vw;
+    width: 220px;
   }
 
   .pools_container .pools_card_list {
@@ -426,23 +435,25 @@ h3 {
   }
 
   .stack-graph-body {
-    height: 25.229167vw;
-    width: 23.1875vw;
+    height: 220px;
+    width: 200px;
   }
   .stack-graph-body .tickets-amount {
-    font-size: 3.6458333333vw;
+    font-size: 35px;
   }
   .stack-graph-body .collect-energy {
-    width: 17.625vw;
-    height: 5.6875vw;
+    width: 160px;
+    height: 50px;
     margin: 0;
-    margin-bottom: 0.479167vw;
+    margin-bottom: 10px;
     font-weight: 400;
-    font-size: 1.241667vw;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
     line-height: 24px;
   }
   .stack-graph-body .round-number {
-    font-size: 2.0833333333vw;
+    font-size: 20px;
   }
 
   .total-coincidence {
@@ -501,10 +512,9 @@ h3 {
 
   .tickets-amount {
     font-size: 4vw;
-    align-self: flex-end;
   }
 
   .pot-tickets-container .pot-title {
-    align-self: flex-end;
+    white-space: nowrap;
   }
 }

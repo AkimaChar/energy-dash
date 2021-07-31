@@ -385,12 +385,22 @@ h3 {
 
 
 @media (max-width: 1080px) {
+    .pot-tickets-container {
+        .pot-title {
+            font-size: 15px;
+        }
+    }
+
     .pools_container {
+        margin-top: 6.302083vw;
+    }
+
+    а .pools_container {
         margin-top: px-to-vw(100);
     }
 
     .round-end-time-container div span {
-        font-size: px-to-vw(25);
+        font-size: px-to-vw(24);
     }
 
     .total-amount {
@@ -426,6 +436,7 @@ h3 {
     .tickets-actions {
         top: px-to-vw(280);
     }
+
 }
 
 @media (max-width: 880px) {
@@ -472,7 +483,7 @@ h3 {
     }
 
     .stack-graph {
-        width: 25.270833vw;
+        width: 220px;
     }
 
     .pools_container .pools_card_list {
@@ -485,25 +496,27 @@ h3 {
     }
 
     .stack-graph-body {
-        height: 25.229167vw;
-        width: 23.1875vw;
+        height: 220px;
+        width: 200px;
 
         .tickets-amount {
-            font-size: px-to-vw(70);
+            font-size: 35px;
         }
 
         .collect-energy {
-            width: 17.625vw;
-            height: 5.6875vw;
+            width: 160px;
+            height: 50px;
             margin: 0;
-            margin-bottom: 0.479167vw;
+            margin-bottom:  10px;
             font-weight: 400;
-            font-size: 1.241667vw;
+            text-align: center;
+            font-size: 12px;
+            white-space: nowrap;
             line-height: 24px;
         }
 
         .round-number {
-            font-size: px-to-vw(40);
+            font-size: 20px;
         }
     }
 
@@ -571,11 +584,10 @@ h3 {
 
     .tickets-amount {
         font-size: 4vw;
-        align-self: flex-end;
+
     }
 
     .pot-tickets-container .pot-title {
-        align-self: flex-end;
-
+        white-space: nowrap;
     }
 }
