@@ -315,7 +315,7 @@
   align-items: center;
   gap: 0.8854166667vw;
 }
-.energy_pool__stats__token .big span {
+.energy_pool__stats__token .big span:last-of-type {
   line-height: 1.5;
   gap: 0.15625vw;
   font-size: 0.7291666667vw;
@@ -326,7 +326,7 @@
   display: flex;
   align-items: center;
 }
-.energy_pool__stats__token .big span img {
+.energy_pool__stats__token .big span:last-of-type img {
   width: 0.7291666667vw;
   height: 0.7291666667vw;
 }
@@ -511,6 +511,7 @@
   justify-content: center;
   border-left: 0.0520833333vw solid rgba(255, 255, 255, 0.05);
   border-right: 0.0520833333vw solid rgba(255, 255, 255, 0.05);
+  flex-grow: 1;
 }
 .energy_details__info .column {
   width: 25%;
@@ -573,4 +574,678 @@
 }
 .energy_details__info .block .text span span {
   color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .small {
+    font-size: 1.0416666667vw;
+    line-height: 1.3020833333vw;
+  }
+
+  .big {
+    font-size: 1.4583333333vw;
+    line-height: 1.5625vw;
+  }
+
+  .extra {
+    font-size: 1.6666666667vw;
+    line-height: 1.8229166667vw;
+  }
+
+  .energy_token_stats {
+    margin-bottom: 1.5625vw;
+  }
+  .energy_token_stats__title {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  .energy_token_stats > div {
+    padding: 1.5625vw 1.4583333333vw;
+  }
+  .energy_token_stats__bnb {
+    gap: 0.5208333333vw;
+  }
+  .energy_token_stats__bnb img {
+    width: 2.0833333333vw;
+  }
+
+  .energy_token_action_graph {
+    gap: 2.6041666667vw;
+  }
+  .energy_token_action_graph__action {
+    width: 35%;
+  }
+  .energy_token_action_graph__action_type {
+    width: 100%;
+    margin-bottom: 0.78125vw;
+  }
+  .energy_token_action_graph__action_type .type {
+    text-align: center;
+    font-size: 1.0416666667vw;
+    line-height: 1.1458333333vw;
+  }
+  .energy_token_action_graph__action_block::before {
+    width: 18.2291666667vw;
+    height: 21.875vw;
+    right: -1.25vw;
+    bottom: -1.0416666667vw;
+  }
+  .energy_token_action_graph__action_block .pocket {
+    padding: 1.3020833333vw 5%;
+    gap: 0.78125vw;
+    font-size: 1.25vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .energy_token_action_graph__action_block .pocket svg {
+    width: 1.5625vw;
+    height: 1.5104166667vw;
+  }
+  .energy_token_action_graph__action_block .action {
+    width: 90%;
+    margin-bottom: 1.5625vw;
+    padding-bottom: 1.0416666667vw;
+  }
+  .energy_token_action_graph__action_block .action .title {
+    margin-bottom: 0.5208333333vw;
+    font-size: 0.9375vw;
+    line-height: 0.9375vw;
+  }
+  .energy_token_action_graph__action_block .action .count {
+    align-items: baseline;
+  }
+  .energy_token_action_graph__action_block .action .count__payed {
+    gap: 0.5208333333vw;
+  }
+  .energy_token_action_graph__action_block .action .count__payed span {
+    font-size: 0.8333333333vw;
+    line-height: 1.1458333333vw;
+  }
+  .energy_token_action_graph__action_block .action .count__payed input {
+    max-width: 7.8125vw;
+    font-size: 1.4583333333vw;
+    line-height: 1.5625vw;
+  }
+  .energy_token_action_graph__action_block .action .count__dollars {
+    font-size: 0.8333333333vw;
+    line-height: 1.1458333333vw;
+  }
+  .energy_token_action_graph__action_block .action_btn {
+    margin-bottom: 1.5625vw;
+    padding: 1.0416666667vw;
+    font-size: 1.1458333333vw;
+    line-height: 1;
+  }
+  .energy_token_action_graph__action_block .action__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604166667vw;
+    padding: 1.0416666667vw 5%;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat {
+    gap: 0.5208333333vw;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat .type {
+    font-size: 0.8333333333vw;
+    line-height: 167%;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat .count {
+    font-size: 0.8333333333vw;
+  }
+  .energy_token_action_graph__graph .date {
+    padding-top: 0.4166666667vw;
+    gap: 0.78125vw;
+    font-size: 1.0416666667vw;
+    line-height: 1.25vw;
+    margin-bottom: 1.1458333333vw;
+  }
+  .energy_token_action_graph__graph #myChart {
+    width: 41.0416666667vw !important;
+    height: 32.2916666667vw !important;
+  }
+
+  .energy_pool {
+    margin-top: 2.0833333333vw;
+  }
+  .energy_pool__title {
+    font-size: 2.0833333333vw;
+    line-height: 2.5vw;
+    margin-bottom: 1.3020833333vw;
+  }
+  .energy_pool__stats {
+    flex-wrap: wrap;
+  }
+  .energy_pool__stats .small {
+    font-size: 1.1458333333vw;
+    line-height: 130%;
+  }
+  .energy_pool__stats .extra {
+    margin-bottom: 0.1041666667vw;
+  }
+  .energy_pool__stats > div {
+    width: fit-content;
+    padding: 1.3020833333vw 1.8229166667vw;
+    width: 33%;
+  }
+  .energy_pool__stats > div:last-of-type {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats > div:nth-of-type(4) {
+    border: none;
+  }
+  .energy_pool__stats > div:first-of-type {
+    order: -2;
+    width: 50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats > div:last-of-type {
+    order: -1;
+    width: 50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats__token img {
+    width: 2.34375vw;
+  }
+  .energy_pool__stats__token .big {
+    font-size: 1.5625vw;
+    margin-bottom: 0.2604166667vw;
+  }
+  .energy_pool__stats__token .big span:last-of-type {
+    line-height: 1;
+    gap: 0.2604166667vw;
+    font-size: 1.3020833333vw;
+  }
+  .energy_pool__stats__token .big span:last-of-type img {
+    width: 1.0416666667vw;
+    height: 1.0416666667vw;
+  }
+
+  .energy_info_blocks__info__block .title {
+    font-size: 1.3541666667vw;
+    line-height: 120%;
+  }
+  .energy_info_blocks__info__block .body {
+    padding: 1.3020833333vw 1.6666666667vw;
+  }
+  .energy_info_blocks__info__block .body .extra {
+    margin-bottom: 0.3645833333vw;
+  }
+  .energy_info_blocks__info__block .body .small {
+    font-size: 1.0416666667vw;
+    line-height: 120%;
+  }
+  .energy_info_blocks__info__block .footer button {
+    font-size: 0.9375vw;
+    line-height: 120%;
+    padding: 0.8854166667vw 0;
+  }
+  .energy_info_blocks__reward__block .title {
+    font-size: 1.3541666667vw;
+    line-height: 120%;
+  }
+  .energy_info_blocks__reward__block .title svg {
+    width: 1.5625vw;
+    height: 1.5625vw;
+  }
+  .energy_info_blocks__reward__block .body {
+    padding: 1.8229166667vw 1.6666666667vw;
+  }
+  .energy_info_blocks__reward__block .body p {
+    font-size: 0.9375vw;
+    margin-bottom: 0.625vw;
+  }
+
+  .energy_details__button {
+    gap: 0.78125vw;
+    font-size: 1.25vw;
+  }
+  .energy_details__button svg {
+    width: 0.8854166667vw;
+    height: 1.25vw;
+    transform: rotate(-90deg) scaleX(1) translateX(0);
+  }
+  .energy_details__button.active svg {
+    transform: rotate(-90deg) scaleX(-1) translateX(0);
+  }
+  .energy_details__info .text {
+    font-size: 0.9375vw !important;
+  }
+  .energy_details__info p {
+    display: flex;
+    align-items: baseline;
+    gap: 0.78125vw;
+  }
+  .energy_details__info > .block:last-of-type div {
+    gap: 0.5208333333vw;
+  }
+  .energy_details__info > .block:last-of-type div p span.text::first-letter {
+    margin-right: 0;
+  }
+  .energy_details__info .block {
+    padding: 1.5625vw;
+  }
+  .energy_details__info .block .title {
+    font-size: 1.25vw;
+    line-height: 120%;
+  }
+  .energy_details__info .block .text {
+    font-size: 0.8854166667vw;
+    line-height: 120%;
+  }
+  .energy_details__info .block .text span {
+    font-size: 0.8854166667vw;
+    line-height: 120%;
+  }
+}
+@media (max-width: 600px) {
+  .small {
+    font-size: 2.6086956522vw;
+    line-height: 3.2608695652vw;
+  }
+
+  .big,
+.extra {
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+
+  .energy_token_stats {
+    margin-top: 4.347826087vw;
+    backdrop-filter: blur(5.4347826087vw);
+    border-radius: 3.2608695652vw;
+    border: 1px solid #27296d;
+    flex-wrap: wrap;
+    margin-bottom: 5.4347826087vw;
+  }
+  .energy_token_stats__title {
+    width: 100%;
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+    border: none !important;
+  }
+  .energy_token_stats > div {
+    padding: 4.347826087vw 5.4347826087vw;
+    border: none;
+  }
+  .energy_token_stats > div:nth-of-type(1) {
+    order: 1;
+  }
+  .energy_token_stats > div:nth-of-type(2) {
+    order: 2;
+    width: 50%;
+    padding-right: 3.2608695652vw;
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_token_stats > div:nth-of-type(3) {
+    order: 4;
+    width: 50%;
+    border-right: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_token_stats > div:nth-of-type(4) {
+    order: 5;
+    width: 50%;
+  }
+  .energy_token_stats > div:nth-of-type(5) {
+    order: 3;
+    width: 50%;
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_token_stats__bnb {
+    gap: 2.3913043478vw;
+  }
+  .energy_token_stats__bnb img {
+    width: 6.3043478261vw;
+  }
+  .energy_token_stats__bnb .big {
+    margin-bottom: 0.2173913043vw;
+  }
+
+  .energy_token_action_graph {
+    display: flex;
+    gap: 7.8260869565vw;
+    flex-wrap: wrap;
+  }
+  .energy_token_action_graph__action {
+    width: 100%;
+  }
+  .energy_token_action_graph__action_type {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 3.2608695652vw;
+    margin-bottom: 3.9130434783vw;
+  }
+  .energy_token_action_graph__action_type .active_block {
+    border-radius: 3.2608695652vw;
+  }
+  .energy_token_action_graph__action_type .type {
+    padding: 4.347826087vw 10.8695652174vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_token_action_graph__action_block {
+    width: 74.5652173913vw;
+    margin: 0 auto;
+    box-shadow: 0 0.8695652174vw 9.7826086957vw rgba(0, 0, 0, 0.25);
+    border-radius: 3.2608695652vw;
+  }
+  .energy_token_action_graph__action_block::before {
+    width: 63.2608695652vw;
+    height: 71.9565217391vw;
+    right: 5.652173913vw;
+    bottom: -3.4782608696vw;
+  }
+  .energy_token_action_graph__action_block .pocket {
+    padding: 5.4347826087vw 5.2173913043vw;
+    gap: 2.3913043478vw;
+    font-size: 4.347826087vw;
+    line-height: 5.2173913043vw;
+    margin-bottom: 3.0434782609vw;
+  }
+  .energy_token_action_graph__action_block .pocket svg {
+    width: 5.4347826087vw;
+    height: 5.2173913043vw;
+  }
+  .energy_token_action_graph__action_block .action {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 5.4347826087vw;
+    padding-bottom: 2.1739130435vw;
+  }
+  .energy_token_action_graph__action_block .action .title {
+    margin-bottom: 0.8695652174vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+    opacity: 0.2;
+  }
+  .energy_token_action_graph__action_block .action .count__payed {
+    gap: 1.0869565217vw;
+  }
+  .energy_token_action_graph__action_block .action .count__payed span {
+    font-size: 2.6086956522vw;
+    line-height: 3.2608695652vw;
+  }
+  .energy_token_action_graph__action_block .action .count__payed input {
+    max-width: 32.6086956522vw;
+    font-weight: 500;
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+  }
+  .energy_token_action_graph__action_block .action .count__dollars {
+    font-size: 2.6086956522vw;
+    line-height: 3.2608695652vw;
+  }
+  .energy_token_action_graph__action_block .action_btn {
+    border-radius: 3.2608695652vw;
+    margin-bottom: 5vw;
+    padding: 5.4347826087vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_token_action_graph__action_block .action__stats {
+    padding: 5.2173913043vw 5.652173913vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8695652174vw;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat {
+    gap: 2.1739130435vw;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat .type {
+    font-size: 2.6086956522vw;
+    line-height: 4.347826087vw;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat .count {
+    font-size: 2.6086956522vw;
+  }
+  .energy_token_action_graph__action_block .action__stats .stat .count span {
+    margin-right: 1.0869565217vw;
+  }
+  .energy_token_action_graph__graph .date {
+    display: none;
+  }
+  .energy_token_action_graph__graph #myChart {
+    width: 100% !important;
+    height: 46.0869565217vw !important;
+    border-radius: 3.2608695652vw;
+  }
+
+  .energy_pool {
+    margin-top: 4.5652173913vw;
+  }
+  .energy_pool__title {
+    gap: 2.1739130435vw;
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+    margin-bottom: 3.9130434783vw;
+  }
+  .energy_pool__stats {
+    align-items: stretch;
+    border-radius: 3.2608695652vw;
+  }
+  .energy_pool__stats .small {
+    font-size: 2.6086956522vw;
+    line-height: 3.2608695652vw;
+  }
+  .energy_pool__stats .extra {
+    margin-bottom: 0.4347826087vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_pool__stats > div {
+    padding: 4.5652173913vw;
+    border: none;
+  }
+  .energy_pool__stats > div:nth-of-type(1) {
+    order: 1;
+    width: 65%;
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats > div:nth-of-type(2) {
+    order: 3;
+    width: 33%;
+    border-right: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats > div:nth-of-type(3) {
+    order: 4;
+    width: 33%;
+    border-right: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_pool__stats > div:nth-of-type(4) {
+    order: 5;
+    width: 33%;
+  }
+  .energy_pool__stats > div:nth-of-type(5) {
+    order: 2;
+    width: 35%;
+    padding-left: 0;
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+    border-right: none;
+  }
+  .energy_pool__stats__token {
+    gap: 3.0434782609vw;
+  }
+  .energy_pool__stats__token img {
+    width: 7.3913043478vw;
+  }
+  .energy_pool__stats__token .big {
+    margin-bottom: 0.8695652174vw;
+    gap: 2.1739130435vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_pool__stats__token .big span:first-of-type {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 5.5ch;
+  }
+  .energy_pool__stats__token .big span:last-of-type {
+    gap: 0.652173913vw;
+    font-size: 2.6086956522vw;
+    border-radius: 3.2608695652vw;
+    padding: 0.652173913vw 1.9565217391vw;
+  }
+  .energy_pool__stats__token .big span:last-of-type img {
+    width: 2.6086956522vw;
+    height: 2.6086956522vw;
+  }
+
+  .energy_info_blocks {
+    margin-bottom: 6.9565217391vw;
+    margin-top: 10.4347826087vw;
+    flex-direction: column;
+    border-top: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+    gap: 4.1304347826vw;
+  }
+  .energy_info_blocks__info {
+    width: 100%;
+    padding: 6.9565217391vw 0 0 0;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4.1304347826vw;
+  }
+  .energy_info_blocks__info__block .title {
+    border-radius: 3.2608695652vw 3.2608695652vw 0 0;
+    font-size: 4.347826087vw;
+    line-height: 5.2173913043vw;
+    padding: 5.4347826087vw 6.9565217391vw;
+  }
+  .energy_info_blocks__info__block .body {
+    padding: 4.347826087vw 6.9565217391vw;
+  }
+  .energy_info_blocks__info__block .body .extra {
+    margin-bottom: 1.5217391304vw;
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+  }
+  .energy_info_blocks__info__block .body .small {
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_info_blocks__info__block .footer {
+    border-radius: 0 0 3.2608695652vw 3.2608695652vw;
+    padding: 3.9130434783vw 6.9565217391vw;
+    gap: 5vw;
+  }
+  .energy_info_blocks__info__block .footer button {
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+    padding: 3.6956521739vw 2.1739130435vw;
+    border-radius: 3.2608695652vw;
+  }
+  .energy_info_blocks__reward {
+    width: 100%;
+    padding: 0 0 6.9565217391vw 0;
+  }
+  .energy_info_blocks__reward__block {
+    box-shadow: 0 0 9.7826086957vw rgba(0, 0, 0, 0.25);
+    border-radius: 3.2608695652vw;
+  }
+  .energy_info_blocks__reward__block > div {
+    padding: 5.2173913043vw 6.9565217391vw;
+  }
+  .energy_info_blocks__reward__block .title {
+    border-radius: 3.2608695652vw 3.2608695652vw 0 0;
+    font-size: 4.347826087vw;
+    line-height: 5.2173913043vw;
+  }
+  .energy_info_blocks__reward__block .title svg {
+    display: none;
+  }
+  .energy_info_blocks__reward__block .body {
+    padding: 5.2173913043vw 6.9565217391vw;
+  }
+  .energy_info_blocks__reward__block .body p {
+    font-size: 3.2608695652vw;
+    margin-bottom: 2.6086956522vw;
+  }
+  .energy_info_blocks__reward__block .body p span {
+    margin-left: 1.0869565217vw;
+  }
+  .energy_info_blocks__reward__block .footer {
+    padding: 4.5652173913vw 6.9565217391vw;
+    border-radius: 0 0 3.2608695652vw 3.2608695652vw;
+    font-size: 8.6956521739vw;
+    line-height: 10.4347826087vw;
+  }
+
+  .energy_details {
+    margin-bottom: 5.652173913vw;
+  }
+  .energy_details__button {
+    margin-bottom: 5.8695652174vw;
+    gap: 1.7391304348vw;
+    font-size: 3.2608695652vw;
+  }
+  .energy_details__button svg {
+    width: 1.7391304348vw;
+    height: 3.2608695652vw;
+    transform: rotate(-90deg) scaleX(1) translateX(0);
+    transition: 0.3s;
+  }
+  .energy_details__button.active svg {
+    transform: rotate(-90deg) scaleX(-1) translateX(0);
+  }
+  .energy_details__info {
+    backdrop-filter: blur(5.4347826087vw);
+    border-radius: 3.2608695652vw;
+    flex-direction: column;
+  }
+  .energy_details__info > div:nth-of-type(2) {
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+    border-right: none;
+    border-left: none;
+  }
+  .energy_details__info .column {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  .energy_details__info .column .block {
+    width: 50%;
+    border-bottom: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_details__info .column .block:first-of-type {
+    border-right: 0.2173913043vw solid rgba(255, 255, 255, 0.05);
+  }
+  .energy_details__info > .block:last-of-type {
+    width: 100%;
+  }
+  .energy_details__info > .block:last-of-type > .text {
+    margin-bottom: 3.2608695652vw;
+    font-size: 3.2608695652vw !important;
+    line-height: 5.4347826087vw;
+  }
+  .energy_details__info > .block:last-of-type div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6086956522vw;
+  }
+  .energy_details__info > .block:last-of-type div p span {
+    margin: 0 0.4347826087vw 0 0;
+  }
+  .energy_details__info > .block:last-of-type div p span.text::first-letter {
+    margin-right: 0;
+  }
+  .energy_details__info .block {
+    padding: 4.5652173913vw 5.4347826087vw;
+    gap: 3.2608695652vw;
+  }
+  .energy_details__info .block > div {
+    gap: 1.5217391304vw;
+  }
+  .energy_details__info .block .title {
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .energy_details__info .block .text {
+    width: 100%;
+    font-size: 2.6086956522vw !important;
+    line-height: 3.6956521739vw;
+  }
+  .energy_details__info .block .text span {
+    margin: 0;
+    font-size: 2.6086956522vw;
+  }
 }
