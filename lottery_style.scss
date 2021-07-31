@@ -574,12 +574,17 @@ h3 {
 @media (max-width: 690px) {
 
     .current-round-info .curren-pot {
-        margin-left: 30px;
+        margin-left: px-to-vw(40);
         align-items: flex-start;
 
         & .total-energy-mount {
             align-items: flex-start;
         }
+    }
+
+    .pools_container .pools_card_list .pool_card {
+        width: 250px;
+        max-width: unset;
     }
 
     .stack-graph-body {
@@ -591,6 +596,18 @@ h3 {
 
     }
 
+    .last_rounds_container .total-lottery-number .lottery-number--digit span {
+        font-size: 26px;
+    }
+
+
+
+    .total-coincidence .coincidence-item .pot-title {
+        font-size: 10px;
+    }
+
+    
+
     .round-end-time-container div span {
         font-size: px-to-vw(40);
     }
@@ -601,18 +618,45 @@ h3 {
 
     .total-energy-amount,
     .tickets-amount {
-        font-size: 4.604167vw;
+        font-size: 40px;
+    }
+    .pools_container .pools_card_list .pool_card {
+        margin-bottom: 25px;
+        
+    }.pools_container .pools_card_list .pool_card .card-pool-earned {
+        padding: 6px 7px;
     }
 
     .total-amount {
         font-size: 3.083333vw;
     }
 
+    .total-energy-img {
+        width: 40px;
+        height: 41px;
+        margin-right: 1.0416666667vw;
+    }
+
+    .pool_card {
+        .total-amount {
+            font-size: 24px;
+        }
+    }
+
     h2,
     h3 {
         font-size: px-to-vw(40);
     }
+
     .pools_container .pools_card_list {
         flex-direction: column;
+    }.pools_container .pools_card_list .pool_card .card-pool-stack {
+        padding: 10px 5px;
+    }
+
+    .last_rounds_container .total-lottery-number .lottery-number--digit {
+
+        height: 45px;
+        width: 45px;
     }
 }
