@@ -2,11 +2,11 @@ $screen-width: 1920;
 $screen-height: 1080;
 
 @function px-to-vw($value-width) {
-  @return $value-width * 100 / $screen-width + vw;
+  @return $value-width * 100 / $screen-width+vw;
 }
 
 @function vh($value-height) {
-  @return $value-height * 100 / $screen-height + vh;
+  @return $value-height * 100 / $screen-height+vh;
 }
 
 * {
@@ -594,9 +594,9 @@ body {
       border-radius: 15px 15px 0 0;
 
       #myChart {
-        width: px-to-vw(900) !important;
+        width: 102% !important;
         height: px-to-vw(300) !important;
-        margin: 0;
+        margin-left: -11px;
       }
     }
 
@@ -1314,14 +1314,16 @@ body {
     transition: 0.2s ease;
   }
 
+
   .assigment-item {
     display: grid;
+    position: relative;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: ". . .";
-    height: px-to-vw(95);
+    height: 95px;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(25px);
     border-radius: 15px;
@@ -1479,9 +1481,13 @@ body {
     margin-bottom: px-to-vw(20);
     border: 1px solid #2c2e7780;
 
-    .news-item--img {
-      width: px-to-vw(441);
-      height: px-to-vw(209);
+    .news-item--img-container {
+      height:auto;
+      margin-right: 25px;
+      .news-item--img {
+        width: px-to-vw(441);
+        height: 100%;
+      }
     }
 
     .news-item--info {
@@ -1534,133 +1540,10 @@ body {
   background-size: contain;
 }
 
-@media  (max-width: 1366px) {
+.line-article-container .article_text {
+  white-space: nowrap;
+}
 
-  .stack_stat .stack-title .stack-cash p,
-  .line-article-container .article_text {
-    white-space: nowrap;
-  }
-
-  .stack_stat .stack-title .stack-cash p {
-    font-size: px-to-vw(40);
-  }
-
-  .stack_stat .stack-graph .graph-body canvas#myChart {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-  .title-hr_half {
-    display: none;
-  }
-
-  .stack_stat .stack-graph .graph-info .graph-pending p,
-  .stack_stat .stack-graph .graph-info .graph-worth p {
-    font-size: px-to-vw(30);
-    margin: 0;
-  }
-
-  .stack_stat .stack-graph .graph-info .graph-pending,
-  .stack_stat .stack-graph .graph-info .graph-worth {
-    display: flex;
-    align-items: center;
-  }
-
-  .graph-title {
-    margin: 0;
-  }
-
-  .stack_stat .stack-graph {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: fit-content;
-
-    .graph-info {
-      margin-top: px-to-vw(50);
-      flex-direction: row;
-      white-space: nowrap;
-      align-items: center;
-
-      button.graph-button {
-        padding: px-to-vw(20);
-      }
-    }
-
-    .graph-body {
-      order: 1;
-      height: px-to-vw(400);
-      width: 100%;
-      min-width: unset;
-      max-width: unset;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: px-to-vw(-30);
-      z-index: -100;
-      width: 67.1875vw;
-      height: vh(390);
-      background: linear-gradient(93.58deg, rgba(62, 66, 182, 0.5) -19.17%, rgba(32, 34, 105, 0.5) 95.81%);
-      border-radius: 15px;
-    }
-  }
-
-  .stack_stat .energy_account-container {
-    flex-direction: column;
-
-    .energy-spot {
-      margin-left: 0;
-      margin-top: px-to-vw(20);
-      max-width: unset;
-
-      .spot-button {
-        height: 8vw;
-      }
-    }
-  }
-
-  .pools_container .pools_card_list .pool_card {
-    max-width: 32.354167vw;
-    border-radius: 1.78125vw;
-    margin-bottom: px-to-vw(50);
-  }
-
-  .pools_container .pools_card_list .pool_card button.details-button {
-    border-radius: 0 0 1.78125vw 1.78125vw;
-
-  }
-
-  .assigments_container .assigment-item {
-
-    font-size: 13px;
-  }
-
-  .as-description--text {
-    font-size: 11px;
-  }
-
-  .assigments_container .assigment-item .as-prize span {
-    font-size: 14px;
-  }
-
-  .assigments_container .assigment-item .as-title .as-title--img .title-circle {
-
-    padding-top: 0;
-    font-size: 11px;
-  }
-
-  .assigments_container .assigment-item .as-title .as-title--img {
-
-    width: 4.125vw;
-  }
-
-  .news_container .news-item .news-item--info .info-title {
-    font-size: 14px;
-  }
-  .line-article-container .title_hr {
-    position: relative;
-    top: 2px;
-  }
+@media(max-width:  ) {
+  
 }

@@ -17,8 +17,7 @@ function setData() {
                 data.push(el.data);
                 step.push(el.step);
             })
-            drawChart()
-            console.log(1);
+            drawChart();
         });
 }
 
@@ -43,7 +42,7 @@ function drawChart() {
                 borderWidth: 1,
                 tension: 0.5,
                 pointBorderColor: 'transparent',
-                pointBackgroundColor: 'transparent',
+                pointBackgroundColor: 'transparent'
             }]
         },
         options: {
@@ -56,9 +55,11 @@ function drawChart() {
                 xAxes: [{
                     ticks: {
                         display: false,
-                    }, gridLines: {
+                    },
+                    gridLines: {
                         color: 'rgba(255,255,255,0.2)',
-                        lineWidth: 0.1
+                        lineWidth: 0.1,
+                        zeroLineColor: 'rgba(255,255,255, 0)'
                     }
                 }],
                 yAxes: [{
@@ -75,12 +76,18 @@ function drawChart() {
                         maxTicksLimit: 30,
                         max: max[0],
                         stepSize: step[0]
-                    }, 
+                    },
                     gridLines: {
                         color: 'rgba(255,255,255,0.2)',
-                        lineWidth: 0.1
+                        lineWidth: 0.1,
+                        zeroLineColor: 'rgba(255,255,255, 0)'
                     }
                 }]
+            },
+            tooltips: {
+                yPadding: 12,
+                titleFontSize: 15,
+                bodyFontSize: 14
             }
         }
     };

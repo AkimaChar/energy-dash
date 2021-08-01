@@ -20,7 +20,6 @@ function setData() {
       step.push(el.step);
     });
     drawChart();
-    console.log(1);
   });
 }
 
@@ -59,7 +58,8 @@ function drawChart() {
           },
           gridLines: {
             color: 'rgba(255,255,255,0.2)',
-            lineWidth: 0.1
+            lineWidth: 0.1,
+            zeroLineColor: 'rgba(255,255,255, 0)'
           }
         }],
         yAxes: [{
@@ -79,9 +79,15 @@ function drawChart() {
           },
           gridLines: {
             color: 'rgba(255,255,255,0.2)',
-            lineWidth: 0.1
+            lineWidth: 0.1,
+            zeroLineColor: 'rgba(255,255,255, 0)'
           }
         }]
+      },
+      tooltips: {
+        yPadding: 12,
+        titleFontSize: 15,
+        bodyFontSize: 14
       }
     }
   };
