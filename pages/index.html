@@ -125,18 +125,20 @@
                     </div>
                   </div>
                   <div class="stack-graph">
-                    <div class="graph-info"><span class="graph-title">Yield</span>
-                      <hr class="title-hr_half">
-                      <div class="graph-worth">Net worth
-                        <p>$ <span>{{stack.net.worth}}</span></p>
+                    <div class="stack-graph--body">
+                      <div class="graph-info"><span class="graph-title">Yield</span>
+                        <hr class="title-hr_half">
+                        <div class="graph-worth">Net worth
+                          <p>$ <span>{{stack.net.worth}}</span></p>
+                        </div>
+                        <div class="graph-pending">Pending
+                          <p>$ <span>{{stack.pending}}</span></p>
+                        </div>
+                        <button class="graph-button shaded-button">Harvest all</button>
                       </div>
-                      <div class="graph-pending">Pending
-                        <p>$ <span>{{stack.pending}}</span></p>
+                      <div class="graph-body">
+                        <canvas id="myChart"></canvas>
                       </div>
-                      <button class="graph-button shaded-button">Harvest all</button>
-                    </div>
-                    <div class="graph-body">
-                      <canvas id="myChart"></canvas>
                     </div>
                   </div>
                   <div class="energy_account-container">

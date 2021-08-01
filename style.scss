@@ -493,114 +493,107 @@ body {
   }
 
   .stack-graph {
-    min-height: 340px;
-    max-width: px-to-vw(1230);
-    margin: 0 auto;
-    margin-top: px-to-vw(20);
-    padding: px-to-vw(30) px-to-vw(45);
-    background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
-    box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    
+    background: linear-gradient(93.58deg,
+        rgba(62, 66, 182, 0.5) -19.17%,
+        rgba(32, 34, 105, 0.5) 95.81%);
     border-radius: 15px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50px;
-      left: -30px;
-      z-index: -100;
-      max-width: px-to-vw(1290);
-      width: px-to-vw(1290);
-      height: px-to-vw(340);
-      background: linear-gradient(93.58deg,
-          rgba(62, 66, 182, 0.5) -19.17%,
-          rgba(32, 34, 105, 0.5) 95.81%);
+    margin-top: px-to-vw(40);
+    width: 100%;
+    .stack-graph--body {
+      min-height: 360px;
+      max-width: px-to-vw(1250);
+      margin: 0 auto;
+      top: -15px;
+      padding: px-to-vw(30) px-to-vw(45);
+      background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
+      box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
       border-radius: 15px;
-    }
 
-    .graph-info {
+      position: relative;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
 
-      .graph-title {
-        font-weight: 500;
-        font-size: 35px;
-        line-height: 43px;
-        margin: 0;
-        margin-top: 10px;
-      }
-
-      .title-hr_half {
-        margin: px-to-vw(18) 0;
-        background: linear-gradient(90deg,
-            #fa9c4c 0%,
-            rgba(33, 35, 94, 0) 112.26%);
-        height: 1px;
-        width: px-to-vw(155);
-        border: none;
-      }
-
-      .graph-pending,
-      .graph-worth {
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-        color: rgba(255, 255, 255, 0.3);
+      .graph-info {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
 
-        p {
+        .graph-title {
+          font-weight: 500;
+          font-size: 55px;
+          line-height: 43px;
+          margin: 0;
           margin-top: 10px;
-          margin-bottom: 15px;
-          font-size: 20px;
-          line-height: 24px;
-          color: #00a3ff;
+        }
 
-          span {
-            color: #ffffff;
+        .title-hr_half {
+          margin: px-to-vw(18) 0;
+          background: linear-gradient(90deg,
+              #fa9c4c 0%,
+              rgba(33, 35, 94, 0) 112.26%);
+          height: 1px;
+          width: px-to-vw(155);
+          border: none;
+        }
+
+        .graph-pending,
+        .graph-worth {
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 18px;
+          color: rgba(255, 255, 255, 0.3);
+          display: flex;
+          flex-direction: column;
+
+          p {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 24px;
+            color: #00a3ff;
+
+            span {
+              color: #ffffff;
+            }
+          }
+        }
+
+        button.graph-button {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+
+          border: 1px solid #00a3ff;
+          border-radius: 15px;
+          padding: px-to-vw(17) px-to-vw(48);
+          transition: 0.2s ease;
+
+          &:active {
+            top: 2px;
           }
         }
       }
 
-      button.graph-button {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+      .graph-body {
+        max-width: px-to-vw(905);
+        width: px-to-vw(905);
+        min-width: px-to-vw(150);
+        min-height: px-to-vw(300);
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        width: px-to-vw(900);
+        overflow: hidden;
+        border-radius: 15px 15px 0 0;
 
-        border: 1px solid #00a3ff;
-        border-radius: 15px;
-        padding: px-to-vw(17) px-to-vw(48);
-        transition: 0.2s ease;
-
-        &:active {
-          top: 2px;
+        #myChart {
+          width: 102% !important;
+          height: auto !important;
+          margin-left: -11px;
         }
       }
+
+      margin-bottom: px-to-vw(50);
     }
-
-    .graph-body {
-      max-width: px-to-vw(905);
-      width: px-to-vw(905);
-      min-width: px-to-vw(150);
-      min-height: px-to-vw(300);
-      border: 1px solid rgba(255, 255, 255, 0.15) !important;
-      width: px-to-vw(900);
-      height: px-to-vw(245);
-      overflow: hidden;
-      border-radius: 15px 15px 0 0;
-
-      #myChart {
-        width: 102% !important;
-        height: px-to-vw(300) !important;
-        margin-left: -11px;
-      }
-    }
-
-    margin-bottom: px-to-vw(50);
   }
 
   .energy_account-container {
@@ -1482,8 +1475,9 @@ body {
     border: 1px solid #2c2e7780;
 
     .news-item--img-container {
-      height:auto;
+      height: auto;
       margin-right: 25px;
+
       .news-item--img {
         width: px-to-vw(441);
         height: 100%;
@@ -1542,8 +1536,4 @@ body {
 
 .line-article-container .article_text {
   white-space: nowrap;
-}
-
-@media(max-width:  ) {
-  
 }

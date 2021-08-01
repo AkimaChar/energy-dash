@@ -85,7 +85,6 @@ function drawChart() {
                 }]
             },
             tooltips: {
-                yPadding: 12,
                 titleFontSize: 15,
                 bodyFontSize: 14
             }

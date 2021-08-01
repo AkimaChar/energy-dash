@@ -36,22 +36,23 @@ mixin _dashboard
                             |$ 
                             span {{NaN}}
                 .stack-graph
-                    .graph-info
-                        span.graph-title Yield
-                        hr.title-hr_half
-                        .graph-worth
-                            | Net worth
-                            p
-                                |$ 
-                                span {{stack.net.worth}}
-                        .graph-pending
-                            | Pending
-                            p
-                                |$ 
-                                span {{stack.pending}}
-                        button.graph-button.shaded-button Harvest all
-                    .graph-body
-                        canvas#myChart
+                    .stack-graph--body
+                        .graph-info
+                            span.graph-title Yield
+                            hr.title-hr_half
+                            .graph-worth
+                                | Net worth
+                                p
+                                    |$ 
+                                    span {{stack.net.worth}}
+                            .graph-pending
+                                | Pending
+                                p
+                                    |$ 
+                                    span {{stack.pending}}
+                            button.graph-button.shaded-button Harvest all
+                        .graph-body
+                            canvas#myChart
                 .energy_account-container
                     .energy-actions
                         .token-cont
