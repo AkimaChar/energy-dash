@@ -1316,7 +1316,6 @@ body {
   }
 
   .opened-list {
-    height: px-to-vw(146);
     overflow: hidden;
     transition: 0.2s ease;
   }
@@ -1566,6 +1565,7 @@ body {
     ".";
   padding: 0;
   height: unset;
+  margin-bottom: 10px;
 
   &>div:first-child {
     display: grid;
@@ -1593,6 +1593,12 @@ body {
   }
 }
 
+.assigments_container .assigment-item .as-description p {
+  text-align: left;
+}
+.assigments_container .assigment-item::before {
+  border-radius: 15px;
+}
 .info-title {
   hr {
     margin-top: 27px !important;
@@ -1620,4 +1626,8 @@ body {
       position: relative !important;
     }
   }
+}
+
+.assigments_container .assigment-item .as-prize span {
+  white-space: nowrap;
 }

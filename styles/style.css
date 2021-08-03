@@ -1077,7 +1077,6 @@ body {
   border-radius: 0.78125vw;
 }
 .assigments_container .opened-list {
-  height: 7.6041666667vw;
   overflow: hidden;
   transition: 0.2s ease;
 }
@@ -1283,6 +1282,7 @@ body {
   grid-template-areas: "." ".";
   padding: 0;
   height: unset;
+  margin-bottom: 10px;
 }
 .assigments_container .as-modified > div:first-child {
   display: grid;
@@ -1302,6 +1302,14 @@ body {
   border: none;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.assigments_container .assigment-item .as-description p {
+  text-align: left;
+}
+
+.assigments_container .assigment-item::before {
+  border-radius: 15px;
 }
 
 .info-title hr {
@@ -1329,4 +1337,8 @@ body {
   font-size: 15px;
   left: 0.5px !important;
   position: relative !important;
+}
+
+.assigments_container .assigment-item .as-prize span {
+  white-space: nowrap;
 }

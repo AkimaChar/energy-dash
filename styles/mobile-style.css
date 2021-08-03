@@ -71,14 +71,18 @@
     margin: 0;
   }
 }
-@media (max-width: 1365px) {
-  .assigments_container .assigment-item {
-    padding: 0 1vw;
-  }
-}
 @media (max-width: 1250px) {
   .stack_stat .energy_account-container {
     flex-direction: column;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+    padding-left: 0;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle svg {
+    height: 1.08125vw;
+    width: 1.320833vw;
   }
 
   .stack_stat .energy_account-container .energy-spot {
@@ -155,6 +159,10 @@
 @media (max-width: 900px) {
   .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
     display: none;
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 13px;
   }
 
   .stack_stat .stack-graph .stack-graph--body .graph-body {
@@ -245,6 +253,34 @@
 
   .slider .slider-navigation .nav-planks .item_plank {
     width: 5.041667vw;
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 10px;
+  }
+
+  .assigments_container .assigment-item .as-title span {
+    font-size: 12px;
+  }
+
+  .assigments_container .as-modified .as-title,
+.assigments_container .as-modified .as-description,
+.assigments_container .as-modified .as-prize {
+    padding: 2vw 3vw;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+    margin-left: 5px;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img {
+    border-radius: 9px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .assigments_container .assigment-item .as-description p {
+    font-size: 13px;
   }
 }
 @media (max-width: 630px) {

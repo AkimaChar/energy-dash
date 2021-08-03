@@ -121,15 +121,22 @@ document.querySelectorAll('.pools-article_button').forEach(function (el) {
   if (el.classList.contains('show-active')) {} else if (el.classList.contains('show-non-active')) {}
 }); // Change task visibility 
 
+var cont = document.querySelector('.assigments-list');
 var change_button = document.querySelector('.change-list-visibility');
 change_button.addEventListener('click', function () {
   document.querySelector('.svg-arrow').classList.toggle('active-rot-svg');
   document.querySelector('.assigments-list').classList.toggle('opened-list');
+
+  if (cont.classList.contains('opened-list')) {
+    var a_item_height = document.querySelector('.as-modified').offsetHeight;
+    cont.style.height = a_item_height + "px";
+  } else {
+    cont.style.height = "fit-content";
+  }
 }); // Change layout of aligns 
 
-var cont = document.querySelector('.assigments-list');
 window.addEventListener('DOMContentLoaded', function () {
-  var bodyWidth = document.querySelector('body').offsetWidth;
+  var bodyWidth = document.querySelector('body').clientWidth;
 
   if (bodyWidth <= 1250) {
     var a_item = document.querySelectorAll('.assigment-item');
