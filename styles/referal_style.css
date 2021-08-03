@@ -525,3 +525,67 @@ h4 {
   color: #00a3ff;
   margin-left: 0.7291666667vw;
 }
+
+.title-ref-link-cont > div:nth-of-type(2) {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  padding: 0;
+  border: none;
+}
+.title-ref-link-cont > div:nth-of-type(2) div {
+  padding: 1.5625vw;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.read-more-line,
+.ref-stat-info,
+.available-rewards_container,
+.rewards-stat {
+  display: none;
+}
+
+@media (max-width: 1455px) {
+  .ref-title-cont {
+    flex-direction: column;
+  }
+  .ref-title-cont .title-text {
+    margin-bottom: 10px;
+  }
+  .ref-title-cont .title-text h1,
+.ref-title-cont .title-text h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 845px) {
+  .title-ref-link-cont span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 780px) {
+  .title-ref-link-cont > div:nth-of-type(2) {
+    flex-direction: column;
+    border: none;
+  }
+  .title-ref-link-cont > div:nth-of-type(2) span {
+    padding: 1.5625vw;
+  }
+  .title-ref-link-cont > div:nth-of-type(2) div {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .title-ref-link-cont span,
+.title-ref-link-cont button.ref-link {
+    margin: auto 1.3020833333vw;
+  }
+
+  .title-ref-link-cont .title-copy-button {
+    width: 10%;
+  }
+
+  .title-ref-link-cont div:nth-of-type(2) .ref-link {
+    line-height: 24px;
+  }
+}

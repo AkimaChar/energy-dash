@@ -32,7 +32,6 @@ $screen-width: 1920;
     }
 }
 
-
 @media(max-width: 1377px) {
     .stack_stat .stack-graph .stack-graph--body {
         flex-direction: column;
@@ -89,8 +88,6 @@ $screen-width: 1920;
         }
     }
 }
-
-
 
 @media(max-width: 1250px) {
     .stack_stat .energy_account-container {
@@ -504,7 +501,7 @@ $screen-width: 1920;
     .stack_stat .energy_account-container .energy-actions .token-action-btns {
         left: 36%;
     }
-    
+
     .stack_stat .energy_account-container .energy-actions .token-cont div p {
         font-size: px-to-vw(50);
 
