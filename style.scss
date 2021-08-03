@@ -972,6 +972,7 @@ body {
     font-size: 15px;
     line-height: 18px;
     color: rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
   }
 
   .pools-article_button {
@@ -1549,6 +1550,24 @@ body {
         font-size: 15px;
         line-height: 18px;
         padding: px-to-vw(17) px-to-vw(62);
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 10%;
+          left: 10%;
+          width: 80%;
+          height: 80%;
+          background: rgba(0, 163, 255, 0.2);
+          filter: blur(px-to-vw(35));
+          border-radius: px-to-vw(15);
+          z-index: -10;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
       }
     }
   }

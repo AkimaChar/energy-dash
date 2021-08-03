@@ -114,6 +114,22 @@
   }
 }
 @media (max-width: 1125px) {
+  .line-article-container {
+    flex-wrap: wrap;
+    gap: 0.5208333333vw;
+  }
+  .line-article-container .title_hr {
+    width: auto;
+    flex-grow: 1;
+  }
+  .line-article-container .active_pools-cont {
+    width: 100%;
+  }
+  .line-article-container .article_text {
+    font-size: 3.90625vw;
+    line-height: 4.3229166667vw;
+  }
+
   .assigments_container .assigment-item .as-prize span {
     font-size: 15px;
   }
@@ -512,5 +528,200 @@
     width: 23px;
     height: 25px;
     margin-right: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .assigments-block {
+    margin-top: 1.6145833333vw;
+  }
+  .assigments-block .assigments-list {
+    padding: 1.1458333333vw 0.78125vw;
+    border-radius: 0.78125vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6770833333vw;
+  }
+  .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize svg,
+.assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .as-prize--mount:last-of-type {
+    display: none;
+  }
+  .assigments-block .change-list-visibility {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .line-article-container {
+    flex-wrap: wrap;
+    gap: 2.1739130435vw;
+  }
+  .line-article-container .title_hr {
+    width: auto;
+    flex-grow: 1;
+    max-width: none;
+  }
+  .line-article-container .active_pools-cont {
+    width: 100%;
+    font-size: 2.6086956522vw;
+    line-height: 3.2608695652vw;
+  }
+  .line-article-container .article_text {
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+  }
+
+  .assigments-block {
+    margin-top: 6.7391304348vw;
+  }
+  .assigments-block .assigments-list {
+    padding: 4.7826086957vw 3.2608695652vw;
+    border-radius: 3.2608695652vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8260869565vw;
+  }
+  .assigments-block .assigments-list .assigment-item {
+    backdrop-filter: blur(5.4347826087vw);
+    border-radius: 3.2608695652vw;
+    margin: 0;
+  }
+  .assigments-block .assigments-list .assigment-item div:first-child {
+    grid-template-columns: 1fr 30%;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title,
+.assigments-block .assigments-list .assigment-item .as-prize,
+.assigments-block .assigments-list .assigment-item .as-description {
+    padding: 3.2608695652vw 4.347826087vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title {
+    display: flex;
+    align-items: center;
+    gap: 2.8260869565vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title .as-title--img {
+    width: 10vw !important;
+    height: 10vw !important;
+    border-radius: 3.2608695652vw;
+    flex-basis: 10vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+    margin: 0;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle svg {
+    width: 1.9565217391vw;
+    height: 2.8260869565vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-title > span {
+    font-size: 3.2608695652vw;
+    line-height: 150%;
+    margin: 0;
+    display: block;
+    width: 70%;
+  }
+  .assigments-block .assigments-list .assigment-item .as-prize {
+    flex-wrap: wrap;
+    gap: 2.6086956522vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-prize svg {
+    width: 3.7565217391vw;
+    height: 5.6413043478vw;
+  }
+  .assigments-block .assigments-list .assigment-item .as-prize .as-prize--mount {
+    font-size: 4.347826087vw;
+    line-height: 5.2173913043vw;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .assigments-block .assigments-list .assigment-item .as-prize .lottery-ticket-mount {
+    margin: 0;
+    line-height: 1;
+  }
+  .assigments-block .assigments-list .assigment-item .as-description .as-description--text {
+    font-size: 3.6956521739vw;
+    line-height: 150%;
+  }
+  .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .lottery-ticket-mount,
+.assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize span:nth-of-type(2) {
+    display: none;
+  }
+  .assigments-block .change-list-visibility {
+    display: none;
+  }
+
+  .news_container {
+    margin-top: 7.8260869565vw;
+    margin-bottom: 17.3913043478vw;
+  }
+  .news_container .line-article-container {
+    flex-wrap: nowrap;
+    margin-bottom: 6.5217391304vw;
+  }
+  .news_container .line-article-container .article_text {
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+    overflow: hidden;
+    display: block;
+    width: 18.6956521739vw;
+  }
+  .news_container .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5.4347826087vw;
+  }
+  .news_container .news-item {
+    backdrop-filter: blur(5.4347826087vw);
+    border-radius: 3.2608695652vw;
+    padding: 4.7826086957vw 5.2173913043vw;
+    flex-direction: column;
+    gap: 4.7826086957vw;
+    margin: 0;
+  }
+  .news_container .news-item .news-item--img-container {
+    height: auto;
+    margin: 0;
+    width: 100%;
+    height: 35.4347826087vw;
+    overflow: hidden;
+    border-radius: 3.2608695652vw;
+  }
+  .news_container .news-item .news-item--img-container .news-item--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .news_container .news-item .news-item--info .info-create-date {
+    margin-top: 0;
+    margin-bottom: 2.6086956522vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+  }
+  .news_container .news-item .news-item--info .info-create-date::before {
+    margin-top: -0.652173913vw;
+    font-size: 6.5217391304vw;
+    margin-right: 2.3913043478vw;
+  }
+  .news_container .news-item .news-item--info .info-title {
+    font-size: 5.4347826087vw;
+    line-height: 6.5217391304vw;
+    max-width: none;
+  }
+  .news_container .news-item .news-item--info .link-button {
+    margin-top: 4.5652173913vw;
+    border-radius: 3.2608695652vw;
+    font-size: 3.2608695652vw;
+    line-height: 3.9130434783vw;
+    padding: 5.8695652174vw;
+    width: 47.6086956522vw;
+    text-align: center;
+  }
+  .news_container .news-item .news-item--info .link-button::before {
+    filter: blur(7.6086956522vw);
+    border-radius: 3.2608695652vw;
   }
 }

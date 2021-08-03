@@ -788,6 +788,7 @@ body {
   font-size: 15px;
   line-height: 18px;
   color: rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
 }
 .line-article-container .pools-article_button {
   transition: 0.2s ease;
@@ -1271,6 +1272,24 @@ body {
   font-size: 15px;
   line-height: 18px;
   padding: 0.8854166667vw 3.2291666667vw;
+  position: relative;
+}
+.news_container .news-item .news-item--info .link-button::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 163, 255, 0.2);
+  filter: blur(1.8229166667vw);
+  border-radius: 0.78125vw;
+  z-index: -10;
+  opacity: 0;
+  transition: 0.3s;
+}
+.news_container .news-item .news-item--info .link-button:hover::before {
+  opacity: 1;
 }
 
 .assigments_container .as-modified {
