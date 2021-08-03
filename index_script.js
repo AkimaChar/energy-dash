@@ -1,6 +1,16 @@
-
-
 // Slider switcher 
+var width = document.querySelector('.slider').clientWidth;
+window.addEventListener('load', () => {
+    document.querySelectorAll('.slider-items > .item').forEach(el => {
+        el.style.width = width + "px";
+    })
+})
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.slider-items > .item').forEach(el => {
+        el.style.width = width + "px";
+    })
+})
+
 var slider_navBtnList = document.querySelectorAll('.item_plank');
 var slider_slidesList = document.querySelectorAll('.item');
 
@@ -102,8 +112,13 @@ document.querySelectorAll('.pools-article_button').forEach(el => {
         document.querySelectorAll('.pools-article_button').forEach(el => {
             el.classList.remove('active_article_btn');
         })
-        el.classList.toggle('active_article_btn')
+        el.classList.toggle('active_article_btn');
     })
+})
+document.querySelectorAll('.pools-article_button').forEach(el => {
+    if (el.classList.contains('show-active')) {
+    } else if (el.classList.contains('show-non-active')) {
+    }
 })
 
 // Change task visibility 
@@ -114,3 +129,19 @@ change_button.addEventListener('click', () => {
     document.querySelector('.assigments-list').classList.toggle('opened-list');
 })
 
+// Change layout of aligns 
+
+var cont = document.querySelector('.assigments-list')
+
+window.addEventListener('DOMContentLoaded', () => {
+    var bodyWidth = document.querySelector('body').offsetWidth;
+    if (bodyWidth <= 1250) {
+        var a_item = document.querySelectorAll('.assigment-item');
+        a_item.forEach(el => {
+            el.style.display = "none";
+        });
+        var a_item = document.querySelectorAll('.as-modified').forEach(el => {
+            el.style.display = "grid";
+        })
+    }
+})

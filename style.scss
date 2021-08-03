@@ -23,6 +23,10 @@ $screen-height: 1080;
   margin-top: px-to-vw(20);
 }
 
+.stack_stat .energy_account-container {
+  flex-wrap: wrap;
+}
+
 a {
   overflow: none;
   text-decoration: none;
@@ -467,6 +471,7 @@ body {
         font-size: 35px;
         line-height: 43px;
         color: rgba(255, 255, 255, 0.2);
+        white-space: nowrap;
 
         span:first-of-type {
           color: #00a3ff;
@@ -493,13 +498,14 @@ body {
   }
 
   .stack-graph {
-    
+
     background: linear-gradient(93.58deg,
         rgba(62, 66, 182, 0.5) -19.17%,
         rgba(32, 34, 105, 0.5) 95.81%);
     border-radius: 15px;
     margin-top: px-to-vw(40);
     width: 100%;
+
     .stack-graph--body {
       min-height: 360px;
       max-width: px-to-vw(1250);
@@ -518,6 +524,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        margin-right: 25px;
 
         .graph-title {
           font-weight: 500;
@@ -607,13 +614,15 @@ body {
     }
 
     .energy-actions {
-      width: 100%;
+      width: 73.4%;
       background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(20px);
       border-radius: 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 20px;
+      margin-right: 20px;
 
       .token-cont {
         padding: px-to-vw(22) px-to-vw(27);
@@ -690,16 +699,14 @@ body {
     }
 
     .energy-spot {
-      margin-left: px-to-vw(20);
       background: linear-gradient(93.58deg, #3c3f98 -19.17%, #191a51 95.81%);
       border-radius: 15px;
-      max-width: px-to-vw(415);
       display: flex;
       justify-content: space-between;
-      width: 100%;
 
       .spot-body {
         padding: px-to-vw(16) 0 px-to-vw(20) px-to-vw(28);
+        padding-right: 20px;
 
         &>span {
           font-weight: 200;
@@ -801,7 +808,7 @@ body {
 // slider styles
 .slider {
   position: relative;
-  height: px-to-vw(140);
+  height: 140px;
   background: linear-gradient(93.58deg,
       rgba(62, 66, 182, 0.5) -19.17%,
       rgba(62, 66, 182, 0.5) -19.16%,
@@ -818,8 +825,6 @@ body {
     z-index: 100;
 
     .item {
-      max-width: px-to-vw(1290);
-      width: px-to-vw(1290);
       height: inherit;
       transition: 0.2s ease;
       background-image: url("../img/item-bg.png");
@@ -827,7 +832,7 @@ body {
   }
 
   .slider-navigation {
-    width: px-to-vw(1290);
+    width: 100%;
 
     height: 100%;
     display: flex;
@@ -925,6 +930,14 @@ body {
   }
 }
 
+
+
+
+
+.assigments_container .assigment-item .as-title .as-title--img .title-circle span {
+  line-height: unset !important;
+}
+
 // end slider's style
 .full-blue {
   background: #00a3ff;
@@ -958,7 +971,7 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.2);
   }
 
   .pools-article_button {
@@ -966,7 +979,7 @@ body {
 
     &:hover {
       cursor: pointer;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 
@@ -1106,6 +1119,7 @@ body {
           align-items: center;
           justify-content: space-between;
           margin: px-to-vw(5) 0;
+          white-space: nowrap;
 
           div:first-of-type {
             display: flex;
@@ -1410,16 +1424,27 @@ body {
           border: 1px solid #00a3ff;
           border-radius: 50%;
 
-          padding-top: px-to-vw(22);
-          font-weight: 500;
-          font-size: 20px;
-          line-height: 24px;
-          color: #00a3ff;
           transition: 0.2s ease;
 
           svg {
             height: px-to-vw(15);
             width: px-to-vw(10);
+            margin-left: 0.5px;
+          }
+
+          span {
+            display: block;
+            margin: auto;
+            text-align: center;
+            font-weight: 500;
+            font-size: px-to-vw(18);
+            line-height: 24px;
+            color: #00a3ff;
+          }
+
+          .third-stake--fig {
+            padding-left: 1px;
+            margin-top: px-to-vw(-1);
           }
         }
       }
@@ -1530,10 +1555,69 @@ body {
   }
 }
 
+.assigments_container .as-modified {
+  display: none;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    ".";
+  padding: 0;
+  height: unset;
+
+  &>div:first-child {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+  }
+
+  .as-title,.as-description,.as-prize {
+    padding: 1vw 2vw;
+
+  }
+  
+  .as-prize {
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .as-description {
+    border: none;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+.info-title {
+  hr {
+    margin-top: 27px !important;
+  }
+}
+
 .slider .slider-items .item {
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .line-article-container .article_text {
   white-space: nowrap;
+}
+
+.as-title .as-title--img {
+  height: 45px !important;
+  width: 45px !important;
+  .title-circle {
+    width: 20px !important;
+    height: 20px !important;
+    span {
+      font-size: 15px;
+      left: .5px !important;
+      position: relative !important;
+    }
+  }
 }

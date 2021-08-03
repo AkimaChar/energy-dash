@@ -1,6 +1,17 @@
 "use strict";
 
 // Slider switcher 
+var width = document.querySelector('.slider').clientWidth;
+window.addEventListener('load', function () {
+  document.querySelectorAll('.slider-items > .item').forEach(function (el) {
+    el.style.width = width + "px";
+  });
+});
+window.addEventListener('resize', function () {
+  document.querySelectorAll('.slider-items > .item').forEach(function (el) {
+    el.style.width = width + "px";
+  });
+});
 var slider_navBtnList = document.querySelectorAll('.item_plank');
 var slider_slidesList = document.querySelectorAll('.item');
 
@@ -105,10 +116,28 @@ document.querySelectorAll('.pools-article_button').forEach(function (el) {
     });
     el.classList.toggle('active_article_btn');
   });
+});
+document.querySelectorAll('.pools-article_button').forEach(function (el) {
+  if (el.classList.contains('show-active')) {} else if (el.classList.contains('show-non-active')) {}
 }); // Change task visibility 
 
 var change_button = document.querySelector('.change-list-visibility');
 change_button.addEventListener('click', function () {
   document.querySelector('.svg-arrow').classList.toggle('active-rot-svg');
   document.querySelector('.assigments-list').classList.toggle('opened-list');
+}); // Change layout of aligns 
+
+var cont = document.querySelector('.assigments-list');
+window.addEventListener('DOMContentLoaded', function () {
+  var bodyWidth = document.querySelector('body').offsetWidth;
+
+  if (bodyWidth <= 1250) {
+    var a_item = document.querySelectorAll('.assigment-item');
+    a_item.forEach(function (el) {
+      el.style.display = "none";
+    });
+    var a_item = document.querySelectorAll('.as-modified').forEach(function (el) {
+      el.style.display = "grid";
+    });
+  }
 });

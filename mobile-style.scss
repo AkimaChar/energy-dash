@@ -1,0 +1,540 @@
+$screen-width: 1920;
+
+@function px-to-vw($value-width) {
+    @return $value-width * 100 / $screen-width+vw;
+}
+
+@media(max-width: 1500px) {
+    .pools_container .pools_card_list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .pool_card .card-pool-multipliers .multiplier {
+
+            *,
+            .mult-counter,
+            .mult-counter>.end-bonus {
+                font-size: 13px;
+
+            }
+        }
+    }
+
+    .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+        font-size: 25px;
+
+    }
+
+    .pools_container .pools_card_list .pool_card {
+        width: 40%;
+        max-width: unset;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media(max-width: 1377px) {
+    .stack_stat .stack-graph .stack-graph--body {
+        flex-direction: column;
+    }
+
+
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: unset;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-body {
+        width: 100%;
+        max-width: unset;
+        margin-top: 15px;
+    }
+
+    .info-title {
+        align-items: flex-start;
+        align-self: flex-start;
+        position: relative;
+        height: auto;
+
+        hr {
+            bottom: 0;
+            position: absolute;
+            margin: 0 !important;
+        }
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
+        height: fit-content;
+        align-self: center;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+        line-height: 125%;
+        top: -5px;
+        position: relative;
+        font-size: px-to-vw(65);
+
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+        justify-content: space-around;
+        height: auto;
+        white-space: nowrap;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media(max-width: 1365px) {
+    .assigments_container .assigment-item {
+        padding: 0 1vw;
+    }
+}
+
+@media(max-width: 1250px) {
+    .stack_stat .energy_account-container {
+        flex-direction: column;
+    }
+    
+    .stack_stat .energy_account-container .energy-spot {
+        margin-left: 0;
+        align-items: unset;
+        max-width: unset;
+        width: fit-content;
+        justify-self: flex-start;
+
+        .spot-body {
+            margin-right: 20px;
+        }
+    }
+
+    .stack_stat .energy_account-container .energy-spot .spot-button {
+        height: auto;
+    }
+
+    .stack_stat .energy_account-container .energy-actions {
+        width: 100%;
+    }
+
+    .stack_stat .energy_account-container .energy-actions {
+
+        .token-cont,
+        .token-pocket,
+        .token-price {
+            height: auto;
+        }
+
+        align-items: unset;
+    }
+
+   
+
+}
+
+@media(max-width: 1125px) {
+    .assigments_container .assigment-item .as-prize span {
+        font-size: 15px;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .stack_stat .stack-title .stack-cash p {
+        font-size: 25px;
+    }
+
+    .stack_stat .stack-title .token {
+        font-size: 15px;
+        line-height: 125%;
+
+        .token-img {
+            width: 2.5625vw;
+            height: 2.770833vw;
+        }
+    }
+
+    .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+        white-space: nowrap;
+    }
+
+    .pools_container .pools_card_list .pool_card {
+        width: 270px;
+        border-radius: 15px;
+
+        &>div {
+            padding: 8px 17px !important;
+        }
+    }
+
+    .pools_container .pools_card_list .pool_card .progress-bar {
+        max-width: unset;
+    }
+
+    .pools_container .pools_card_list .pool_card button.details-button {
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+@media(max-width: 900px) {
+    .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
+        display: none;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-body {
+        margin-top: px-to-vw(25);
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-cont div p {
+        white-space: nowrap;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body {
+
+        top: -10px;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+        line-height: 125%;
+        font-size: px-to-vw(95);
+
+    }
+
+    .stack_stat .stack-graph .stack-graph--body {
+        min-height: unset;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+        font-size: px-to-vw(40);
+        justify-content: space-between;
+
+        p {
+            font-size: px-to-vw(40);
+        }
+    }
+}
+
+@media(max-width: 780px) {
+    .stack_stat .energy_account-container .energy-actions {
+        margin-bottom: 50px;
+
+        .token-img {
+            width: 33px;
+            height: 35px;
+            margin-right: 0.8333333333vw;
+        }
+
+        .token-action-btns {
+            position: absolute;
+            left: 46%;
+            margin-top: px-to-vw(210);
+        }
+
+        .token-cont {
+            padding: 2.145833vw 2.40625vw;
+        }
+    }
+    .assigment-item {
+        .as-title .as-title--img {
+            height: 35px !important;
+            width: 35px !important;
+            .title-circle {
+              width: 20px !important;
+              height: 20px !important;
+              span {
+                font-size: 11px !important;
+                left: .5px !important;
+                position: relative !important;
+              }
+            }
+          }
+    }
+    .stack_stat .energy_account-container .energy-spot {
+        display: none;
+    }
+
+    .token-action-btns {
+        margin-left: px-to-vw(-270);
+
+        .orange {
+            padding: 14px 40px;
+            margin-right: 5px;
+        }
+
+        .blue {
+            padding: 14px 60px;
+        }
+    }
+}
+
+@media(max-width: 740px) {
+    .stack_stat .stack-title {
+        justify-content: space-between;
+
+        .title_hr {
+            display: none;
+        }
+    }
+
+    .slider .slider-navigation {
+        .nav-planks .item_plank {
+            width: 5.041667vw;
+        }
+    }
+}
+
+@media(max-width: 630px) {
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+        top: 0;
+    }
+
+    .stack_stat .stack-title {
+        flex-direction: column;
+    }
+
+    .stack_stat .stack-title .token {
+        .token_price {
+            padding: 2.09375vw 2.3958333333vw;
+        }
+    }
+
+    .stack_stat .stack-title .token {
+        background: rgba(255, 255, 255, 0.01);
+        padding-left: 2.3958333333vw;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 600px) {
+    .stack_stat .stack-graph .stack-graph--body {
+        max-width: 83.104167vw;
+    }
+
+    .slider .slider-navigation .nav__button_left svg,
+    .slider .slider-navigation .nav__button_right svg {
+        display: none;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+        font-size: px-to-vw(60);
+        justify-content: space-between;
+
+        p {
+            font-size: px-to-vw(60);
+        }
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+        line-height: 125%;
+        align-self: flex-start;
+    }
+
+    .info-title {
+        align-self: unset;
+
+        hr {
+            margin-bottom: 5px !important;
+        }
+    }
+
+    .stack_stat .stack-graph .stack-graph--body {
+
+        padding: 3.5625vw 4.34375vw;
+    }
+
+    .stack_stat .stack-title {
+        margin-bottom: 25px;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-price,
+    .stack_stat .energy_account-container .energy-actions .token-pocket {
+        padding: 0 4.40625vw;
+
+    }
+}
+
+@media (max-width: 520px) {
+    .stack_stat .energy_account-container .energy-actions .token-cont {
+        padding: 3.145833vw 4.40625vw;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-action-btns {
+        margin-top: px-to-vw(280);
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-price,
+    .stack_stat .energy_account-container .energy-actions .token-pocket {
+        font-size: 13px;
+
+        svg {
+            width: 20px;
+            height: 21px;
+        }
+    }
+
+    .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier *,
+    .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter,
+    .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter>.end-bonus {
+        font-size: 11px;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .multiplier-level {
+        padding: 1.616667vw 1.772917vw;
+        border-radius: 11px;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-token-progress .profit-title {
+        font-size: 16px;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-title .token-fox-tag {
+        border-radius: 15px;
+        padding: 0.104167vw 1.625vw;
+        margin-left: 10px;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-pool-stack .orange {
+        padding: 10px 30px !important;
+        font-size: 11px !important;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-pool-earned .full-blue {
+        padding: 10px 30px !important;
+        font-size: 11px !important;
+    }
+
+    .pools_container .pools_card_list .token-stack-name {
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .pools_container .pools_card_list .stack-amount {
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .pools_container .pools_card_list .pool_card .card-title-token {
+        font-size: 12px;
+
+        .token-img {
+            width: 5.5625vw;
+            height: 5.770833vw;
+            margin-right: 10px;
+        }
+    }
+
+    .pools_container .pools_card_list .pool_card button.details-button {
+        padding: 3.302083vw 0;
+    }
+
+    .pools_container .pools_card_list .pool_card button.details-button svg {
+        margin-left: 10px;
+    }
+
+    .pools_container .pools_card_list .pool_card>div {
+        padding: 11px 17px !important;
+    }
+
+    .full-blue {
+        font-size: 11px;
+        padding: 1.78125vw 4.5625vw;
+        border-radius: 12px;
+    }
+}
+
+@media(max-width: 455px) {
+    .stack_stat .energy_account-container .energy-actions .token-action-btns {
+        left: 36%;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-cont div p {
+        font-size: px-to-vw(50);
+
+        span {
+            font-size: px-to-vw(50);
+        }
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-cont div span {
+        font-size: px-to-vw(80);
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-cont {
+        padding-right: 0;
+    }
+}
+
+@media(max-width: 390px) {
+    .stack_stat .stack-title .stack-cash p {
+        font-size: 20px;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
+    .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
+        font-size: 2.625vw;
+    }
+
+    .stack_stat .stack-title .token .token-img {
+        width: 4.5625vw;
+        height: 4.770833vw;
+    }
+
+    .slider {
+        height: 23vw;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-action-btns {
+        left: 39%;
+        margin-top: px-to-vw(330);
+    }
+
+    .info-title {
+        hr {
+            margin-bottom: 9px !important;
+            width: 14.072917vw !important;
+        }
+    }
+
+    .token-action-btns .blue,
+    .token-action-btns .orange {
+        padding: 9px 30px;
+        font-size: 11px;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body {
+        max-width: 81.104167vw;
+    }
+
+    .stack_stat .stack-title .token {
+
+        border-radius: 10px;
+    }
+
+    .stack_stat .stack-graph .stack-graph--body .graph-body #myChart {
+        width: 104% !important;
+        height: auto !important;
+        margin-left: -11px;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-cont div p {
+        margin-top: 0;
+    }
+
+    .stack_stat .energy_account-container .energy-actions .token-img {
+        width: 23px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}
