@@ -539,13 +539,121 @@ h4 {
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.read-more-line,
-.ref-stat-info,
-.available-rewards_container,
-.rewards-stat {
-  display: none;
+h4 {
+  white-space: nowrap;
 }
 
+.available-rewards_container .rewards-list .rew-card .withdraw-button-cont button {
+  padding: 18px 50px;
+}
+
+.refs-level-cont .lvl-card-list.lvl-modified {
+  width: 280px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "." "." ".";
+}
+.refs-level-cont .lvl-card-list.lvl-modified::before {
+  display: none;
+}
+.refs-level-cont .lvl-card-list.lvl-modified .level-card .lvl-title .pot-title {
+  font-size: 1.9375vw;
+}
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-earn {
+  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+}
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-ref-mount,
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-title,
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-earn {
+  padding: 1.520833vw 2.25vw;
+}
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row:last-of-type .level-card * {
+  text-align: center;
+}
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row:not(:last-of-type) {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+}
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row:not(:last-of-type):nth-of-type(2) {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rewards-stat {
+  width: 310px;
+}
+
+.rewards-stat .stack-title.rewards-title {
+  padding: 17px 25px;
+}
+
+.rewards-stat .tokens-item-container .cont-col .rew-item {
+  padding: 15px 29px;
+}
+
+.rewards-stat .tokens-item-container .cont-col .rew-item > span {
+  font-size: 20px;
+  line-height: 125%;
+}
+
+.rewards-stat .tokens-item-container .cont-col .rew-item .rew-info-item span {
+  font-size: 14px;
+}
+
+.rewards-stat .tokens-item-container .cont-col .rew-item .rew-info-item p {
+  font-size: 12px;
+}
+
+.rewards-stat .stack-title.rewards-title span {
+  font-size: 20px;
+}
+
+@media (max-width: 1500px) {
+  .ref-stat-info {
+    flex-direction: column;
+  }
+
+  .available-rewards_container .rewards-list {
+    justify-content: space-evenly;
+  }
+
+  .available-rewards_container .stack-cash.av-rew-title {
+    margin: 0;
+  }
+
+  .available-rewards_container .rewards-list .rew-card .info-ref-amount {
+    padding: 0 18px;
+    padding-top: 10px;
+  }
+
+  .available-rewards_container .rewards-list .rew-card {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .available-rewards_container .rewards-list .rew-card .rew-card-info .info-token-amount {
+    padding: 0 18px;
+    padding-top: 10px;
+  }
+
+  .available-rewards_container .rewards-list .rew-card .withdraw-button-cont {
+    padding: 18px 15px;
+  }
+
+  .short-info-block {
+    align-self: center;
+    width: 20.96875vw;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
 @media (max-width: 1455px) {
   .ref-title-cont {
     flex-direction: column;
@@ -558,17 +666,135 @@ h4 {
     text-align: center;
   }
 }
+body {
+  padding-bottom: 30px;
+}
+
+@media (max-width: 1235px) {
+  h4 {
+    white-space: pre-wrap;
+    width: 450px;
+  }
+
+  .stack-cash.av-rew-title {
+    position: relative;
+  }
+  .stack-cash.av-rew-title .title-hr_half {
+    background: linear-gradient(270deg, rgba(19, 16, 69, 0) 2.15%, #FFA114 47.35%, rgba(19, 16, 69, 0) 97.52%);
+    position: absolute;
+    top: 110px;
+    right: -50px;
+    width: 90%;
+  }
+
+  .short-info-block .ref-amount-cont:nth-of-type(2) .show-details,
+.short-info-block .ref-amount-cont .ref-title {
+    font-size: 12px;
+  }
+
+  .lvl-card-list .level-card .lvl-percent {
+    font-size: 10px;
+    padding: 0.316667vw 0.616667vw;
+    text-align: center;
+  }
+
+  .lvl-card-list .level-card .lvl-title .pot-title {
+    line-height: 30px;
+  }
+
+  .lvl-card-list .level-card .pot-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .lvl-card-list .level-card .lvl-earn p {
+    font-size: 15px;
+  }
+
+  .short-info-block .ref-amount-cont p,
+.short-info-block .ref-amount-cont .ref-amount {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1080px) {
+  .short-info-block {
+    width: 280px;
+  }
+
+  .short-info-block .ref-amount-cont {
+    padding: 0 14px;
+  }
+
+  .short-info-block .ref-amount-cont:nth-of-type(2) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .lvl-conditions .first-lvl p,
+.lvl-conditions .sec-trd-lvl p,
+.lvl-conditions .fth-fs-lvl p {
+    font-size: 10px;
+  }
+}
 @media (max-width: 845px) {
   .title-ref-link-cont span {
     font-size: 14px;
   }
 }
+.short-info-block .withdraw-button {
+  padding: 15px 0;
+}
+
+.short-info-block .cont {
+  top: -10px;
+}
+
 @media (max-width: 780px) {
+  h4 {
+    font-size: 25px;
+    width: 320px;
+  }
+
+  .short-info-block .ref-amount-cont p,
+.short-info-block .ref-amount-cont .ref-amount {
+    font-size: 25px;
+  }
+
+  .available-rewards_container .rewards-list .rew-card .rew-card-info .info-token-amount span:first-of-type {
+    font-size: 25px;
+  }
+
+  .short-info-block .ref-amount-cont {
+    padding: 0 15px;
+  }
+
+  .short-info-block .withdraw-button {
+    margin: 15px;
+  }
+
+  .available-rewards_container .rewards-list .rew-card .info-ref-amount span:first-of-type {
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  .copy-msg {
+    top: -20px;
+  }
+
+  .stack-cash.av-rew-title {
+    position: relative;
+  }
+  .stack-cash.av-rew-title .title-hr_half {
+    top: 95px;
+    right: 30px;
+    width: 70%;
+  }
+
   .title-ref-link-cont > div:nth-of-type(2) {
     flex-direction: column;
     border: none;
   }
   .title-ref-link-cont > div:nth-of-type(2) span {
+    font-size: 1.8229166667vw;
     padding: 1.5625vw;
   }
   .title-ref-link-cont > div:nth-of-type(2) div {
@@ -576,16 +802,145 @@ h4 {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 
+  .lvl-card-list .level-card .lvl-percent {
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 8px;
+  }
+
+  .read-more-line {
+    margin: 15px 0;
+  }
+
+  .lvl-card-list .lvl-row:last-of-type .level-card .lvl-title {
+    justify-content: center;
+  }
+
+  .refs-level-cont .lvl-conditions {
+    width: 90%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+  .refs-level-cont .lvl-conditions .sec-trd-lvl {
+    border: none;
+  }
+  .refs-level-cont .lvl-conditions div {
+    width: 100px !important;
+  }
+
+  .lvl-cond-text p {
+    text-align: center;
+    font-weight: 200;
+  }
+
+  .refs-level-cont .lvl-card-list.lvl-modified .level-card .lvl-title .pot-title {
+    font-size: 12px;
+  }
+
   .title-ref-link-cont span,
 .title-ref-link-cont button.ref-link {
     margin: auto 1.3020833333vw;
   }
 
+  .title-ref-link-cont .title-copy-button div {
+    height: 45px;
+    width: 45px;
+  }
+
+  .ref-title-cont {
+    align-items: unset;
+    width: 80%;
+  }
+
+  .ref-title-cont {
+    align-self: center;
+  }
+
   .title-ref-link-cont .title-copy-button {
-    width: 10%;
+    width: 15.625vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-ref-link-cont div:nth-of-type(2) {
+    width: 100%;
+  }
+  .title-ref-link-cont div:nth-of-type(2) .ref-link {
+    line-height: 24px;
+    font-size: 1.8229166667vw;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+.refs-level-cont .lvl-card-list,
+.lvl-conditions {
+  width: fit-content;
+  align-self: center;
+}
+
+@media (max-width: 580px) {
+  .title-ref-link-cont .title-copy-button {
+    width: 21.625vw;
+  }
+
+  .rewards-stat {
+    display: none;
+  }
+
+  .title-ref-link-cont > div:nth-of-type(2) span {
+    font-size: 2.5vw;
   }
 
   .title-ref-link-cont div:nth-of-type(2) .ref-link {
-    line-height: 24px;
+    font-size: 2vw;
+  }
+}
+@media (max-width: 510px) {
+  .title-ref-link-cont .title-copy-button {
+    width: 100px;
+  }
+
+  .stack-cash.av-rew-title .title-hr_half {
+    right: -10px;
+  }
+}
+@media (max-width: 489px) {
+  .refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-ref-mount,
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-title,
+.refs-level-cont .lvl-card-list.lvl-modified .lvl-row .lvl-earn {
+    padding: 1.520833vw 4.25vw;
+  }
+}
+@media (max-width: 395px) {
+  h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .title-ref-link-cont > div:nth-of-type(2) span {
+    font-size: 3.3vw;
+  }
+
+  .title-ref-link-cont div:nth-of-type(2) .ref-link {
+    font-size: 2.3vw;
+  }
+
+  .ref-title-cont {
+    width: 90%;
+  }
+
+  .refs-level-cont .lvl-card-list.lvl-modified .level-card .lvl-title .pot-title {
+    font-size: 14px;
+    margin-top: 1px;
+  }
+
+  .stack-cash.av-rew-title .title-hr_half {
+    top: 70px;
+  }
+}
+@media (max-width: 350px) {
+  .refs-level-cont .lvl-conditions div {
+    width: 70px !important;
   }
 }

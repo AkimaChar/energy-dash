@@ -21,7 +21,7 @@ ref_link.addEventListener('click', function () {
 function setStyleToHead() {
   var style = document.createElement('style');
   var head = document.querySelector('head');
-  var lvlTitleHeight = document.querySelector('.lvl-title ').clientHeight;
+  var lvlTitleHeight = document.querySelector('.lvl-title ').offsetHeight;
   var css = '.lvl-card-list::before {top:' + (lvlTitleHeight + 1) + 'px; height: ' + document.querySelector('.lvl-earn').clientHeight + 'px;}';
   style.type = 'text/css';
   style.appendChild(document.createTextNode(css));
@@ -40,3 +40,12 @@ window.onload = function () {
 };
 
 window.addEventListener('resize', setStyleToHead());
+window.addEventListener('load', function () {
+  if (document.querySelector('body').offsetWidth <= 780) {
+    document.querySelector('.lvl-card-list').style.display = "none";
+    document.querySelector('.lvl-modified').style.display = "grid";
+  } else {
+    document.querySelector('.lvl-card-list').style.display = "flex";
+    document.querySelector('.lvl-modified').style.display = "none";
+  }
+});
