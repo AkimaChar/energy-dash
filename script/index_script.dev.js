@@ -1,5 +1,13 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 // Slider switcher 
 var width = document.querySelector('.slider').clientWidth;
 window.addEventListener('load', function () {
@@ -162,4 +170,18 @@ document.querySelectorAll('.lang-label').forEach(function (el) {
     selected_lang.setAttribute('data-lang', el.getAttribute('data-lang'));
     document.querySelector('.lang-content').classList.toggle('active-lang-cont');
   });
-});
+}); //change pool vis
+
+var earned = _toConsumableArray(document.querySelectorAll('.card-pool-earned'));
+
+var stack = _toConsumableArray(document.querySelectorAll('.card-pool-stack'));
+
+var multipliers = _toConsumableArray(document.querySelectorAll('.card-pool-multipliers'));
+
+function switchPool(el) {
+  var id = el.id.replace(/[\D]+/g, '');
+  console.log(id);
+  earned[id - 1].classList.toggle('hidden');
+  stack[id - 1].classList.toggle('hidden');
+  multipliers[id - 1].classList.toggle('hidden');
+}

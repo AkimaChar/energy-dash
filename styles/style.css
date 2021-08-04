@@ -1443,3 +1443,15 @@ body {
   opacity: 1;
   max-height: fit-content;
 }
+
+.hidden {
+  display: none !important;
+}
+
+.pools_container .pools_card_list .pool_card button.details-button {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pools_card_list .pool_card {
+  align-self: flex-start;
+}
