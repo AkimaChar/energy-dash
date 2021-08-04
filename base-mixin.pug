@@ -3,7 +3,14 @@ mixin _header
         a(href="index.html")
             img(src="../img/main-logo.png" alt="BSC_Energy-logo")
         div 
-            button.burger-btn Menu
+            button.burger-btn 
+                <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="2" fill="#00A3FF"/>
+                    <rect y="10" width="40" height="2" fill="#00A3FF"/>
+                    <rect y="20" width="40" height="2" fill="#00A3FF"/>
+                    <rect y="30" width="40" height="2" fill="#00A3FF"/>
+                </svg>
+
             .user_info-short 
                 img.user_avatar(src="../img/user-avatar.png" alt="user-avatar")
                 div

@@ -128,6 +128,11 @@
     display: none;
   }
 
+  .user_medals-container,
+.container aside .social_media_links-container {
+    display: none;
+  }
+
   .container {
     grid-template-columns: 18vw auto;
   }
@@ -217,41 +222,70 @@
 }
 
 .burger-btn {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 200;
-  margin-right: 7.8125vw;
-  display: none;
+  display: none !important;
+  outline: none !important;
 }
 .burger-btn:active, .burger-btn:hover {
-  outline: none;
-  border: none;
+  outline: none !important;
+  border: none !important;
 }
 
-.active-burger {
-  outline: none;
-  display: block;
+.active-aside {
+  max-height: 500px !important;
+  overflow: visible !important;
 }
 
-@media (max-width: 680px) {
-  .user_medals-container,
-.container aside .social_media_links-container {
-    display: none;
+.change_lang-container {
+  display: none;
+}
+
+.dashboard {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+}
+
+@media (max-width: 600px) {
+  .burger-btn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .burger-btn svg {
+    margin: 0 !important;
+    height: 20px;
   }
 
-  .change_lang-container {
-    display: none;
+  .change_lang-btn .lang-content {
+    font-size: 15px;
   }
 
-  .container aside .nav_button .button_icon svg {
-    width: 4.25vw;
+  .burger-btn {
+    font-size: 15px;
+  }
+
+  body {
+    padding: 0 2.6041666667vw;
+  }
+
+  .container aside .nav_button .button_title {
+    font-size: 15px;
+  }
+
+  .container {
     display: block;
+    border-right: none;
+  }
+  .container .page_main_content {
+    max-width: 93.75vw;
   }
 
   .container aside .nav_button .button_icon {
     display: flex;
-    width: 8.78125vw;
-    height: 8.78125vw;
-    border-radius: 20%;
+    width: 2.78125vw;
+    height: 2.78125vw;
+    border-radius: 50%;
     margin-right: 10px;
   }
 
@@ -265,9 +299,9 @@
   }
 
   aside.aside {
+    overflow: hidden;
     height: auto;
     max-height: 0;
-    overflow: hidden;
     transition: 0.2s ease;
   }
 
@@ -277,23 +311,6 @@
 
   .container aside .nav_button {
     height: 40px;
-  }
-}
-.active-aside {
-  max-height: 500px !important;
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 0 2.6041666667vw;
-  }
-
-  .container {
-    display: block;
-    border-right: none;
-  }
-  .container .page_main_content {
-    max-width: 93.75vw;
   }
 
   .header {
