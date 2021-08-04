@@ -127,7 +127,7 @@ var change_button = document.querySelector('.change-list-visibility');
 change_button.addEventListener('click', () => {
     document.querySelector('.svg-arrow').classList.toggle('active-rot-svg');
     document.querySelector('.assigments-list').classList.toggle('opened-list');
-    
+
     if (cont.classList.contains('opened-list')) {
         var a_item_height = document.querySelector('.as-modified').offsetHeight;
         cont.style.height = a_item_height + "px";
@@ -150,4 +150,22 @@ window.addEventListener('DOMContentLoaded', () => {
             el.style.display = "grid";
         })
     }
+})
+
+//change lang
+
+var lang_list = document.querySelector('.lang-title');
+lang_list.addEventListener('click', () => {
+    document.querySelector('.lang-content').classList.toggle('active-lang-cont');
+})
+const selected_lang = document.querySelector('.lang-title > span');
+var temp;
+
+document.querySelectorAll('.lang-label').forEach(el => {
+    el.addEventListener('click', () => {
+        temp = selected_lang.getAttribute('data-lang');
+        selected_lang.textContent = el.getAttribute('data-lang');
+        selected_lang.setAttribute('data-lang', el.getAttribute('data-lang'));
+        document.querySelector('.lang-content').classList.toggle('active-lang-cont');
+    });
 })

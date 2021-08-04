@@ -269,22 +269,100 @@ $screen-height: 1080;
                 margin: px-to-vw(10);
             }
         }
-    }.container aside .nav_button .button_title {
+    }
+
+    .container aside .nav_button .button_title {
         font-size: px-to-vw(35);
     }
+
     .social_media_links-container {
         flex-direction: column;
     }
+
     .header div .user_info-short div span {
         font-size: px-to-vw(40);
     }
-    .header div .user_info-short div p span, .header div .user_info-short div p .user_account {
+
+    .header div .user_info-short div p span,
+    .header div .user_info-short div p .user_account {
         font-size: px-to-vw(35);
     }
 
 }
+
 .header div .user_info-short {
     align-items: center;
+}
+
+.burger-btn {
+    font-size: 20px;
+    font-weight: 200;
+    margin-right: px-to-vw(150);
+    display: none;
+
+    &:active,
+    &:hover {
+        outline: none;
+        border: none;
+    }
+}
+
+.active-burger {
+    outline: none;
+    display: block;
+
+
+}
+
+@media(max-width: 680px) {
+
+    .user_medals-container,
+    .container aside .social_media_links-container {
+        display: none;
+    }
+
+    .change_lang-container {
+        display: none;
+    }
+
+    .container aside .nav_button .button_icon svg {
+        width: 4.25vw;
+        display: block;
+    }
+
+    .container aside .nav_button .button_icon {
+        display: flex;
+        width: 8.78125vw;
+        height: 8.78125vw;
+        border-radius: 20%;
+        margin-right: 10px;
+    }
+    nav {
+        border-bottom: 1px solid rgba(255,255,255, 0.1);
+    }
+    .container aside .change_lang-container form.change_lang-btn .lang-title {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    aside.aside {
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: .2s ease;
+    }
+
+    .container aside .nav_button .button_title {
+        font-size: 15px;
+    }
+
+    .container aside .nav_button {
+        height: 40px;
+    }
+}
+
+.active-aside {
+    max-height: 500px !important;
 }
 
 @media (max-width: 600px) {
@@ -292,9 +370,7 @@ $screen-height: 1080;
         padding: 0 px-to-vw(50);
     }
 
-    aside.aside {
-        display: none;
-    }
+
 
     .container {
         display: block;

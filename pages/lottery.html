@@ -8,13 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lottery_style.css">
+    <script src="../script/burger-script-menu.dev.js" defer> </script>
     <link rel="stylesheet" href="../styles/mobile.css">
     <title>BSC Lottery</title>
   </head>
   <body>
     <div class="wrapper">
           <header class="header" id="header"><a href="index.html"><img src="../img/main-logo.png" alt="BSC_Energy-logo"></a>
-            <div>
+            <div> 
+              <button class="burger-btn">Menu</button>
               <div class="user_info-short"> <img class="user_avatar" src="../img/user-avatar.png" alt="user-avatar">
                 <div><span class="user_nickname">{{user_nickname}}</span>
                   <P>  <span>$ </span><span class="user_account"> {{user_account}}</span></P>
@@ -68,14 +70,30 @@
 </svg>
                   </div><span class="button_title">Wiki</span></a></nav>
               <section class="change_lang-container">
-                <button class="change_lang-btn"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <form class="change_lang-btn"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.5 21C13.2848 21 15.9555 19.8938 17.9246 17.9246C19.8938 15.9555 21 13.2848 21 10.5C21 7.71523 19.8938 5.04451 17.9246 3.07538C15.9555 1.10625 13.2848 0 10.5 0C7.71523 0 5.04451 1.10625 3.07538 3.07538C1.10625 5.04451 0 7.71523 0 10.5C0 13.2848 1.10625 15.9555 3.07538 17.9246C5.04451 19.8938 7.71523 21 10.5 21V21ZM10.5 1.3125C11.3623 1.3125 12.3467 2.08688 13.1539 3.81675C13.4387 4.42837 13.6868 5.13188 13.8876 5.90625H7.11244C7.31325 5.13188 7.56131 4.42837 7.84744 3.81675C8.652 2.08688 9.63638 1.3125 10.5 1.3125ZM6.657 3.26156C6.26943 4.11051 5.96908 4.99661 5.76056 5.90625H2.541C3.64907 3.99114 5.40911 2.53857 7.49963 1.81387C7.18331 2.247 6.90113 2.73788 6.657 3.26156ZM5.502 7.21875C5.33214 8.30421 5.24788 9.40134 5.25 10.5C5.25 11.6419 5.33794 12.747 5.50331 13.7812H1.91625C1.51597 12.7336 1.31133 11.6215 1.3125 10.5C1.3125 9.345 1.52644 8.23725 1.91625 7.21875H5.50331H5.502ZM5.76056 15.0938C5.99156 16.0689 6.29475 16.9601 6.657 17.7384C6.90113 18.2621 7.18331 18.753 7.49963 19.1861C5.40911 18.4614 3.64907 17.0089 2.541 15.0938H5.76187H5.76056ZM7.11244 15.0938H13.8876C13.7068 15.8112 13.4607 16.5106 13.1526 17.1833C12.348 18.9131 11.3636 19.6875 10.5 19.6875C9.63769 19.6875 8.65331 18.9131 7.84613 17.1833C7.53889 16.5105 7.29375 15.8111 7.11375 15.0938H7.11244ZM14.1671 13.7812H6.83287C6.65049 12.6971 6.56005 11.5994 6.5625 10.5C6.5625 9.34106 6.65831 8.23594 6.83287 7.21875H14.1671C14.3417 8.23594 14.4375 9.34106 14.4375 10.5C14.4375 11.6589 14.3417 12.7641 14.1671 13.7812ZM15.2394 15.0938H18.459C17.3509 17.0089 15.5909 18.4614 13.5004 19.1861C13.8167 18.753 14.0989 18.2621 14.343 17.7384C14.7053 16.9601 15.0084 16.0689 15.2394 15.0938V15.0938ZM19.0851 13.7812H15.4967C15.6621 12.747 15.75 11.6419 15.75 10.5C15.75 9.35812 15.6621 8.253 15.4967 7.21875H19.0838C19.4736 8.23725 19.6875 9.345 19.6875 10.5C19.6875 11.655 19.4736 12.7627 19.0838 13.7812H19.0851ZM13.5004 1.81387C15.591 2.53847 17.351 3.99107 18.459 5.90625H15.2381C15.0296 4.99662 14.7292 4.11051 14.3417 3.26156C14.108 2.75305 13.8258 2.26824 13.4991 1.81387H13.5004Z" fill="#FFA114"/>
-</svg><span class="lang-title">EN</span>
-                </button>
+</svg>
+                  <div class="lang-title"> <span data-lang="EN">EN</span>
+                    <div class="lang-content">
+                      <input class="option-input" id="lang-option1" type="radio" name="lang-option1">
+                      <label class="lang-label" for="lang-option1" data-lang="RU">RU</label>
+                      <input class="option-input" id="lang-option2" type="radio" name="lang-option2">
+                      <label class="lang-label" for="lang-option2" data-lang="GE">GE</label>
+                      <input class="option-input" id="lang-option3" type="radio" name="lang-option3">
+                      <label class="lang-label" for="lang-option2" data-lang="CH">CH</label>
+                      <input class="option-input" id="lang-option4" type="radio" name="lang-option4">
+                      <label class="lang-label" for="lang-option2" data-lang="EN">EN</label>
+                    </div>
+                  </div>
+                </form>
               </section>
               <section class="user_medals-container">
                 <p>My medals <span class="user_medal-count">( NaN )</span></p><span class="received_medals-title">Received medals for all time</span>
-                <div class="medals"><img src="../img/medal1.png" alt="medal"><img src="../img/medal2.png" alt="medal"><img src="../img/medal3.png" alt="medal"></div>
+                <div class="medals">
+                  <div><img src="../img/medal1.png" alt="medal"></div>
+                  <div>                  <img src="../img/medal2.png" alt="medal"></div>
+                  <div>   <img src="../img/medal3.png" alt="medal"></div>
+                </div>
               </section>
               <section class="social_media_links-container"><a class="link telegram" href="#"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M24.0701 0.996043C23.7491 1.0194 23.434 1.09471 23.1371 1.21904H23.1331C22.8481 1.33204 21.4931 1.90204 19.4331 2.76604L12.0511 5.87504C6.75412 8.10504 1.54712 10.301 1.54712 10.301L1.60912 10.277C1.60912 10.277 1.25012 10.395 0.875119 10.652C0.643447 10.7995 0.444092 10.9924 0.289119 11.219C0.105119 11.489 -0.0428813 11.902 0.0121187 12.329C0.102119 13.051 0.570119 13.484 0.906119 13.723C1.24612 13.965 1.57012 14.078 1.57012 14.078H1.57812L6.46112 15.723C6.68012 16.426 7.94912 20.598 8.25412 21.559C8.43412 22.133 8.60912 22.492 8.82812 22.766C8.93412 22.906 9.05812 23.023 9.20712 23.117C9.28458 23.1621 9.36717 23.1977 9.45312 23.223L9.40312 23.211C9.41812 23.215 9.43012 23.227 9.44112 23.231C9.48112 23.242 9.50812 23.246 9.55912 23.254C10.3321 23.488 10.9531 23.008 10.9531 23.008L10.9881 22.98L13.8711 20.355L18.7031 24.062L18.8131 24.109C19.8201 24.551 20.8401 24.305 21.3791 23.871C21.9221 23.434 22.1331 22.875 22.1331 22.875L22.1681 22.785L25.9021 3.65604C26.0081 3.18404 26.0351 2.74204 25.9181 2.31304C25.7974 1.87887 25.5189 1.50545 25.1371 1.26604C24.8165 1.07116 24.4448 0.977092 24.0701 0.996043ZM23.9691 3.04604C23.9651 3.10904 23.9771 3.10204 23.9491 3.22304V3.23404L20.2501 22.164C20.2341 22.191 20.2071 22.25 20.1331 22.309C20.0551 22.371 19.9931 22.41 19.6681 22.281L13.7581 17.75L10.1881 21.004L10.9381 16.214L20.5941 7.21404C20.9921 6.84404 20.8591 6.76604 20.8591 6.76604C20.8871 6.31204 20.2581 6.63304 20.2581 6.63304L8.08212 14.176L8.07812 14.156L2.24212 12.191V12.187L2.22712 12.184C2.23735 12.1806 2.24737 12.1766 2.25712 12.172L2.28912 12.156L2.32012 12.145C2.32012 12.145 7.53112 9.94904 12.8281 7.71904C15.4801 6.60204 18.1521 5.47704 20.2071 4.60904C22.2621 3.74604 23.7811 3.11304 23.8671 3.07904C23.9491 3.04704 23.9101 3.04704 23.9691 3.04704V3.04604Z" fill="white"/>
