@@ -1,31 +1,142 @@
 //Graph
 
-
 var value = [];
-var step = [];
-var min = [];
-var max = [];
-var data = [];
-function setData() {
+var time = [];
+function getData() {
     var url = '../json/price_data.json';
     fetch(url)
         .then(res => res.json())
         .then(res => {
             res.coin.forEach(el => {
                 value.push(el.value);
-                min.push(el.min);
-                max.push(el.max);
-                data.push(el.data);
-                step.push(el.step);
+                time.push(el.time);
             })
-            drawChart();
         });
 }
 
+getData();
 
-setData()
+var chart = LightweightCharts.createChart(document.querySelector('.graph-body'), {
 
-function drawChart() {
+    localization: {
+        DateFormat: 'yyyy/MM/dd',
+       // priceFormatter: price => '$ ' + price,
+    },
+    layout: {
+        backgroundColor: '#FAEBD700',
+        textColor: 'rgba(70, 130, 180, 0.5)',
+        fontSize: 14,
+    },
+    grid: {
+        vertLines: {
+            color: 'rgba(70, 130, 180, 0.2)',
+            style: 1,
+        },
+        horzLines: {
+            color: 'rgba(70, 130, 180, 0.2)',
+            style: 1,
+        },
+    },
+});
+var graph = document.querySelector('.graph-body');
+var graphWidth;
+var graphHeight;
+window.addEventListener('resize', () => {
+    graphHeight = graph.offsetHeight;
+    graphWidth = graph.offsetWidth;
+    console.log(graphHeight);
+    console.log(graphWidth);
+    chart.resize(graphWidth, graphHeight)
+})
+
+var lineSeries = chart.addLineSeries({
+    lineWidth: 1,
+});
+lineSeries.setData([
+    {
+        time: "2019-09-09",
+        value: 80
+
+    },
+    {
+        time: "2019-09-10",
+        value: 81
+    },
+    {
+        time: "2019-09-11",
+        value: 88
+    },
+    {
+        time: "2019-09-12",
+        value: 82
+    },
+    {
+        time: "2019-09-13",
+        value: 80
+    },
+    {
+        time: "2019-09-14",
+        value: 89
+    },
+    {
+        time: "2019-09-15",
+        value: 82
+    },
+    {
+        time: "2019-09-16",
+        value: 86
+    },
+    {
+        time: "2019-09-17",
+        value: 87
+    },
+    {
+        time: "2019-09-18",
+        value: 85
+    }, {
+        time: "2019-09-19",
+        value: 85
+    },
+    {
+        time: "2019-09-20",
+        value: 81
+    },
+    {
+        time: "2019-09-21",
+        value: 88
+    },
+    {
+        time: "2019-09-22",
+        value: 82
+    },
+    {
+        time: "2019-09-23",
+        value: 80
+    },
+    {
+        time: "2019-09-24",
+        value: 89
+    },
+    {
+        time: "2019-09-25",
+        value: 82
+    },
+    {
+        time: "2019-09-26",
+        value: 86
+    },
+    {
+        time: "2019-09-27",
+        value: 87
+    },
+    {
+        time: "2019-09-28",
+        value: 85
+    }
+]);
+chart.timeScale().fitContent();
+
+/*function drawChart() {
     if (myChart) {
         myChart.destroy();
     }
@@ -92,4 +203,4 @@ function drawChart() {
         }
     };
     myChart = new Chart(ctx, config);
-} // ----------------------------------------------
+} // ---------------------------------------------- */

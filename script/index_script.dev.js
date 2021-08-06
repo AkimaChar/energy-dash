@@ -170,18 +170,12 @@ document.querySelectorAll('.lang-label').forEach(function (el) {
     selected_lang.setAttribute('data-lang', el.getAttribute('data-lang'));
     document.querySelector('.lang-content').classList.toggle('active-lang-cont');
   });
-}); //change pool vis
+}); //change pool 
 
-var earned = _toConsumableArray(document.querySelectorAll('.card-pool-earned'));
-
-var stack = _toConsumableArray(document.querySelectorAll('.card-pool-stack'));
-
-var multipliers = _toConsumableArray(document.querySelectorAll('.card-pool-multipliers'));
+var details = _toConsumableArray(document.querySelectorAll('.details-block'));
 
 function switchPool(el) {
   var id = el.id.replace(/[\D]+/g, '');
   console.log(id);
-  earned[id - 1].classList.toggle('hidden');
-  stack[id - 1].classList.toggle('hidden');
-  multipliers[id - 1].classList.toggle('hidden');
+  details[id - 1].classList.toggle('hidden');
 }

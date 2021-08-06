@@ -1367,6 +1367,14 @@ body {
   white-space: nowrap;
 }
 
+.stack_stat .stack-graph .stack-graph--body .graph-body {
+  overflow: visible;
+  border-radius: 0;
+  border: none !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
 .container aside .user_medals-container .medals {
   position: relative;
 }
@@ -1442,6 +1450,10 @@ body {
 .change_lang-btn .active-lang-cont {
   opacity: 1;
   max-height: fit-content;
+}
+
+.stack_stat .stack-graph .stack-graph--body .graph-body {
+  min-height: 200px;
 }
 
 .hidden {

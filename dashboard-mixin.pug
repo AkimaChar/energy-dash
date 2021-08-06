@@ -53,7 +53,6 @@ mixin _dashboard
                                     span {{stack.pending}}
                             button.graph-button.shaded-button Harvest all
                         .graph-body
-                            canvas#myChart
                 .energy_account-container
                     .energy-actions
                         .token-cont
@@ -101,147 +100,7 @@ mixin _dashboard
                         | / 
                         span.show-non-active.pools-article_button Non active 
                 .pools_card_list
-                    .pool_card.active-pool#pool1
-                        .card-title
-                            .card-title-token
-                                img.token-img(src="../img/gex.png")
-                                | BNB
-                                .token-fox-tag +
-                                    img(src="../img/foxy.png")
-                            button.shaded-button.full-blue Buy a coin 
-                        .card-token-progress
-                            .token-profit
-                                .profit-title    
-                                    p Profit for 
-                                        span 15 days
-                                    span.stat-with-turbo (-152,2% with Turbo)
-                                .profit-percents 122,5 
-                                    span %
-                            .pool-progress
-                                progress.progress-bar(value="63" max="100")
-                                .card-pool-left
-                                    span.left-time Left 13d 4h 54m 32s
-                                    p.left-percents 63 
-                                        span %
-                        .card-pool-multipliers
-                            .multiplier
-                                div
-                                    p.multiplier-level M1
-                                    | + 0.3% per day
-                                .mult-counter 
-                                    | 0.3% x 1 =  
-                                    span.end-bonus  +0.3%
-                            .multiplier
-                                div
-                                    p.multiplier-level M2
-                                    | + 0.5% per day 
-                                .mult-counter 
-                                    | 0.5% x 0 = 
-                                    span.end-bonus +0.0%
-                            .multiplier
-                                div
-                                    p.multiplier-level M3
-                                    | + 0.7% per day 
-                                .mult-counter 
-                                    |0.7% x 0 =
-                                    span.end-bonus +0.0%
-                            .multiplier
-                                div
-                                    p.multiplier-level Turbo
-                                    | + 0.2% per day 
-                                span.end-bonus +0.2%
-                        .card-pool-stack
-                            .stack-desc
-                                .token-stack-name 
-                                    span BNB 
-                                    | Stacked
-                                span.stack-amount 34.5563
-                                span.stack-difference (-$1.445,23)
-                            button.shaded-button.orange(value="Turbo") Turbo
-                        .card-pool-earned
-                            .stack-desc
-                                .token-stack-name 
-                                    span BNB 
-                                    | Earn
-                                span.stack-amount 34.5563
-                                span.stack-difference (-$245,23)
-                            button.shaded-button.full-blue(value="Turbo") Turbo
-                        button.details-button.opened#btn_pool_1(onclick="switchPool(this)") 
-                            span Details
-                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
-                            </svg>
-                    .pool_card#pool2
-                        .card-title
-                            .card-title-token
-                                img.token-img(src="../img/gex.png")
-                                | BNB
-                                .token-fox-tag +
-                                    img(src="../img/foxy.png")
-                            button.shaded-button.full-blue Buy a coin 
-                        .card-token-progress
-                            .token-profit
-                                .profit-title    
-                                    p Profit for 
-                                        span 15 days
-                                    span.stat-with-turbo (-152,2% with Turbo)
-                                .profit-percents 122,5 
-                                    span %
-                            .pool-progress
-                                progress.progress-bar(value="63" max="100")
-                                .card-pool-left
-                                    span.left-time Left 13d 4h 54m 32s
-                                    p.left-percents 63 
-                                        span %
-                        .card-pool-multipliers
-                            .multiplier
-                                div
-                                    p.multiplier-level M1
-                                    | + 0.3% per day
-                                .mult-counter 
-                                    | 0.3% x 1 =  
-                                    span.end-bonus  +0.3%
-                            .multiplier
-                                div
-                                    p.multiplier-level M2
-                                    | + 0.5% per day 
-                                .mult-counter 
-                                    | 0.5% x 0 = 
-                                    span.end-bonus +0.0%
-                            .multiplier
-                                div
-                                    p.multiplier-level M3
-                                    | + 0.7% per day 
-                                .mult-counter 
-                                    |0.7% x 0 =
-                                    span.end-bonus +0.0%
-                            .multiplier
-                                div
-                                    p.multiplier-level Turbo
-                                    | + 0.2% per day 
-                                span.end-bonus +0.2%
-                        .card-pool-stack
-                            .stack-desc
-                                .token-stack-name 
-                                    span BNB 
-                                    | Stacked
-                                span.stack-amount 34.5563
-                                span.stack-difference (-$1.445,23)
-                            button.shaded-button.orange(value="Turbo") Turbo
-                        .card-pool-earned
-                            .stack-desc
-                                .token-stack-name 
-                                    span BNB 
-                                    | Earn
-                                span.stack-amount 34.5563
-                                span.stack-difference (-$245,23)
-                            button.shaded-button.full-blue(value="Turbo") Turbo
-                        button.details-button.opened#btn_pool_2(onclick="switchPool(this)")
-                            span Details
-                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
-                            </svg>
-                    .pool_card.non-active-pool#pool3(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
+                    .pool_card#pool1(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
                         .card-title
                             .card-title-token
                                 img.token-img(src="../img/gex.png")
@@ -311,6 +170,14 @@ mixin _dashboard
                             <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
                             </svg>
+                        .details-block
+                            .d-row
+                                span Deposit Fee:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937
+                                    span BNB
+
             .assigments_container
                 .line-article-container
                     p.article_text Assignments 

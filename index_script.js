@@ -170,16 +170,13 @@ document.querySelectorAll('.lang-label').forEach(el => {
     });
 })
 
-//change pool vis
+//change pool 
 
-var earned = [...document.querySelectorAll('.card-pool-earned')];
-var stack = [...document.querySelectorAll('.card-pool-stack')];
-var multipliers = [...document.querySelectorAll('.card-pool-multipliers')];
+var details = [...document.querySelectorAll('.details-block')];
+
 function switchPool(el) {
     var id = el.id.replace(/[\D]+/g, '')
-    console.log( id);
-    earned[id-1].classList.toggle('hidden');
-    stack[id-1].classList.toggle('hidden');
-    multipliers[id-1].classList.toggle('hidden');
+    console.log(id);
+    details[id-1].classList.toggle('hidden');
 }
 

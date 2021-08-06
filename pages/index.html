@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/mobile-style.css">
     <link rel="stylesheet" href="../styles/mobile.css">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"> </script>
+    <script src="../script/chart.dev.js" defer> </script>
     <script src="../script/burger-script-menu.dev.js" defer> </script>
+    <script src="../script/index_script.dev.js" defer> </script>
     <title>BSC Energy</title>
   </head>
   <body>
@@ -164,9 +167,7 @@
                         </div>
                         <button class="graph-button shaded-button">Harvest all</button>
                       </div>
-                      <div class="graph-body">
-                        <canvas id="myChart"></canvas>
-                      </div>
+                      <div class="graph-body"></div>
                     </div>
                   </div>
                   <div class="energy_account-container">
@@ -210,139 +211,7 @@
                     <div class="active_pools-cont"><span class="show-active pools-article_button active_article_btn">Active </span>/ <span class="show-non-active pools-article_button">Non active </span></div>
                   </div>
                   <div class="pools_card_list">
-                    <div class="pool_card active-pool" id="pool1">
-                      <div class="card-title">
-                        <div class="card-title-token"><img class="token-img" src="../img/gex.png">BNB
-                          <div class="token-fox-tag">+<img src="../img/foxy.png"></div>
-                        </div>
-                        <button class="shaded-button full-blue">Buy a coin </button>
-                      </div>
-                      <div class="card-token-progress">
-                        <div class="token-profit">
-                          <div class="profit-title">   
-                            <p>Profit for <span>15 days</span></p><span class="stat-with-turbo">(-152,2% with Turbo)</span>
-                          </div>
-                          <div class="profit-percents">122,5 <span>%</span></div>
-                        </div>
-                        <div class="pool-progress">
-                          <progress class="progress-bar" value="63" max="100"></progress>
-                          <div class="card-pool-left"><span class="left-time">Left 13d 4h 54m 32s</span>
-                            <p class="left-percents">63 <span>%</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-pool-multipliers">
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M1</p>+ 0.3% per day
-                          </div>
-                          <div class="mult-counter">
-                             0.3% x 1 =  <span class="end-bonus"> +0.3%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M2</p>+ 0.5% per day 
-                          </div>
-                          <div class="mult-counter">
-                             0.5% x 0 = <span class="end-bonus">+0.0%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M3</p>+ 0.7% per day 
-                          </div>
-                          <div class="mult-counter">
-                             0.7% x 0 =<span class="end-bonus">+0.0%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">Turbo</p>+ 0.2% per day 
-                          </div><span class="end-bonus">+0.2%</span>
-                        </div>
-                      </div>
-                      <div class="card-pool-stack">
-                        <div class="stack-desc">
-                          <div class="token-stack-name"> <span>BNB </span>Stacked</div><span class="stack-amount">34.5563</span><span class="stack-difference">(-$1.445,23)</span>
-                        </div>
-                        <button class="shaded-button orange" value="Turbo">Turbo</button>
-                      </div>
-                      <div class="card-pool-earned">
-                        <div class="stack-desc">
-                          <div class="token-stack-name"> <span>BNB </span>Earn</div><span class="stack-amount">34.5563</span><span class="stack-difference">(-$245,23)</span>
-                        </div>
-                        <button class="shaded-button full-blue" value="Turbo">Turbo</button>
-                      </div>
-                      <button class="details-button opened" id="btn_pool_1" onclick="switchPool(this)"> <span>Details</span><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
-</svg>
-                      </button>
-                    </div>
-                    <div class="pool_card" id="pool2">
-                      <div class="card-title">
-                        <div class="card-title-token"><img class="token-img" src="../img/gex.png">BNB
-                          <div class="token-fox-tag">+<img src="../img/foxy.png"></div>
-                        </div>
-                        <button class="shaded-button full-blue">Buy a coin </button>
-                      </div>
-                      <div class="card-token-progress">
-                        <div class="token-profit">
-                          <div class="profit-title">   
-                            <p>Profit for <span>15 days</span></p><span class="stat-with-turbo">(-152,2% with Turbo)</span>
-                          </div>
-                          <div class="profit-percents">122,5 <span>%</span></div>
-                        </div>
-                        <div class="pool-progress">
-                          <progress class="progress-bar" value="63" max="100"></progress>
-                          <div class="card-pool-left"><span class="left-time">Left 13d 4h 54m 32s</span>
-                            <p class="left-percents">63 <span>%</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-pool-multipliers">
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M1</p>+ 0.3% per day
-                          </div>
-                          <div class="mult-counter">
-                             0.3% x 1 =  <span class="end-bonus"> +0.3%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M2</p>+ 0.5% per day 
-                          </div>
-                          <div class="mult-counter">
-                             0.5% x 0 = <span class="end-bonus">+0.0%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">M3</p>+ 0.7% per day 
-                          </div>
-                          <div class="mult-counter">
-                             0.7% x 0 =<span class="end-bonus">+0.0%</span></div>
-                        </div>
-                        <div class="multiplier">
-                          <div>
-                            <p class="multiplier-level">Turbo</p>+ 0.2% per day 
-                          </div><span class="end-bonus">+0.2%</span>
-                        </div>
-                      </div>
-                      <div class="card-pool-stack">
-                        <div class="stack-desc">
-                          <div class="token-stack-name"> <span>BNB </span>Stacked</div><span class="stack-amount">34.5563</span><span class="stack-difference">(-$1.445,23)</span>
-                        </div>
-                        <button class="shaded-button orange" value="Turbo">Turbo</button>
-                      </div>
-                      <div class="card-pool-earned">
-                        <div class="stack-desc">
-                          <div class="token-stack-name"> <span>BNB </span>Earn</div><span class="stack-amount">34.5563</span><span class="stack-difference">(-$245,23)</span>
-                        </div>
-                        <button class="shaded-button full-blue" value="Turbo">Turbo</button>
-                      </div>
-                      <button class="details-button opened" id="btn_pool_2" onclick="switchPool(this)"><span>Details</span><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
-</svg>
-                      </button>
-                    </div>
-                    <div class="pool_card non-active-pool" id="pool3" style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);">
+                    <div class="pool_card" id="pool1" style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);">
                       <div class="card-title">
                         <div class="card-title-token"><img class="token-img" src="../img/gex.png">BNB
                           <div class="token-fox-tag">+<img src="../img/foxy.png"></div>
@@ -407,6 +276,12 @@
 <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
 </svg>
                       </button>
+                      <div class="details-block">
+                        <div class="d-row"><span>Deposit Fee:</span>
+                          <hr class="d-hr">
+                          <p class="d-par">13,918,937<span>BNB</span></p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -544,7 +419,5 @@
             </section>
       </div>
     </div>
-    <script src="../script/index_script.dev.js" defer> </script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js" integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg==" crossorigin="anonymous"></script>
-    <script src="../script/chart.dev.js" defer></script>
   </body>
 </html>
