@@ -1013,7 +1013,7 @@ body {
 
     .pool_card {
       max-width: px-to-vw(410);
-
+      overflow: hidden;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -1241,6 +1241,7 @@ body {
         svg {
           transform: rotate(-90deg);
           margin-left: px-to-vw(10);
+          transition: .2s ease;
 
           path {
             fill: #ffa114;
@@ -1669,8 +1670,8 @@ body {
   overflow: visible;
   border-radius: 0;
   border: none !important;
-  border-top: 1px solid rgba(255,255,255,0.15) !important;
-  border-left: 1px solid rgba(255,255,255,0.15) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .container aside .user_medals-container .medals {
@@ -1717,6 +1718,7 @@ body {
     line-height: 14px;
   }
 }
+
 
 
 .change_lang-btn {
@@ -1774,6 +1776,7 @@ body {
   display: none !important;
 }
 
+
 .pools_container .pools_card_list .pool_card button.details-button {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1782,4 +1785,314 @@ body {
   .pool_card {
     align-self: flex-start;
   }
+}
+
+.active-det-btn {
+  border-radius: 0 !important;
+  background: transparent !important;
+  border-top: none !important;
+
+  svg {
+    transition: .2s ease;
+    transform: rotate(-270deg) !important;
+  }
+}
+
+
+.details-block {
+  padding: 20px 25px;
+  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+
+  .d-row {
+    span {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .d-hr {
+      width: px-to-vw(100);
+      border: none;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .d-par {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+
+      line-height: 20px;
+
+      span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        /* identical to box height, or 167% */
+
+
+        color: #00A3FF;
+      }
+    }
+  }
+}
+
+.card-token-progress.closed-pool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .level {
+    background: #00A3FF;
+    border-radius: 15px;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:not(:first-of-type) {
+    background: transparent !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &:nth-of-type(2) {
+    opacity: 0.2;
+
+    .level {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .profit-title {
+      p {
+        span {
+          color: #fff !important;
+        }
+      }
+
+    }
+
+    .profit-percents {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+
+  &:last-of-type {
+    opacity: 0.1;
+
+    .level {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .profit-title {
+      p {
+        span {
+          color: #fff !important;
+        }
+      }
+
+    }
+
+    .profit-percents {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .token-profit {
+    .profit-title {
+      margin-right: px-to-vw(50);
+      font-size: 17px !important;
+    }
+  }
+}
+
+.unlock-pool {
+  border: 1px solid #00A3FF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  width: fit-content;
+  align-self: center;
+  padding: 20px px-to-vw(130);
+  position: relative;
+  top: -10px;
+
+  &::before {
+    transition: .2s ease;
+  }
+
+  &:active {
+    top: -9px;
+  }
+
+
+  &:hover {
+    &::before {
+      content: '';
+      background: rgba(0, 163, 255, 0.1);
+      filter: blur(35px);
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      transition: .2s ease;
+      top: 0;
+    }
+  }
+}
+
+.pools_container .pools_card_list .pool_card input[type='range'] {
+  max-width: unset;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
+
+.pools_container .pools_card_list .pool_card.stake-pool .card-pool-multipliers {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.choose-stake-plan {
+  display: flex;
+  padding: 17px 21px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  div {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    position: relative;
+
+    label {
+      display: inline-block;
+      flex-direction: row-reverse;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 17px;
+      position: relative;
+      cursor: pointer;
+      padding-left: 35px;
+
+
+      &::before {
+        content: "";
+        width: 30px;
+        height: 26px;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        background: url('../img/radio-1.png') 0 0 no-repeat;
+      }
+
+
+
+    }
+
+    input[type='radio'] {
+      display: none;
+    }
+  }
+}
+
+input[type='radio']:checked+.plan-tip::before {
+  width: 10000px;
+  background: url('../img/radio-2.png') 0 0 no-repeat !important;
+}
+
+.confirm-btn {
+  top: unset;
+  margin: 20px 0;
+  width: 90%;
+
+  &:active {
+    top: 1px;
+  }
+}
+
+.predict-profit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    /* or 133% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.3;
+  }
+}
+
+.stake-pool {
+  background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%) !important;
+
+  .card-title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+
+    .card-title-token {
+      margin-top: 20px;
+      font-weight: 500 !important;
+      font-size: 15px !important;
+      line-height: 18px !important;
+    }
+
+
+    .token-img {
+      width: 26px;
+      height: 33px;
+    }
+  }
+
+  .card-pool-earned {
+    background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
+  }
+}
+
+.pools_container .pools_card_list .pool_card.stake-pool .card-pool-multipliers {
+
+  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.confirm-btn-cont {
+  display: flex;
+  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.stake-pool {
+  padding-top: 10px;
+  border-radius: 15px !important;
+}
+
+.predict-profit {
+  padding-bottom: 20px;
+  background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
+
 }

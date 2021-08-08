@@ -107,6 +107,70 @@ mixin _dashboard
                                 | BNB
                                 .token-fox-tag +
                                     img(src="../img/foxy.png")
+                            button.shaded-button.full-blue Buy a coin
+                        .closed-pool-progress
+                            .card-token-progress.closed-pool
+                                .level
+                                    p M1
+                                .token-profit
+                                    .profit-title    
+                                        p Profit for 
+                                            span 15 days
+                                        span.stat-with-turbo (-152,2% with Turbo)
+                                    .profit-percents 122,5 
+                                        span %
+                            .card-token-progress.closed-pool
+                                .level
+                                    p M1
+                                .token-profit
+                                    .profit-title    
+                                        p Profit for 
+                                            span 15 days
+                                        span.stat-with-turbo (-152,2% with Turbo)
+                                    .profit-percents 122,5 
+                                        span %
+                            .card-token-progress.closed-pool
+                                .level
+                                    p M1
+                                .token-profit
+                                    .profit-title    
+                                        p Profit for 
+                                            span 15 days
+                                        span.stat-with-turbo (-152,2% with Turbo)
+                                    .profit-percents 122,5 
+                                        span %
+                        button.unlock-pool Unclock Wallet
+                        button.details-button.opened#btn_pool_1(onclick="switchPool(this)") 
+                            span Details
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
+                            </svg>
+                        .details-block.hidden
+                            .d-row
+                                span Deposit Fee:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937 
+                                    span BNB
+                            .d-row
+                                span Withdraw Fee:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937 
+                                    span BNB
+                            .d-row
+                                span Total Staked:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937 
+                                    span BNB
+                    .pool_card#pool2(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
+                        .card-title
+                            .card-title-token
+                                img.token-img(src="../img/gex.png")
+                                | BNB
+                                .token-fox-tag +
+                                    img(src="../img/foxy.png")
                             button.shaded-button.full-blue Buy a coin 
                         .card-token-progress
                             .token-profit
@@ -164,20 +228,80 @@ mixin _dashboard
                                     | Earn
                                 span.stack-amount 34.5563
                                 span.stack-difference (-$245,23)
-                            button.shaded-button.full-blue(value="Turbo") Turbo
-                        button.details-button.opened#btn_pool_3(onclick="switchPool(this)") 
+                            button.shaded-button.full-blue(value="Turbo") Collect
+                        button.details-button.opened#btn_pool_2(onclick="switchPool(this)") 
                             span Details
                             <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
                             </svg>
-                        .details-block
+                        .details-block.hidden
                             .d-row
                                 span Deposit Fee:
                                 hr.d-hr
                                 p.d-par
-                                    | 13,918,937
+                                    | 13,918,937 
                                     span BNB
-
+                            .d-row
+                                span Withdraw Fee:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937 
+                                    span BNB
+                            .d-row
+                                span Total Staked:
+                                hr.d-hr
+                                p.d-par
+                                    | 13,918,937 
+                                    span BNB
+                    form.pool_card.stake-pool#pool3(style="backdrop-filter: blur(25px);")
+                        .card-title
+                            span Stake in BNB Pool
+                            .card-title-token
+                                img.token-img(src="../img/stake-bnb.png")
+                                | Stake BNB
+                        .card-pool-earned
+                            .stack-desc
+                                span.stack-amount 34.5563
+                                span.stack-difference (-$245,23)
+                        .card-token-progress
+                            .pool-progress
+                                span.progress-title Wallet Balance: 53,3456 BNB
+                                input.progress-bar(type="range" )
+                                .card-pool-left
+                                    button.set-value-btn#set_25 25%
+                                    button.set-value-btn#set_50 50%
+                                    button.set-value-btn#set_75 75%
+                                    button.set-value-btn#set_100 100%
+                        .choose-stake-plan
+                            div
+                                input.plan-tip-input#first-plan(type="radio" name="plan" checked)
+                                label.plan-tip(for="first-plan") Profit 122,5% for 15 days (152,5% with Turbo)
+                            div
+                                input.plan-tip-input#second-plan(type="radio" name="plan") 
+                                label.plan-tip(for="second-plan") Profit 122,5% for 15 days (152,5% with Turbo)
+                            div
+                                input.plan-tip-input#third-plan(type="radio" name="plan") 
+                                label.plan-tip(for="third-plan") Profit 122,5% for 15 days (152,5% with Turbo)
+                        .card-pool-multipliers
+                            .multiplier
+                                div
+                                    p.multiplier-level M1
+                                    | Extra + 0.3% 
+                                    br
+                                    |per day
+                            .multiplier
+                                div
+                                    p.multiplier-level M2
+                                    | + 0.5%
+                            .multiplier
+                                div
+                                    p.multiplier-level M3
+                                    | + 0.7%
+                        .confirm-btn-cont
+                            button.unlock-pool.confirm-btn Confirm
+                        .predict-profit
+                            span You have M1x2, M2x1
+                            span After 15 days you will get XXX XXX,XXX BNB
             .assigments_container
                 .line-article-container
                     p.article_text Assignments 

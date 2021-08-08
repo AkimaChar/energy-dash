@@ -176,7 +176,7 @@ var details = [...document.querySelectorAll('.details-block')];
 
 function switchPool(el) {
     var id = el.id.replace(/[\D]+/g, '')
-    console.log(id);
     details[id-1].classList.toggle('hidden');
+    el.classList.toggle('active-det-btn');
 }
 
