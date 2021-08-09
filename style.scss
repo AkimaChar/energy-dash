@@ -1841,6 +1841,24 @@ body {
 }
 
 
+.mult-sum {
+  align-self: flex-end; 
+  font-weight: 300;
+  padding-top: 5px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+    font-size: 15px;
+    line-height: 17px;
+    span {
+      color: #00A3FF;
+      font-weight: 600;
+    }
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 input.stack-amount {
   font-weight: normal;
   font-size: 35px;
