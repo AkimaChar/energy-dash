@@ -262,15 +262,15 @@
                       <div class="details-block hidden">
                         <div class="d-row"><span>Deposit Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Withdraw Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Total Staked:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                       </div>
                     </div>
@@ -326,15 +326,15 @@
                       <div class="details-block hidden">
                         <div class="d-row"><span>Deposit Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Withdraw Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Total Staked:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                       </div>
                     </div>
@@ -392,7 +392,7 @@
                         <div class="stack-desc">
                           <div class="token-stack-name"> <span>BNB </span>Stacked</div><span class="stack-amount">34.5563</span><span class="stack-difference">(-$1.445,23)</span>
                         </div>
-                        <button class="shaded-button orange" value="Turbo">Turbo</button>
+                        <button class="shaded-button orange" id="btnpool2" value="Turbo" onclick="openTurboPopup()">Turbo</button>
                       </div>
                       <div class="card-pool-earned">
                         <div class="stack-desc">
@@ -400,23 +400,39 @@
                         </div>
                         <button class="shaded-button full-blue" value="Turbo">Collect</button>
                       </div>
-                      <button class="details-button opened" id="btn_pool_2" onclick="switchPool(this)"> <span>Details</span><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <button class="details-button opened" id="btn_pool_3" onclick="switchPool(this)"> <span>Details</span><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
 </svg>
                       </button>
                       <div class="details-block hidden">
                         <div class="d-row"><span>Deposit Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Withdraw Fee:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
                         <div class="d-row"><span>Total Staked:</span>
                           <hr class="d-hr">
-                          <p class="d-aaaaaaaaaaaaaaaa">13,918,937 <span>BNB</span></p>
+                          <p class="d-par">13,918,937 <span>BNB</span></p>
                         </div>
+                      </div>
+                    </div>
+                    <div class="turbo-pool pool_card">
+                      <div class="card-title"><span>Activation of Turbo Mode</span>
+                        <hr class="half">
+                        <p class="turbo-des">You can increase your staking profilability by 2% for 24 hours bu buying an energy token and spending it so activationturbo mode. You can exchange your BNB to Energy or spend Energy from your wallet.</p>
+                      </div>
+                      <div class="card-pool-earned">
+                        <div class="stack-desc">
+                          <input class="stack-amount" id="turboInput" type="text" value="34.5563"><span class="stack-difference">(-$245,23)</span>
+                        </div>
+                      </div>
+                      <div class="confirm-turbo-cont"> <span class="energy-balance">Wallet Balance: 53,3456 Energy</span>
+                        <button class="unlock-pool buy-turbo">
+                          <p> <span class="timer-block">Spend from wallet</span></p>
+                        </button>
                       </div>
                     </div>
                     <form class="pool_card stake-pool" id="first-pool" style="backdrop-filter: blur(25px);">
@@ -484,10 +500,10 @@
                         <div class="pool-progress"><span class="progress-title">Wallet Balance: 53,3456 BNB</span>
                           <input class="progress-bar range" oninput="toolTip()" type="range" min="0" max="100" step="1"><span class="bar-percents">0%</span>
                           <div class="card-pool-left">
-                            <button class="set-value-btn" id="set_25" type="button" data-range-value="25">25%</button>
-                            <button class="set-value-btn" id="set_50" type="button" data-range-value="50">50%</button>
-                            <button class="set-value-btn" id="set_75" type="button" data-range-value="75">75%</button>
-                            <button class="set-value-btn" id="set_100" type="button" data-range-value="100">100%</button>
+                            <button class="set-value-btn" type="button" data-range-value="25">25%</button>
+                            <button class="set-value-btn" type="button" data-range-value="50">50%</button>
+                            <button class="set-value-btn" type="button" data-range-value="75">75%</button>
+                            <button class="set-value-btn" type="button" data-range-value="100">100%</button>
                           </div>
                         </div>
                       </div>
@@ -521,6 +537,7 @@
                             <p class="multiplier-level">M3</p>+ 0.7%
                           </div>
                         </div>
+                        <div class="mult-sum"></div>
                       </div>
                       <div class="confirm-btn-cont">
                         <button class="unlock-pool confirm-btn">Confirm</button>

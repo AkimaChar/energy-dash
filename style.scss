@@ -585,6 +585,19 @@ body {
           &:active {
             top: 2px;
           }
+
+          &:hover::before {
+            content: "";
+            background: rgba(0, 163, 255, 0.1);
+            filter: blur(15px);
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            transition: 0.2s ease;
+            top: 0;
+          }
         }
       }
 
@@ -1674,6 +1687,10 @@ body {
   border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
+.pools_container .pools_card_list .pool_card .progress-bar {
+  max-width: unset;
+}
+
 .container aside .user_medals-container .medals {
   position: relative;
 
@@ -1700,6 +1717,110 @@ body {
   }
 }
 
+.turbo-pool {
+  display: flex;
+  flex-direction: column;
+
+  .card-title {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+
+    }
+
+    .turbo-des {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 20px;
+      /* or 167% */
+      color: #FFFFFF;
+      opacity: 0.3;
+    }
+
+    hr.half {
+      width: 100%;
+      border: none;
+      height: 1.5px;
+      background: linear-gradient(90deg, #FFA114 1.65%, rgba(33, 35, 90, 0) 75.1%);
+    }
+  }
+
+  .confirm-turbo-cont {
+    display: flex;
+    flex-direction: column;
+
+    span.energy-balance {
+      margin: auto;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 17px;
+      /* identical to box height, or 142% */
+      margin: 10px auto;
+      color: #FFFFFF;
+
+      opacity: 0.3;
+    }
+
+    .buy-turbo {
+      top: unset;
+
+      span {
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        line-height: 18px !important;
+
+        color: #FFFFFF !important;
+      }
+
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-pool-earned {
+    background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+}
+
+.blue {
+  &:hover::before {
+    content: "";
+    background: rgba(0, 163, 255, 0.1);
+    filter: blur(35px);
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.2s ease;
+    top: 0;
+  }
+}
+
+.turbo-pool {
+  box-shadow: 0px 0px 1000px rgba(0, 0, 0, 1);
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  left: 40%;
+  opacity: 0 !important;
+  transition: .2s ease-in;
+}
+
+.turbo-pool-active {
+  top: 45px;
+  z-index: 1000000;
+  opacity: 1 !important;
+  transition: .2s ease-out;
+}
+
+
 @media(max-width: 1200px) {
   .container aside .user_medals-container .medals div {
     &::before {
@@ -1719,6 +1840,16 @@ body {
   }
 }
 
+
+input.stack-amount {
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 22px;
+  background: none;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
 
 
 .change_lang-btn {

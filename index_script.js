@@ -247,3 +247,24 @@ function timerToUnlock() {
     document.getElementById("unlock_timer").innerHTML = d + "d " + h + "h " + m + "m " + s;
     setTimeout(timerToUnlock, 1000);
 }
+
+//open turbo popup 
+function openTurboPopup() {
+    document.querySelector('.turbo-pool').classList.toggle('turbo-pool-active');
+    document.querySelector('.popup-bg').style.display = 'block ';
+}
+document.querySelector('.popup-bg').addEventListener('click', () => {
+    document.querySelector('.turbo-pool-active').classList.toggle('turbo-pool-active');
+    document.querySelector('.popup-bg').style.display = 'none ';
+});
+
+// turbo validation 
+
+const turboInput = document.querySelector('#turboInput');
+turboInput.addEventListener('keyup', () => {
+    if (turboInput.value.test(/\d/g)) {
+        console.log('ok');
+    } else {
+        alert('Digit only!')
+    }
+})

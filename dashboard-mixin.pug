@@ -149,19 +149,19 @@ mixin _dashboard
                             .d-row
                                 span Deposit Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Withdraw Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Total Staked:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                     .pool_card#pool1(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
@@ -215,19 +215,19 @@ mixin _dashboard
                             .d-row
                                 span Deposit Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Withdraw Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Total Staked:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                     .pool_card#pool2(style="background: rgba(255, 255, 255, 0.02);border:1px solid #35388A;backdrop-filter: blur(25px);")
@@ -288,7 +288,7 @@ mixin _dashboard
                                     | Stacked
                                 span.stack-amount 34.5563
                                 span.stack-difference (-$1.445,23)
-                            button.shaded-button.orange(value="Turbo") Turbo
+                            button.shaded-button.orange#btnpool2(value="Turbo" onclick="openTurboPopup()") Turbo
                         .card-pool-earned
                             .stack-desc
                                 .token-stack-name 
@@ -297,7 +297,7 @@ mixin _dashboard
                                 span.stack-amount 34.5563
                                 span.stack-difference (-$245,23)
                             button.shaded-button.full-blue(value="Turbo") Collect
-                        button.details-button.opened#btn_pool_2(onclick="switchPool(this)") 
+                        button.details-button.opened#btn_pool_3(onclick="switchPool(this)") 
                             span Details
                             <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.11125 15L-3.27835e-07 7.5L7.11125 -3.88485e-08L8 0.937335L1.7775 7.5L8 14.0627L7.11125 15Z" fill="#00A3FF"/>
@@ -306,21 +306,35 @@ mixin _dashboard
                             .d-row
                                 span Deposit Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Withdraw Fee:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
                             .d-row
                                 span Total Staked:
                                 hr.d-hr
-                                p.d-aaaaaaaaaaaaaaaa
+                                p.d-par
                                     | 13,918,937 
                                     span BNB
+                    .turbo-pool.pool_card
+                        .card-title
+                            span Activation of Turbo Mode
+                            hr.half
+                            p.turbo-des You can increase your staking profilability by 2% for 24 hours bu buying an energy token and spending it so activationturbo mode. You can exchange your BNB to Energy or spend Energy from your wallet.
+                        .card-pool-earned
+                            .stack-desc
+                                input.stack-amount#turboInput(type="text" value="34.5563") 
+                                span.stack-difference (-$245,23)
+                        .confirm-turbo-cont 
+                            span.energy-balance Wallet Balance: 53,3456 Energy
+                            button.unlock-pool.buy-turbo
+                                p 
+                                    span.timer-block Spend from wallet
                     form.pool_card.stake-pool#first-pool(style="backdrop-filter: blur(25px);")
                         .card-title
                             span Stake in BNB Pool
@@ -387,10 +401,10 @@ mixin _dashboard
                                 input.progress-bar.range(oninput="toolTip()" type="range" min='0' max="100" step="1")
                                 span.bar-percents 0%
                                 .card-pool-left
-                                    button.set-value-btn#set_25(type="button" data-range-value="25") 25%
-                                    button.set-value-btn#set_50(type="button" data-range-value="50") 50%
-                                    button.set-value-btn#set_75(type="button" data-range-value="75") 75%
-                                    button.set-value-btn#set_100(type="button" data-range-value="100") 100%
+                                    button.set-value-btn(type="button" data-range-value="25") 25%
+                                    button.set-value-btn(type="button" data-range-value="50") 50%
+                                    button.set-value-btn(type="button" data-range-value="75") 75%
+                                    button.set-value-btn(type="button" data-range-value="100") 100%
                         .choose-stake-plan
                             div
                                 input.plan-tip-input#first-plan(type="radio" name="plan" checked)
@@ -416,6 +430,8 @@ mixin _dashboard
                                 div
                                     p.multiplier-level M3
                                     | + 0.7%
+                            .mult-sum
+                                
                         .confirm-btn-cont
                             button.unlock-pool.confirm-btn Confirm
                         .predict-profit
