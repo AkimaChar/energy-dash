@@ -615,6 +615,44 @@ h4 {
   font-size: 20px;
 }
 
+.lvl-conditions > div {
+  padding-top: 10px;
+}
+
+.refferal-stat-info_container {
+  position: relative;
+}
+
+.rewards-stat .stack-title.rewards-title span {
+  font-size: 17px;
+}
+
+.refs-level-cont .lvl-card-list {
+  margin-bottom: 0;
+}
+
+.show-details:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.rewards-stat {
+  box-shadow: 0px 0px 1000px black;
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  left: calc(50% - 175px);
+  opacity: 0 !important;
+  transition: 0.2s ease-in;
+}
+
+.rewards-stat.active-rew-stat {
+  top: 45px;
+  z-index: 1000000;
+  opacity: 1 !important;
+  transition: 0.2s ease-out;
+}
+
 @media (max-width: 1500px) {
   .ref-stat-info {
     flex-direction: column;

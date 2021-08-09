@@ -176,7 +176,74 @@ var details = [...document.querySelectorAll('.details-block')];
 
 function switchPool(el) {
     var id = el.id.replace(/[\D]+/g, '')
-    details[id-1].classList.toggle('hidden');
+    details[id - 1].classList.toggle('hidden');
     el.classList.toggle('active-det-btn');
 }
 
+
+function unlockPool(id) {
+    document.querySelector('#' + id).classList.toggle('stake-pool-active');
+    document.querySelector('.popup-bg').style.display = 'block ';
+}
+
+document.querySelector('.popup-bg').addEventListener('click', () => {
+    document.querySelector('.stake-pool-active').classList.toggle('stake-pool-active');
+    document.querySelector('.popup-bg').style.display = 'none ';
+});
+document.querySelectorAll('.set-value-btn').forEach(el => {
+    el.addEventListener('click', () => {
+        document.querySelector('.range').value = el.getAttribute('data-range-value');
+        toolTip()
+    });
+});
+
+function toolTip() {
+    const tooltip = document.querySelector('.bar-percents');
+    const range = document.querySelector('.range');
+    tooltip.innerHTML = '+' + range.value + "%";
+    tooltip.style.left = range.value * 3.1 + 'px';
+}
+
+toolTip()
+
+
+//timer 
+
+//время устанавливается внутри кнопки в соотвествующем формате, после истечении времени, кнопка становится доступной для вызова попап окна
+function setTimers() {
+    timerToUnlock();
+}
+
+function timerToUnlock() {
+    var my_timer = document.getElementById("unlock_timer");
+    var time = my_timer.innerHTML;
+    var arr = time.split(/\D\D/g);
+    var d = arr[0];
+    var h = arr[1];
+    var m = arr[2];
+    var s = arr[3];
+    if (s == 0) {
+        if (m == 0) {
+            if (h == 0) {
+                if (d == 0) {
+                    document.querySelector('#blocked-pool').setAttribute('onclick', "unlockPool('second-pool')");
+                    document.querySelector('#blocked-pool').innerHTML = 'Unlock Wallet'
+                    return;
+                }
+                d--;
+                h = 24;
+                if (d < 10) d = "0" + d;
+            }
+            h--;
+            m = 60;
+            if (h < 10) h = "0" + h;
+        }
+        m--;
+        if (m < 10) m = "0" + m;
+        s = 59;
+    }
+    else s--;
+    if (s < 10) s = "0" + s;
+    document.getElementById("unlock_timer").innerHTML = d + "d " + h + "h " + m + "m " + s;
+    setTimeout(timerToUnlock, 1000);
+}

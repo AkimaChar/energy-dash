@@ -315,18 +315,7 @@
   align-items: center;
   gap: 0.8854166667vw;
 }
-.energy_pool__stats__token .big span:last-of-type {
-  line-height: 1.5;
-  gap: 0.15625vw;
-  font-size: 0.7291666667vw;
-  color: #ffa114;
-  border: 0.0520833333vw solid #ffa114;
-  border-radius: 0.78125vw;
-  padding: 0.1041666667vw 0.625vw;
-  display: flex;
-  align-items: center;
-}
-.energy_pool__stats__token .big span:last-of-type img {
+.energy_pool__stats__token .big img {
   width: 0.7291666667vw;
   height: 0.7291666667vw;
 }
@@ -574,6 +563,68 @@
 }
 .energy_details__info .block .text span span {
   color: #fff;
+}
+
+.energy_token_action_graph__action_block .action .count__payed {
+  align-items: center;
+  margin-right: 5px;
+}
+
+.energy_token_action_graph__action_block .action .count__payed input {
+  max-width: unset;
+  width: 100%;
+}
+
+.energy_token_action_graph__action_block::before {
+  position: absolute;
+  content: "";
+  width: 15.80625vw;
+  height: 25.645833vw;
+}
+
+.energy_token_action_graph__graph {
+  width: 100%;
+}
+
+.graph-body {
+  height: auto;
+  width: 100%;
+}
+
+.big {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.energy_token_action_graph__action_block .action .count__payed {
+  width: 90%;
+  justify-content: space-between;
+}
+
+.energy_token_action_graph__action_block .action .count__dollars {
+  white-space: nowrap;
+}
+
+.energy_pool__stats__token .token-fox-tag {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 0.5208333333vw;
+  color: #ffa114;
+  border: 1px solid #ffa114;
+  box-sizing: border-box;
+  padding: 0.1041666667vw 0.625vw;
+  border-radius: 15px;
+  min-height: 1.3020833333vw;
+  width: fit-content;
+}
+.energy_pool__stats__token .token-fox-tag img {
+  height: 14px;
+  width: 14px;
 }
 
 @media (max-width: 1024px) {

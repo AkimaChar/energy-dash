@@ -36,6 +36,9 @@ var chart = LightweightCharts.createChart(document.querySelector('.graph-body'),
       color: 'rgba(70, 130, 180, 0.2)',
       style: 1
     }
+  },
+  priceScale: {
+    borderColor: 'rgba(70, 130, 180, 0.1)'
   }
 });
 var graph = document.querySelector('.graph-body');

@@ -260,6 +260,29 @@ input::-webkit-inner-spin-button {
   font-weight: inherit;
 }
 
+.withdraw__block .value {
+  display: flex;
+  align-items: center;
+}
+.withdraw__block .value .token-img {
+  margin-left: 10px;
+  height: 34px;
+  width: 30px;
+}
+
+.withdraw__block__footer::before {
+  content: "Enter amount in BNB:";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  /* identical to box height, or 200% */
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.3;
+  top: -10px;
+  position: relative;
+}
+
 @media (max-width: 1880px) and (min-width: 1600px) {
   .rules_info__block ul li {
     font-size: 0.6770833333vw;

@@ -14,6 +14,8 @@ $screen-width: 1920;
   }
 }
 
+
+
 .rules_info {
   display: flex;
   justify-content: space-between;
@@ -331,6 +333,32 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.withdraw__block .value {
+  display: flex;
+  align-items: center;
+
+  .token-img {
+    margin-left: 10px;
+    height: 34px;
+    width: 30px;
+  }
+}
+
+.withdraw__block__footer  {
+  &::before {
+    content: 'Enter amount in BNB:';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.3;
+    top: -10px;
+    position: relative;
+  }
+}
+
 @media (max-width: 1880px) and (min-width: 1600px) {
   .rules_info__block ul li {
     font-size: px-to-vw(13);
@@ -364,8 +392,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 1366px) {
-  .wrapper {
-  }
+  .wrapper {}
 
   .rules_info__block ul li {
     font-size: px-to-vw(22);
@@ -464,7 +491,7 @@ input::-webkit-inner-spin-button {
 
 }
 
-@media  (max-width: 800px) {
+@media (max-width: 800px) {
   .rules_info__text .title {
     font-size: px-to-vw(50);
   }

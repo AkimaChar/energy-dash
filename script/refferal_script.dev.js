@@ -64,3 +64,13 @@ document.querySelectorAll('.lang-label').forEach(function (el) {
     document.querySelector('.lang-content').classList.toggle('active-lang-cont');
   });
 });
+
+function switchDetail() {
+  document.querySelector('.rewards-stat').classList.toggle('active-rew-stat');
+  document.querySelector('.popup-bg').style.display = 'block ';
+}
+
+document.querySelector('.popup-bg').addEventListener('click', function () {
+  document.querySelector('.rewards-stat').classList.toggle('active-rew-stat');
+  document.querySelector('.popup-bg').style.display = 'none ';
+});

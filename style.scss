@@ -1682,7 +1682,7 @@ body {
 
     &::before {
       position: absolute;
-      content: '45%';
+      content: '45';
       background: linear-gradient(132.67deg, #4600FF -2.2%, #449ED1 102.2%);
       border-radius: 15px;
       padding: 3px 6px;
@@ -2003,6 +2003,39 @@ body {
 
 
 
+
+    }
+
+    &:last-of-type label::after {
+      content: 'M2';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+      color: #FFA114;
+      width: 30px;
+      margin-left: 10px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    &:nth-of-type(2) label::after {
+      content: 'M1';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+      color: #FFA114;
+      width: 30px;
+      margin-left: 10px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      padding: 5px;
     }
 
     input[type='radio'] {
@@ -2011,9 +2044,39 @@ body {
   }
 }
 
+.stack_stat .energy_account-container .energy-spot {
+
+  align-items: unset;
+  max-width: unset;
+  width: fit-content;
+  justify-self: flex-start;
+
+  .spot-button {
+    height: auto;
+  }
+}
+
+.stack_stat .energy_account-container {
+  flex-direction: column;
+}
+
+.bar-percents {
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  /* identical to box height, or 113% */
+  color: #00A3FF;
+  margin-bottom: 10px;
+}
+
 input[type='radio']:checked+.plan-tip::before {
-  width: 10000px;
   background: url('../img/radio-2.png') 0 0 no-repeat !important;
+}
+
+
+input[type='radio']:disabled+.plan-tip {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .confirm-btn {
@@ -2095,4 +2158,101 @@ input[type='radio']:checked+.plan-tip::before {
   padding-bottom: 20px;
   background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
 
+}
+
+.popup-bg {
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  /* identical to box height, or 142% */
+  color: #FFFFFF;
+
+  opacity: 0.3;
+}
+
+.set-value-btn {
+  border: 1px solid #00A3FF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 65px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+
+  &:active {
+    top: 1px;
+  }
+
+  &:hover::before {
+    content: "";
+    background: rgba(0, 163, 255, 0.1);
+    filter: blur(10px);
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.2s ease;
+    top: 0;
+  }
+
+  color: #00A3FF;
+}
+
+.stake-pool {
+  box-shadow: 0px 0px 1000px rgba(0, 0, 0, 1);
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  left: calc(50% - 175px);
+  display: none;
+  width: 380px !important;
+  opacity: 0 !important;
+  transition: .2s ease-in;
+
+  .card-pool-multipliers {
+    font-size: 11px !important;
+
+    .multiplier {
+      height: 32px !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+.stake-pool-active {
+  top: 45px;
+  z-index: 1000000;
+  opacity: 1 !important;
+  transition: .2s ease-out;
+}
+
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+.page-shaded {
+  position: absolute;
+  z-index: 10000000000000000000000000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

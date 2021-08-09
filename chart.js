@@ -20,7 +20,7 @@ var chart = LightweightCharts.createChart(document.querySelector('.graph-body'),
 
     localization: {
         DateFormat: 'yyyy/MM/dd',
-       // priceFormatter: price => '$ ' + price,
+        // priceFormatter: price => '$ ' + price,
     },
     layout: {
         backgroundColor: '#FAEBD700',
@@ -37,10 +37,14 @@ var chart = LightweightCharts.createChart(document.querySelector('.graph-body'),
             style: 1,
         },
     },
+    priceScale: {
+        borderColor: 'rgba(70, 130, 180, 0.1)',
+    }
 });
 var graph = document.querySelector('.graph-body');
 var graphWidth;
 var graphHeight;
+
 window.addEventListener('resize', () => {
     graphHeight = graph.offsetHeight;
     graphWidth = graph.offsetWidth;

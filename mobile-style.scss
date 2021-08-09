@@ -90,108 +90,616 @@ $screen-width: 1920;
 @media(max-width: 1250px) {
   .stack_stat .energy_account-container {
     flex-direction: column;
+  }
+}
 
-    @media (max-width: 1377px) {
-      .stack_stat .stack-graph .stack-graph--body {
-        flex-direction: column;
+@media (max-width: 1377px) {
+  .stack_stat .stack-graph .stack-graph--body {
+    flex-direction: column;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: unset;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-body {
+    width: 100%;
+    max-width: unset;
+    margin-top: 15px;
+  }
+
+  .info-title {
+    align-items: flex-start;
+    align-self: flex-start;
+    position: relative;
+    height: auto;
+
+    hr {
+      bottom: 0;
+      position: absolute;
+      margin: 0 !important;
+    }
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
+    height: fit-content;
+    align-self: center;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+    line-height: 125%;
+    top: -5px;
+    position: relative;
+    font-size: px-to-vw(65);
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+    justify-content: space-around;
+    height: auto;
+    white-space: nowrap;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .stack_stat .energy_account-container {
+    flex-direction: column;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+    padding-left: 0;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle svg {
+    height: 1.08125vw;
+    width: 1.320833vw;
+  }
+
+  .stack_stat .energy_account-container .energy-spot {
+    margin-left: 0;
+    align-items: unset;
+    max-width: unset;
+    width: fit-content;
+    justify-self: flex-start;
+
+    .spot-body {
+      margin-right: 20px;
+    }
+  }
+
+  .stack_stat .energy_account-container .energy-spot .spot-button {
+    height: auto;
+  }
+
+  .stack_stat .energy_account-container .energy-actions {
+    width: 100%;
+  }
+
+  .stack_stat .energy_account-container .energy-actions {
+
+    .token-cont,
+    .token-pocket,
+    .token-price {
+      height: auto;
+    }
+
+    align-items: unset;
+  }
+}
+
+@media (max-width: 1125px) {
+  .line-article-container {
+    flex-wrap: wrap;
+    gap: px-to-vw(10);
+
+    .title_hr {
+      width: auto;
+      flex-grow: 1;
+    }
+
+    .active_pools-cont {
+      width: 100%;
+    }
+
+    .article_text {
+      font-size: px-to-vw(75);
+      line-height: px-to-vw(83);
+    }
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 15px;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .stack_stat .stack-title .stack-cash p {
+    font-size: 25px;
+  }
+
+  .stack_stat .stack-title .token {
+    font-size: 15px;
+    line-height: 125%;
+
+    .token-img {
+      width: 2.5625vw;
+      height: 2.770833vw;
+    }
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+    font-size: 15px;
+  }
+
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    font-size: 12px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+    white-space: nowrap;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 270px;
+    border-radius: 15px;
+
+  }
+
+  .pools_container .pools_card_list .pool_card .progress-bar {
+    max-width: unset;
+  }
+
+  .pools_container .pools_card_list .pool_card button.details-button {
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
+    display: none;
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 13px;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-body {
+    margin-top: px-to-vw(25);
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont div p {
+    white-space: nowrap;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body {
+    top: -10px;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+    line-height: 125%;
+    font-size: px-to-vw(95);
+  }
+
+  .stack_stat .stack-graph .stack-graph--body {
+    min-height: unset;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+    font-size: px-to-vw(40);
+    justify-content: space-between;
+
+    p {
+      font-size: px-to-vw(40);
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .stack_stat .energy_account-container .energy-actions {
+    margin-bottom: 50px;
+
+    .token-img {
+      width: 33px;
+      height: 35px;
+      margin-right: 0.8333333333vw;
+    }
+
+    .token-action-btns {
+      position: absolute;
+      left: 46%;
+      margin-top: px-to-vw(210);
+    }
+
+    .token-cont {
+      padding: 2.145833vw 2.40625vw;
+    }
+  }
+
+  .assigment-item {
+    .as-title .as-title--img {
+      height: 35px !important;
+      width: 35px !important;
+
+      .title-circle {
+        width: 20px !important;
+        height: 20px !important;
+
+        span {
+          font-size: 11px !important;
+          left: 0.5px !important;
+          position: relative !important;
+        }
+      }
+    }
+  }
+
+  .stack_stat .energy_account-container .energy-spot {
+    display: none;
+  }
+
+  .token-action-btns {
+    margin-left: px-to-vw(-270);
+
+    .orange {
+      padding: 14px 40px;
+      margin-right: 5px;
+    }
+
+    .blue {
+      padding: 14px 60px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .stack_stat .stack-title {
+    justify-content: space-between;
+
+    .title_hr {
+      display: none;
+    }
+  }
+
+  .slider .slider-navigation {
+    .nav-planks .item_plank {
+      width: 5.041667vw;
+    }
+  }
+
+  .assigments_container .assigment-item .as-prize span {
+    font-size: 10px;
+  }
+
+  .assigments_container .assigment-item .as-title span {
+    font-size: 12px;
+  }
+
+  .assigments_container .as-modified {
+
+    .as-title,
+    .as-description,
+    .as-prize {
+      padding: 2vw 3vw;
+    }
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+    margin-left: 5px;
+  }
+
+  .assigments_container .assigment-item .as-title .as-title--img {
+    border-radius: 9px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .assigments_container .assigment-item .as-description p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 630px) {
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+    top: 0;
+  }
+
+  .stack_stat .stack-title {
+    flex-direction: column;
+  }
+
+  .stack_stat .stack-title .token {
+    .token_price {
+      padding: 2.09375vw 2.3958333333vw;
+    }
+  }
+
+  .stack_stat .stack-title .token {
+    background: rgba(255, 255, 255, 0.01);
+    padding-left: 2.3958333333vw;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stack_stat .stack-graph .stack-graph--body {
+    max-width: 83.104167vw;
+  }
+
+  .slider .slider-navigation .nav__button_left svg,
+  .slider .slider-navigation .nav__button_right svg {
+    display: none;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+    font-size: px-to-vw(60);
+    justify-content: space-between;
+
+    p {
+      font-size: px-to-vw(60);
+    }
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+    line-height: 125%;
+    align-self: flex-start;
+  }
+
+  .info-title {
+    align-self: unset;
+
+    hr {
+      margin-bottom: 5px !important;
+    }
+  }
+
+  .stack_stat .stack-graph .stack-graph--body {
+    padding: 3.5625vw 4.34375vw;
+  }
+
+  .stack_stat .stack-title {
+    margin-bottom: 25px;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-price,
+  .stack_stat .energy_account-container .energy-actions .token-pocket {
+    padding: 0 4.40625vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .stack_stat .energy_account-container .energy-actions .token-cont {
+    padding: 3.145833vw 4.40625vw;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+    margin-top: px-to-vw(280);
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-price,
+  .stack_stat .energy_account-container .energy-actions .token-pocket {
+    font-size: 13px;
+
+    svg {
+      width: 20px;
+      height: 21px;
+    }
+  }
+
+  .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier *,
+  .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter,
+  .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter>.end-bonus {
+    font-size: 11px;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .multiplier-level {
+    padding: 1.616667vw 1.772917vw;
+    border-radius: 11px;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-title {
+    font-size: 16px;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-title .token-fox-tag {
+    border-radius: 15px;
+    padding: 0.104167vw 1.625vw;
+    margin-left: 10px;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-pool-stack .orange {
+    padding: 10px 30px !important;
+    font-size: 11px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-pool-earned .full-blue {
+    padding: 10px 30px !important;
+    font-size: 11px !important;
+  }
+
+  .pools_container .pools_card_list .token-stack-name {
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .pools_container .pools_card_list .stack-amount {
+    font-weight: 300;
+    font-size: 30px;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-title-token {
+    font-size: 12px;
+
+    .token-img {
+      width: 5.5625vw;
+      height: 5.770833vw;
+      margin-right: 10px;
+    }
+  }
+
+  .pools_container .pools_card_list .pool_card button.details-button {
+    padding: 3.302083vw 0;
+  }
+
+  .pools_container .pools_card_list .pool_card button.details-button svg {
+    margin-left: 10px;
+  }
+
+  .pools_container .pools_card_list .pool_card>div {
+    padding: 11px 17px !important;
+  }
+
+  .full-blue {
+    font-size: 11px;
+    padding: 1.78125vw 4.5625vw;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 455px) {
+  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+    left: 36%;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont div p {
+    font-size: px-to-vw(50);
+
+    span {
+      font-size: px-to-vw(50);
+    }
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont div span {
+    font-size: px-to-vw(80);
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont {
+    padding-right: 0;
+  }
+}
+
+@media(max-width: 455px) {
+  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+    left: 36%;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont div p {
+    font-size: px-to-vw(50);
+
+    @media (max-width: 390px) {
+      .stack_stat .stack-title .stack-cash p {
+        font-size: 20px;
       }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-right: unset;
+      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
+      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
+        font-size: 2.625vw;
       }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-body {
-        width: 100%;
-        max-width: unset;
-        margin-top: 15px;
+      .stack_stat .stack-title .token .token-img {
+        width: 4.5625vw;
+        height: 4.770833vw;
+      }
+
+      .slider {
+        height: 23vw;
+      }
+
+      .stack_stat .energy_account-container .energy-actions .token-action-btns {
+        left: 39%;
+        margin-top: px-to-vw(330);
       }
 
       .info-title {
-        align-items: flex-start;
-        align-self: flex-start;
-        position: relative;
-        height: auto;
-
         hr {
-          bottom: 0;
-          position: absolute;
-          margin: 0 !important;
+          margin-bottom: 9px !important;
+          width: 14.072917vw !important;
         }
       }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
-        height: fit-content;
-        align-self: center;
+      .token-action-btns .blue,
+      .token-action-btns .orange {
+        padding: 9px 30px;
+        font-size: 11px;
       }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
-        line-height: 125%;
-        top: -5px;
-        position: relative;
-        font-size: px-to-vw(65);
+      .stack_stat .stack-graph .stack-graph--body {
+        max-width: 81.104167vw;
       }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
-        justify-content: space-around;
-        height: auto;
-        white-space: nowrap;
+      .stack_stat .stack-title .token {
+        border-radius: 10px;
+      }
 
-        p {
-          margin: 0;
+      .stack_stat .stack-graph .stack-graph--body .graph-body #myChart {
+        width: 104% !important;
+        height: auto !important;
+        margin-left: -11px;
+      }
+
+      .stack_stat .energy_account-container .energy-actions .token-cont div p {
+        margin-top: 0;
+      }
+
+      .stack_stat .energy_account-container .energy-actions .token-img {
+        width: 23px;
+        height: 25px;
+        margin-right: 10px;
+      }
+    }
+
+    //
+
+    @media (min-width: 600px) {
+      .assigments-block {
+        margin-top: px-to-vw(31);
+
+        .assigments-list {
+          padding: px-to-vw(22) px-to-vw(15);
+          border-radius: px-to-vw(15);
+          display: flex;
+          flex-direction: column;
+          gap: px-to-vw(13);
+
+          .assigment-item {
+            &:nth-of-type(3) {
+              .as-prize {
+
+                svg,
+                .as-prize--mount:last-of-type {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        .change-list-visibility {
+          display: none;
         }
       }
     }
 
-    @media (max-width: 1250px) {
-      .stack_stat .energy_account-container {
-        flex-direction: column;
+    @media (max-width: 600px) {
+      $screen-width: 460;
+
+      @function px-to-vw($value) {
+        @return $value * 100 / $screen-width+vw;
       }
 
-      .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
-        padding-left: 0;
-      }
-
-      .assigments_container .assigment-item .as-title .as-title--img .title-circle svg {
-        height: 1.08125vw;
-        width: 1.320833vw;
-      }
-
-      .stack_stat .energy_account-container .energy-spot {
-        margin-left: 0;
-        align-items: unset;
-        max-width: unset;
-        width: fit-content;
-        justify-self: flex-start;
-
-        .spot-body {
-          margin-right: 20px;
-        }
-      }
-
-      .stack_stat .energy_account-container .energy-spot .spot-button {
-        height: auto;
-      }
-
-      .stack_stat .energy_account-container .energy-actions {
-        width: 100%;
-      }
-
-      .stack_stat .energy_account-container .energy-actions {
-
-        .token-cont,
-        .token-pocket,
-        .token-price {
-          height: auto;
-        }
-
-        align-items: unset;
-      }
-    }
-
-    @media (max-width: 1125px) {
       .line-article-container {
         flex-wrap: wrap;
         gap: px-to-vw(10);
@@ -199,712 +707,209 @@ $screen-width: 1920;
         .title_hr {
           width: auto;
           flex-grow: 1;
+          max-width: none;
         }
 
         .active_pools-cont {
           width: 100%;
+          font-size: px-to-vw(12);
+          line-height: px-to-vw(15);
         }
 
         .article_text {
-          font-size: px-to-vw(75);
-          line-height: px-to-vw(83);
+          font-size: px-to-vw(25);
+          line-height: px-to-vw(30);
         }
       }
 
-      .assigments_container .assigment-item .as-prize span {
-        font-size: 15px;
-      }
+      .assigments-block {
+        margin-top: px-to-vw(31);
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
-        p {
-          font-size: 15px;
-        }
-      }
+        .assigments-list {
+          padding: px-to-vw(22) px-to-vw(15);
+          border-radius: px-to-vw(15);
+          display: flex;
+          flex-direction: column;
+          gap: px-to-vw(13);
 
-      .stack_stat .stack-title .stack-cash p {
-        font-size: 25px;
-      }
+          .assigment-item {
+            // height: 95px;
+            backdrop-filter: blur(px-to-vw(25));
+            border-radius: px-to-vw(15);
+            margin: 0;
 
-      .stack_stat .stack-title .token {
-        font-size: 15px;
-        line-height: 125%;
+            div:first-child {
+              grid-template-columns: 1fr 30%;
+            }
 
-        .token-img {
-          width: 2.5625vw;
-          height: 2.770833vw;
-        }
-      }
+            .as-title,
+            .as-prize,
+            .as-description {
+              padding: px-to-vw(15) px-to-vw(20);
+            }
 
-      .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
-        white-space: nowrap;
-      }
+            .as-title {
+              .as-title--img {
+                width: px-to-vw(46) !important;
+                height: px-to-vw(46) !important;
+                border-radius: px-to-vw(15);
+                flex-basis: px-to-vw(46);
 
-      .pools_container .pools_card_list .pool_card {
-        width: 270px;
-        border-radius: 15px;
+                .title-circle {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
 
-        &>div {
-          padding: 8px 17px !important;
-        }
-      }
+                  .third-stake--fig {
+                    margin: 0;
+                  }
 
-      .pools_container .pools_card_list .pool_card .progress-bar {
-        max-width: unset;
-      }
+                  svg {
+                    width: px-to-vw(9);
+                    height: px-to-vw(13);
+                  }
+                }
+              }
 
-      .pools_container .pools_card_list .pool_card button.details-button {
-        border-radius: 0 0 15px 15px;
-      }
-    }
+              >span {
+                font-size: px-to-vw(15);
+                line-height: 150%;
+                margin: 0;
+                display: block;
+                width: 70%;
+              }
 
-    @media (max-width: 900px) {
-      .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
-        display: none;
-      }
+              display: flex;
+              align-items: center;
+              gap: px-to-vw(13);
+            }
 
-      .assigments_container .assigment-item .as-prize span {
-        font-size: 13px;
-      }
+            .as-prize {
+              flex-wrap: wrap;
+              gap: px-to-vw(12);
 
-      .stack_stat .stack-graph .stack-graph--body .graph-body {
-        margin-top: px-to-vw(25);
-      }
+              svg {
+                width: px-to-vw(17.28);
+                height: px-to-vw(25.95);
+              }
 
-      .stack_stat .energy_account-container .energy-actions .token-cont div p {
-        white-space: nowrap;
-      }
+              .as-prize--mount {
+                font-size: px-to-vw(20);
+                line-height: px-to-vw(24);
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
 
-      .stack_stat .stack-graph .stack-graph--body {
-        top: -10px;
-      }
+              .lottery-ticket-mount {
+                margin: 0;
+                line-height: 1;
+              }
+            }
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
-        line-height: 125%;
-        font-size: px-to-vw(95);
-      }
+            .as-description {
+              .as-description--text {
+                font-size: px-to-vw(17);
+                line-height: 150%;
+              }
+            }
 
-      .stack_stat .stack-graph .stack-graph--body {
-        min-height: unset;
-      }
+            &:nth-of-type(3) {
+              .as-prize {
 
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
-        font-size: px-to-vw(40);
-        justify-content: space-between;
-
-        p {
-          font-size: px-to-vw(40);
-        }
-      }
-    }
-
-    @media (max-width: 780px) {
-      .stack_stat .energy_account-container .energy-actions {
-        margin-bottom: 50px;
-
-        .token-img {
-          width: 33px;
-          height: 35px;
-          margin-right: 0.8333333333vw;
-        }
-
-        .token-action-btns {
-          position: absolute;
-          left: 46%;
-          margin-top: px-to-vw(210);
-        }
-
-        .token-cont {
-          padding: 2.145833vw 2.40625vw;
-        }
-      }
-
-      .assigment-item {
-        .as-title .as-title--img {
-          height: 35px !important;
-          width: 35px !important;
-
-          .title-circle {
-            width: 20px !important;
-            height: 20px !important;
-
-            span {
-              font-size: 11px !important;
-              left: 0.5px !important;
-              position: relative !important;
+                .lottery-ticket-mount,
+                span:nth-of-type(2) {
+                  display: none;
+                }
+              }
             }
           }
         }
-      }
 
-      .stack_stat .energy_account-container .energy-spot {
-        display: none;
-      }
-
-      .token-action-btns {
-        margin-left: px-to-vw(-270);
-
-        .orange {
-          padding: 14px 40px;
-          margin-right: 5px;
-        }
-
-        .blue {
-          padding: 14px 60px;
-        }
-      }
-    }
-
-    @media (max-width: 740px) {
-      .stack_stat .stack-title {
-        justify-content: space-between;
-
-        .title_hr {
+        .change-list-visibility {
           display: none;
         }
       }
 
-      .slider .slider-navigation {
-        .nav-planks .item_plank {
-          width: 5.041667vw;
-        }
-      }
+      .news_container {
+        margin-top: px-to-vw(36);
+        margin-bottom: px-to-vw(80);
 
-      .assigments_container .assigment-item .as-prize span {
-        font-size: 10px;
-      }
+        .line-article-container {
+          flex-wrap: nowrap;
+          margin-bottom: px-to-vw(30);
 
-      .assigments_container .assigment-item .as-title span {
-        font-size: 12px;
-      }
-
-      .assigments_container .as-modified {
-
-        .as-title,
-        .as-description,
-        .as-prize {
-          padding: 2vw 3vw;
-        }
-      }
-
-      .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
-        margin-left: 5px;
-      }
-
-      .assigments_container .assigment-item .as-title .as-title--img {
-        border-radius: 9px;
-        min-width: 35px;
-        min-height: 35px;
-      }
-
-      .assigments_container .assigment-item .as-description p {
-        font-size: 13px;
-      }
-    }
-
-    @media (max-width: 630px) {
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
-        top: 0;
-      }
-
-      .stack_stat .stack-title {
-        flex-direction: column;
-      }
-
-      .stack_stat .stack-title .token {
-        .token_price {
-          padding: 2.09375vw 2.3958333333vw;
-        }
-      }
-
-      .stack_stat .stack-title .token {
-        background: rgba(255, 255, 255, 0.01);
-        padding-left: 2.3958333333vw;
-        border-radius: 15px;
-        margin-bottom: 10px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .stack_stat .stack-graph .stack-graph--body {
-        max-width: 83.104167vw;
-      }
-
-      .slider .slider-navigation .nav__button_left svg,
-      .slider .slider-navigation .nav__button_right svg {
-        display: none;
-      }
-
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
-        font-size: px-to-vw(60);
-        justify-content: space-between;
-
-        p {
-          font-size: px-to-vw(60);
-        }
-      }
-
-      .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
-        line-height: 125%;
-        align-self: flex-start;
-      }
-
-      .info-title {
-        align-self: unset;
-
-        hr {
-          margin-bottom: 5px !important;
-        }
-      }
-
-      .stack_stat .stack-graph .stack-graph--body {
-        padding: 3.5625vw 4.34375vw;
-      }
-
-      .stack_stat .stack-title {
-        margin-bottom: 25px;
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-price,
-      .stack_stat .energy_account-container .energy-actions .token-pocket {
-        padding: 0 4.40625vw;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .stack_stat .energy_account-container .energy-actions .token-cont {
-        padding: 3.145833vw 4.40625vw;
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-action-btns {
-        margin-top: px-to-vw(280);
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-price,
-      .stack_stat .energy_account-container .energy-actions .token-pocket {
-        font-size: 13px;
-
-        svg {
-          width: 20px;
-          height: 21px;
-        }
-      }
-
-      .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier *,
-      .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter,
-      .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter>.end-bonus {
-        font-size: 11px;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .multiplier-level {
-        padding: 1.616667vw 1.772917vw;
-        border-radius: 11px;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-token-progress .profit-title {
-        font-size: 16px;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-title .token-fox-tag {
-        border-radius: 15px;
-        padding: 0.104167vw 1.625vw;
-        margin-left: 10px;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-pool-stack .orange {
-        padding: 10px 30px !important;
-        font-size: 11px !important;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-pool-earned .full-blue {
-        padding: 10px 30px !important;
-        font-size: 11px !important;
-      }
-
-      .pools_container .pools_card_list .token-stack-name {
-        font-weight: 300;
-        margin-bottom: 10px;
-      }
-
-      .pools_container .pools_card_list .stack-amount {
-        font-weight: 300;
-        font-size: 30px;
-      }
-
-      .pools_container .pools_card_list .pool_card .card-title-token {
-        font-size: 12px;
-
-        .token-img {
-          width: 5.5625vw;
-          height: 5.770833vw;
-          margin-right: 10px;
-        }
-      }
-
-      .pools_container .pools_card_list .pool_card button.details-button {
-        padding: 3.302083vw 0;
-      }
-
-      .pools_container .pools_card_list .pool_card button.details-button svg {
-        margin-left: 10px;
-      }
-
-      .pools_container .pools_card_list .pool_card>div {
-        padding: 11px 17px !important;
-      }
-
-      .full-blue {
-        font-size: 11px;
-        padding: 1.78125vw 4.5625vw;
-        border-radius: 12px;
-      }
-    }
-
-    @media (max-width: 455px) {
-      .stack_stat .energy_account-container .energy-actions .token-action-btns {
-        left: 36%;
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-cont div p {
-        font-size: px-to-vw(50);
-
-        span {
-          font-size: px-to-vw(50);
-        }
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-cont div span {
-        font-size: px-to-vw(80);
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-cont {
-        padding-right: 0;
-      }
-    }
-
-    <<<<<<< HEAD @media(max-width: 455px) {
-      .stack_stat .energy_account-container .energy-actions .token-action-btns {
-        left: 36%;
-      }
-
-      .stack_stat .energy_account-container .energy-actions .token-cont div p {
-        font-size: px-to-vw(50);
-
-        =======@media (max-width: 390px) {
-          .stack_stat .stack-title .stack-cash p {
-            font-size: 20px;
+          .article_text {
+            font-size: px-to-vw(25);
+            line-height: px-to-vw(30);
+            overflow: hidden;
+            display: block;
+            width: px-to-vw(86);
           }
+        }
 
-          .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
-          .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
-            font-size: 2.625vw;
-          }
+        .news-list {
+          display: flex;
+          flex-direction: column;
+          gap: px-to-vw(25);
+        }
 
-          .stack_stat .stack-title .token .token-img {
-            width: 4.5625vw;
-            height: 4.770833vw;
-          }
+        .news-item {
+          backdrop-filter: blur(px-to-vw(25));
+          border-radius: px-to-vw(15);
+          padding: px-to-vw(22) px-to-vw(24);
+          flex-direction: column;
+          gap: px-to-vw(22);
+          margin: 0;
 
-          .slider {
-            height: 23vw;
-          }
+          .news-item--img-container {
+            height: auto;
+            margin: 0;
+            width: 100%;
+            height: px-to-vw(163);
+            overflow: hidden;
+            border-radius: px-to-vw(15);
 
-          .stack_stat .energy_account-container .energy-actions .token-action-btns {
-            left: 39%;
-            margin-top: px-to-vw(330);
-          }
-
-          .info-title {
-            hr {
-              margin-bottom: 9px !important;
-              width: 14.072917vw !important;
+            .news-item--img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
             }
           }
 
-          .token-action-btns .blue,
-          .token-action-btns .orange {
-            padding: 9px 30px;
-            font-size: 11px;
-          }
+          .news-item--info {
+            .info-create-date {
+              margin-top: 0;
+              margin-bottom: px-to-vw(12);
+              font-size: px-to-vw(15);
+              line-height: px-to-vw(18);
 
-          .stack_stat .stack-graph .stack-graph--body {
-            max-width: 81.104167vw;
-          }
-
-          .stack_stat .stack-title .token {
-            border-radius: 10px;
-          }
-
-          .stack_stat .stack-graph .stack-graph--body .graph-body #myChart {
-            width: 104% !important;
-            height: auto !important;
-            margin-left: -11px;
-          }
-
-          .stack_stat .energy_account-container .energy-actions .token-cont div p {
-            margin-top: 0;
-          }
-
-          .stack_stat .energy_account-container .energy-actions .token-img {
-            width: 23px;
-            height: 25px;
-            margin-right: 10px;
-          }
-        }
-
-        >>>>>>>c35e24f2f25a5e9c447826d208bf26336205772d //
-
-        @media (min-width: 600px) {
-          .assigments-block {
-            margin-top: px-to-vw(31);
-
-            .assigments-list {
-              padding: px-to-vw(22) px-to-vw(15);
-              border-radius: px-to-vw(15);
-              display: flex;
-              flex-direction: column;
-              gap: px-to-vw(13);
-
-              .assigment-item {
-                &:nth-of-type(3) {
-                  .as-prize {
-
-                    svg,
-                    .as-prize--mount:last-of-type {
-                      display: none;
-                    }
-                  }
-                }
+              &::before {
+                margin-top: px-to-vw(-3);
+                font-size: px-to-vw(30);
+                margin-right: px-to-vw(11);
               }
             }
 
-            .change-list-visibility {
-              display: none;
-            }
-          }
-        }
-
-        @media (max-width: 600px) {
-          $screen-width: 460;
-
-          @function px-to-vw($value) {
-            @return $value * 100 / $screen-width+vw;
-          }
-
-          .line-article-container {
-            flex-wrap: wrap;
-            gap: px-to-vw(10);
-
-            .title_hr {
-              width: auto;
-              flex-grow: 1;
+            .info-title {
+              font-size: px-to-vw(25);
+              line-height: px-to-vw(30);
               max-width: none;
             }
 
-            .active_pools-cont {
-              width: 100%;
-              font-size: px-to-vw(12);
-              line-height: px-to-vw(15);
-            }
-
-            .article_text {
-              font-size: px-to-vw(25);
-              line-height: px-to-vw(30);
-            }
-          }
-
-          .assigments-block {
-            margin-top: px-to-vw(31);
-
-            .assigments-list {
-              padding: px-to-vw(22) px-to-vw(15);
+            .link-button {
+              margin-top: px-to-vw(21);
               border-radius: px-to-vw(15);
-              display: flex;
-              flex-direction: column;
-              gap: px-to-vw(13);
+              font-size: px-to-vw(15);
+              line-height: px-to-vw(18);
+              padding: px-to-vw(27);
+              width: px-to-vw(219);
+              text-align: center;
 
-              .assigment-item {
-                // height: 95px;
-                backdrop-filter: blur(px-to-vw(25));
+              &::before {
+                filter: blur(px-to-vw(35));
                 border-radius: px-to-vw(15);
-                margin: 0;
-
-                div:first-child {
-                  grid-template-columns: 1fr 30%;
-                }
-
-                .as-title,
-                .as-prize,
-                .as-description {
-                  padding: px-to-vw(15) px-to-vw(20);
-                }
-
-                .as-title {
-                  .as-title--img {
-                    width: px-to-vw(46) !important;
-                    height: px-to-vw(46) !important;
-                    border-radius: px-to-vw(15);
-                    flex-basis: px-to-vw(46);
-
-                    .title-circle {
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-
-                      .third-stake--fig {
-                        margin: 0;
-                      }
-
-                      svg {
-                        width: px-to-vw(9);
-                        height: px-to-vw(13);
-                      }
-                    }
-                  }
-
-                  >span {
-                    font-size: px-to-vw(15);
-                    line-height: 150%;
-                    margin: 0;
-                    display: block;
-                    width: 70%;
-                  }
-
-                  display: flex;
-                  align-items: center;
-                  gap: px-to-vw(13);
-                }
-
-                .as-prize {
-                  flex-wrap: wrap;
-                  gap: px-to-vw(12);
-
-                  svg {
-                    width: px-to-vw(17.28);
-                    height: px-to-vw(25.95);
-                  }
-
-                  .as-prize--mount {
-                    font-size: px-to-vw(20);
-                    line-height: px-to-vw(24);
-                    margin: 0;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                  }
-
-                  .lottery-ticket-mount {
-                    margin: 0;
-                    line-height: 1;
-                  }
-                }
-
-                .as-description {
-                  .as-description--text {
-                    font-size: px-to-vw(17);
-                    line-height: 150%;
-                  }
-                }
-
-                &:nth-of-type(3) {
-                  .as-prize {
-
-                    .lottery-ticket-mount,
-                    span:nth-of-type(2) {
-                      display: none;
-                    }
-                  }
-                }
-              }
-            }
-
-            .change-list-visibility {
-              display: none;
-            }
-          }
-
-          .news_container {
-            margin-top: px-to-vw(36);
-            margin-bottom: px-to-vw(80);
-
-            .line-article-container {
-              flex-wrap: nowrap;
-              margin-bottom: px-to-vw(30);
-
-              .article_text {
-                font-size: px-to-vw(25);
-                line-height: px-to-vw(30);
-                overflow: hidden;
-                display: block;
-                width: px-to-vw(86);
-              }
-            }
-
-            .news-list {
-              display: flex;
-              flex-direction: column;
-              gap: px-to-vw(25);
-            }
-
-            .news-item {
-              backdrop-filter: blur(px-to-vw(25));
-              border-radius: px-to-vw(15);
-              padding: px-to-vw(22) px-to-vw(24);
-              flex-direction: column;
-              gap: px-to-vw(22);
-              margin: 0;
-
-              .news-item--img-container {
-                height: auto;
-                margin: 0;
-                width: 100%;
-                height: px-to-vw(163);
-                overflow: hidden;
-                border-radius: px-to-vw(15);
-
-                .news-item--img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                }
-              }
-
-              .news-item--info {
-                .info-create-date {
-                  margin-top: 0;
-                  margin-bottom: px-to-vw(12);
-                  font-size: px-to-vw(15);
-                  line-height: px-to-vw(18);
-
-                  &::before {
-                    margin-top: px-to-vw(-3);
-                    font-size: px-to-vw(30);
-                    margin-right: px-to-vw(11);
-                  }
-                }
-
-                .info-title {
-                  font-size: px-to-vw(25);
-                  line-height: px-to-vw(30);
-                  max-width: none;
-                }
-
-                .link-button {
-                  margin-top: px-to-vw(21);
-                  border-radius: px-to-vw(15);
-                  font-size: px-to-vw(15);
-                  line-height: px-to-vw(18);
-                  padding: px-to-vw(27);
-                  width: px-to-vw(219);
-                  text-align: center;
-
-                  &::before {
-                    filter: blur(px-to-vw(35));
-                    border-radius: px-to-vw(15);
-                  }
-                }
               }
             }
           }

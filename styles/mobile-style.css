@@ -75,6 +75,63 @@
   .stack_stat .energy_account-container {
     flex-direction: column;
   }
+}
+@media (max-width: 1377px) {
+  .stack_stat .stack-graph .stack-graph--body {
+    flex-direction: column;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: unset;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-body {
+    width: 100%;
+    max-width: unset;
+    margin-top: 15px;
+  }
+
+  .info-title {
+    align-items: flex-start;
+    align-self: flex-start;
+    position: relative;
+    height: auto;
+  }
+  .info-title hr {
+    bottom: 0;
+    position: absolute;
+    margin: 0 !important;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
+    height: fit-content;
+    align-self: center;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
+    line-height: 125%;
+    top: -5px;
+    position: relative;
+    font-size: 3.3854166667vw;
+  }
+
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
+.stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
+    justify-content: space-around;
+    height: auto;
+    white-space: nowrap;
+  }
+  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
+.stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
+    margin: 0;
+  }
+}
+@media (max-width: 1250px) {
+  .stack_stat .energy_account-container {
+    flex-direction: column;
+  }
 
   .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
     padding-left: 0;
@@ -153,15 +210,20 @@
   }
 
   .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+    font-size: 15px;
+  }
+
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    font-size: 12px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
     white-space: nowrap;
   }
 
   .pools_container .pools_card_list .pool_card {
     width: 270px;
     border-radius: 15px;
-  }
-  .pools_container .pools_card_list .pool_card > div {
-    padding: 8px 17px !important;
   }
 
   .pools_container .pools_card_list .pool_card .progress-bar {
@@ -471,166 +533,163 @@
     padding-right: 0;
   }
 }
-@media (max-width: 390px) {
-  .stack_stat .stack-title .stack-cash p {
+@media (max-width: 455px) {
+  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+    left: 36%;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-cont div p {
+    font-size: 2.6041666667vw;
+  }
+}
+@media (max-width: 455px) and (max-width: 390px) {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-title .stack-cash p {
     font-size: 20px;
   }
-
-  .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
-.stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
     font-size: 2.625vw;
   }
-
-  .stack_stat .stack-title .token .token-img {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-title .token .token-img {
     width: 4.5625vw;
     height: 4.770833vw;
   }
-
-  .slider {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .slider {
     height: 23vw;
   }
-
-  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .energy_account-container .energy-actions .token-action-btns {
     left: 39%;
     margin-top: 17.1875vw;
   }
-
-  .info-title hr {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .info-title hr {
     margin-bottom: 9px !important;
     width: 14.072917vw !important;
   }
-
-  .token-action-btns .blue,
-.token-action-btns .orange {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .token-action-btns .blue,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .token-action-btns .orange {
     padding: 9px 30px;
     font-size: 11px;
   }
-
-  .stack_stat .stack-graph .stack-graph--body {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-graph .stack-graph--body {
     max-width: 81.104167vw;
   }
-
-  .stack_stat .stack-title .token {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-title .token {
     border-radius: 10px;
   }
-
-  .stack_stat .stack-graph .stack-graph--body .graph-body #myChart {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .stack-graph .stack-graph--body .graph-body #myChart {
     width: 104% !important;
     height: auto !important;
     margin-left: -11px;
   }
-
-  .stack_stat .energy_account-container .energy-actions .token-cont div p {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .energy_account-container .energy-actions .token-cont div p {
     margin-top: 0;
   }
-
-  .stack_stat .energy_account-container .energy-actions .token-img {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .stack_stat .energy_account-container .energy-actions .token-img {
     width: 23px;
     height: 25px;
     margin-right: 10px;
   }
 }
-@media (min-width: 600px) {
-  .assigments-block {
+@media (max-width: 455px) and (min-width: 600px) {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block {
     margin-top: 1.6145833333vw;
   }
-  .assigments-block .assigments-list {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list {
     padding: 1.1458333333vw 0.78125vw;
     border-radius: 0.78125vw;
     display: flex;
     flex-direction: column;
     gap: 0.6770833333vw;
   }
-  .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize svg,
-.assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .as-prize--mount:last-of-type {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize svg,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .as-prize--mount:last-of-type {
     display: none;
   }
-  .assigments-block .change-list-visibility {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .change-list-visibility {
     display: none;
   }
 }
-@media (max-width: 600px) {
-  .line-article-container {
+@media (max-width: 455px) and (max-width: 600px) {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .line-article-container {
     flex-wrap: wrap;
     gap: 2.1739130435vw;
   }
-  .line-article-container .title_hr {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .line-article-container .title_hr {
     width: auto;
     flex-grow: 1;
     max-width: none;
   }
-  .line-article-container .active_pools-cont {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .line-article-container .active_pools-cont {
     width: 100%;
     font-size: 2.6086956522vw;
     line-height: 3.2608695652vw;
   }
-  .line-article-container .article_text {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .line-article-container .article_text {
     font-size: 5.4347826087vw;
     line-height: 6.5217391304vw;
   }
-
-  .assigments-block {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block {
     margin-top: 6.7391304348vw;
   }
-  .assigments-block .assigments-list {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list {
     padding: 4.7826086957vw 3.2608695652vw;
     border-radius: 3.2608695652vw;
     display: flex;
     flex-direction: column;
     gap: 2.8260869565vw;
   }
-  .assigments-block .assigments-list .assigment-item {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item {
     backdrop-filter: blur(5.4347826087vw);
     border-radius: 3.2608695652vw;
     margin: 0;
   }
-  .assigments-block .assigments-list .assigment-item div:first-child {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item div:first-child {
     grid-template-columns: 1fr 30%;
   }
-  .assigments-block .assigments-list .assigment-item .as-title,
-.assigments-block .assigments-list .assigment-item .as-prize,
-.assigments-block .assigments-list .assigment-item .as-description {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-prize,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-description {
     padding: 3.2608695652vw 4.347826087vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-title {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title {
     display: flex;
     align-items: center;
     gap: 2.8260869565vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-title .as-title--img {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title .as-title--img {
     width: 10vw !important;
     height: 10vw !important;
     border-radius: 3.2608695652vw;
     flex-basis: 10vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
     margin: 0;
   }
-  .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle svg {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title .as-title--img .title-circle svg {
     width: 1.9565217391vw;
     height: 2.8260869565vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-title > span {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-title > span {
     font-size: 3.2608695652vw;
     line-height: 150%;
     margin: 0;
     display: block;
     width: 70%;
   }
-  .assigments-block .assigments-list .assigment-item .as-prize {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-prize {
     flex-wrap: wrap;
     gap: 2.6086956522vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-prize svg {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-prize svg {
     width: 3.7565217391vw;
     height: 5.6413043478vw;
   }
-  .assigments-block .assigments-list .assigment-item .as-prize .as-prize--mount {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-prize .as-prize--mount {
     font-size: 4.347826087vw;
     line-height: 5.2173913043vw;
     margin: 0;
@@ -638,43 +697,42 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .assigments-block .assigments-list .assigment-item .as-prize .lottery-ticket-mount {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-prize .lottery-ticket-mount {
     margin: 0;
     line-height: 1;
   }
-  .assigments-block .assigments-list .assigment-item .as-description .as-description--text {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item .as-description .as-description--text {
     font-size: 3.6956521739vw;
     line-height: 150%;
   }
-  .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .lottery-ticket-mount,
-.assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize span:nth-of-type(2) {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize .lottery-ticket-mount,
+.stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .assigments-list .assigment-item:nth-of-type(3) .as-prize span:nth-of-type(2) {
     display: none;
   }
-  .assigments-block .change-list-visibility {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .assigments-block .change-list-visibility {
     display: none;
   }
-
-  .news_container {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container {
     margin-top: 7.8260869565vw;
     margin-bottom: 17.3913043478vw;
   }
-  .news_container .line-article-container {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .line-article-container {
     flex-wrap: nowrap;
     margin-bottom: 6.5217391304vw;
   }
-  .news_container .line-article-container .article_text {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .line-article-container .article_text {
     font-size: 5.4347826087vw;
     line-height: 6.5217391304vw;
     overflow: hidden;
     display: block;
     width: 18.6956521739vw;
   }
-  .news_container .news-list {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-list {
     display: flex;
     flex-direction: column;
     gap: 5.4347826087vw;
   }
-  .news_container .news-item {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item {
     backdrop-filter: blur(5.4347826087vw);
     border-radius: 3.2608695652vw;
     padding: 4.7826086957vw 5.2173913043vw;
@@ -682,7 +740,7 @@
     gap: 4.7826086957vw;
     margin: 0;
   }
-  .news_container .news-item .news-item--img-container {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--img-container {
     height: auto;
     margin: 0;
     width: 100%;
@@ -690,28 +748,28 @@
     overflow: hidden;
     border-radius: 3.2608695652vw;
   }
-  .news_container .news-item .news-item--img-container .news-item--img {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--img-container .news-item--img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .news_container .news-item .news-item--info .info-create-date {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .info-create-date {
     margin-top: 0;
     margin-bottom: 2.6086956522vw;
     font-size: 3.2608695652vw;
     line-height: 3.9130434783vw;
   }
-  .news_container .news-item .news-item--info .info-create-date::before {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .info-create-date::before {
     margin-top: -0.652173913vw;
     font-size: 6.5217391304vw;
     margin-right: 2.3913043478vw;
   }
-  .news_container .news-item .news-item--info .info-title {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .info-title {
     font-size: 5.4347826087vw;
     line-height: 6.5217391304vw;
     max-width: none;
   }
-  .news_container .news-item .news-item--info .link-button {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .link-button {
     margin-top: 4.5652173913vw;
     border-radius: 3.2608695652vw;
     font-size: 3.2608695652vw;
@@ -720,7 +778,7 @@
     width: 47.6086956522vw;
     text-align: center;
   }
-  .news_container .news-item .news-item--info .link-button::before {
+  .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .link-button::before {
     filter: blur(7.6086956522vw);
     border-radius: 3.2608695652vw;
   }
