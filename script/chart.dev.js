@@ -47,8 +47,6 @@ var graphHeight;
 window.addEventListener('resize', function () {
   graphHeight = graph.offsetHeight;
   graphWidth = graph.offsetWidth;
-  console.log(graphHeight);
-  console.log(graphWidth);
   chart.resize(graphWidth, graphHeight);
 });
 var lineSeries = chart.addLineSeries({

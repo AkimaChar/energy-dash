@@ -257,13 +257,18 @@ function openTurboPopup() {
 document.querySelector('.popup-bg').addEventListener('click', function () {
   document.querySelector('.turbo-pool-active').classList.toggle('turbo-pool-active');
   document.querySelector('.popup-bg').style.display = 'none ';
+});
+var link = document.querySelector('.turbo-pool.pool_card');
+document.addEventListener(' resize', function () {
+  var width = document.querySelector('.turbo-pool').clientWidth;
+  var width2 = document.querySelector('body').offsetWidth;
+  link.style.left = width2 / 2 - width / 2 + '!important';
+  console.log(width / 2, width2 / 2);
 }); // turbo validation 
 
 var turboInput = document.querySelector('#turboInput');
 turboInput.addEventListener('keyup', function () {
-  if (turboInput.value.test(/\d/g)) {
-    console.log('ok');
-  } else {
+  if (turboInput.value.test(/\d/g)) {} else {
     alert('Digit only!');
   }
 });

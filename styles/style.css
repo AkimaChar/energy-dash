@@ -1992,3 +1992,38 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.unlock-pool {
+  width: 90%;
+  padding: 20px 0;
+}
+
+.stack_stat .stack-graph .stack-graph--body .graph-body {
+  min-height: 350px;
+}
+
+.token-img {
+  height: 34px;
+  width: 32px;
+}
+
+@media (max-width: 520px) {
+  .pools_container .pools_card_list .pool_card .card-pool-earned, .pools_container .pools_card_list .pool_card .card-pool-stack, .pools_container .pools_card_list .pool_card .card-title, .pools_container .pools_card_list .pool_card .card-token-progress {
+    padding: 11px 17px !important;
+  }
+  .pools_container .pools_card_list .pool_card.locked-pool .card-token-progress {
+    padding: 0;
+  }
+}
+.news_container .line-article-container {
+  flex-wrap: nowrap;
+}
+
+.pools_container .pools_card_list .pool_card .card-pool-multipliers,
+.pools_container .pools_card_list .pool_card .card-token-progress,
+.pools_container .pools_card_list .pool_card .choose-stake-plan,
+.pools_container .pools_card_list .pool_card .card-title,
+.pools_container .pools_card_list .pool_card .card-pool-earned,
+.pools_container .pools_card_list .pool_card .card-pool-stack {
+  padding: 13px 14px !important;
+}

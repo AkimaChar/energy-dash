@@ -48,8 +48,6 @@ var graphHeight;
 window.addEventListener('resize', () => {
     graphHeight = graph.offsetHeight;
     graphWidth = graph.offsetWidth;
-    console.log(graphHeight);
-    console.log(graphWidth);
     chart.resize(graphWidth, graphHeight)
 })
 

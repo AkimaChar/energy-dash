@@ -391,6 +391,22 @@
     display: none;
   }
 
+  .pools_container .pools_card_list .pool_card.stake-pool-active {
+    width: 300px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card.stake-pool-active .card-pool-multipliers .multiplier .multiplier-level {
+    padding: 1.416667vw 1.572917vw;
+  }
+
+  .pools_container .pools_card_list .pool_card.stake-pool-active .card-pool-multipliers,
+.pools_container .pools_card_list .pool_card.stake-pool-active .card-token-progress,
+.pools_container .pools_card_list .pool_card.stake-pool-active .choose-stake-plan,
+.pools_container .pools_card_list .pool_card.stake-pool-active .card-title,
+.pools_container .pools_card_list .pool_card.stake-pool-active .card-pool-earned {
+    padding: 13px 14px;
+  }
+
   .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
 .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
     font-size: 3.125vw;
@@ -399,6 +415,10 @@
   .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending p,
 .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth p {
     font-size: 3.125vw;
+  }
+
+  .turbo-pool-active {
+    left: 26.0416666667vw;
   }
 
   .stack_stat .stack-graph .stack-graph--body .graph-info .graph-title {
@@ -449,6 +469,31 @@
 .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter,
 .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .mult-counter > .end-bonus {
     font-size: 11px;
+  }
+
+  .news_container .news-item {
+    flex-direction: column;
+  }
+  .news_container .news-item .news-item--info {
+    width: 100%;
+  }
+  .news_container .news-item .news-item--img-container {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .news_container .news-item {
+    border-radius: 15px;
+    padding: 13px 14px;
+  }
+
+  .news_container .news-item .news-item--img-container .news-item--img {
+    width: 100%;
+  }
+
+  .news_container .news-item .news-item--info .info-title {
+    max-width: unset;
   }
 
   .pools_container .pools_card_list .pool_card .card-pool-multipliers .multiplier .multiplier-level {
@@ -503,8 +548,8 @@
     margin-left: 10px;
   }
 
-  .pools_container .pools_card_list .pool_card > div {
-    padding: 11px 17px !important;
+  .pools_container .pools_card_list .pool_card .card-pool-multipliers {
+    padding: 10px 17px;
   }
 
   .full-blue {
@@ -529,8 +574,28 @@
     font-size: 4.1666666667vw;
   }
 
+  .line-article-container {
+    flex-wrap: nowrap;
+  }
+  .line-article-container .title_hr {
+    width: 100%;
+  }
+
+  .line-article-container .active_pools-cont {
+    display: none;
+  }
+
   .stack_stat .energy_account-container .energy-actions .token-cont {
     padding-right: 0;
+  }
+
+  .token-action-btns .blue,
+.token-action-btns .orange {
+    padding: 10px 30px;
+  }
+
+  .stack_stat .energy_account-container .energy-actions .token-action-btns {
+    margin-top: 17.583333vw;
   }
 }
 @media (max-width: 455px) {
@@ -781,5 +846,19 @@
   .stack_stat .energy_account-container .energy-actions .token-cont div p .news_container .news-item .news-item--info .link-button::before {
     filter: blur(7.6086956522vw);
     border-radius: 3.2608695652vw;
+  }
+}
+@media (max-width: 1600px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin-right: 0.904167vw;
+  }
+}
+.pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+  white-space: nowrap;
+}
+
+@media (max-width: 350px) {
+  .turbo-pool-active {
+    left: 10.4166666667vw;
   }
 }

@@ -257,14 +257,23 @@ document.querySelector('.popup-bg').addEventListener('click', () => {
     document.querySelector('.turbo-pool-active').classList.toggle('turbo-pool-active');
     document.querySelector('.popup-bg').style.display = 'none ';
 });
+const link = document.querySelector('.turbo-pool.pool_card');
+document.addEventListener(' resize', () => {
+    var width = document.querySelector('.turbo-pool').clientWidth;
+    var width2 = document.querySelector('body').offsetWidth;
+    link.style.left = width2 / 2 - width / 2 + '!important';
+    console.log(width / 2, width2 / 2);
+
+})
 
 // turbo validation 
 
 const turboInput = document.querySelector('#turboInput');
 turboInput.addEventListener('keyup', () => {
     if (turboInput.value.test(/\d/g)) {
-        console.log('ok');
     } else {
         alert('Digit only!')
     }
 })
+
+

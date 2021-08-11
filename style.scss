@@ -1842,7 +1842,7 @@ body {
 
 
 .mult-sum {
-  align-self: flex-end; 
+  align-self: flex-end;
   font-weight: 300;
   padding-top: 5px;
   width: 100%;
@@ -1850,13 +1850,15 @@ body {
   display: flex;
   text-align: right;
   justify-content: flex-end;
-    font-size: 15px;
-    line-height: 17px;
-    span {
-      color: #00A3FF;
-      font-weight: 600;
-    }
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+  line-height: 17px;
+
+  span {
+    color: #00A3FF;
+    font-weight: 600;
+  }
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 input.stack-amount {
@@ -2404,4 +2406,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.unlock-pool {
+  width: 90%;
+  padding: 20px 0;
+}
+
+.stack_stat .stack-graph .stack-graph--body .graph-body {
+  min-height: 350px;
+
+
+}
+.token-img {
+  height: 34px;
+  width: 32px;
+}
+
+@media(max-width: 520px) {
+  .pools_container .pools_card_list .pool_card {
+    & .card-pool-earned, & .card-pool-stack ,& .card-title, .card-token-progress {
+      padding: 11px 17px !important;
+    }
+    &.locked-pool .card-token-progress {
+      padding: 0 ;
+    }
+  }
+}
+.news_container .line-article-container{
+  flex-wrap: nowrap;
+}
+.pools_container .pools_card_list .pool_card {
+
+  .card-pool-multipliers,
+  .card-token-progress,
+  .choose-stake-plan,
+  .card-title,
+  .card-pool-earned,
+  .card-pool-stack {
+    padding: 13px 14px !important;
+  }
 }
