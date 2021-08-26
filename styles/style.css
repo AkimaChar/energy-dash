@@ -530,7 +530,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
   margin-right: 20px;
 }
 .stack_stat .energy_account-container .energy-actions .token-cont {
@@ -832,7 +831,7 @@ body {
   margin-top: 1.3020833333vw;
 }
 .pools_container .pools_card_list .pool_card {
-  max-width: 21.3541666667vw;
+  max-width: 18.3125vw;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -1812,10 +1811,6 @@ input.stack-amount {
   height: auto;
 }
 
-.stack_stat .energy_account-container {
-  flex-direction: column;
-}
-
 .bar-percents {
   position: relative;
   font-weight: 500;
@@ -2008,7 +2003,8 @@ body {
 }
 
 @media (max-width: 520px) {
-  .pools_container .pools_card_list .pool_card .card-pool-earned, .pools_container .pools_card_list .pool_card .card-pool-stack, .pools_container .pools_card_list .pool_card .card-title, .pools_container .pools_card_list .pool_card .card-token-progress {
+  .pools_container .pools_card_list .pool_card .card-pool-earned, .pools_container .pools_card_list .pool_card .card-pool-stack, .pools_container .pools_card_list .pool_card .card-title,
+.pools_container .pools_card_list .pool_card .card-token-progress {
     padding: 11px 17px !important;
   }
   .pools_container .pools_card_list .pool_card.locked-pool .card-token-progress {
@@ -2026,4 +2022,47 @@ body {
 .pools_container .pools_card_list .pool_card .card-pool-earned,
 .pools_container .pools_card_list .pool_card .card-pool-stack {
   padding: 13px 14px !important;
+}
+
+@media (max-width: 1880px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -30px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 1810px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -15px;
+    font-size: 14px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 320px !important;
+    max-width: unset;
+  }
+
+  .pools_container .pools_card_list .pool_card.stake-pool {
+    width: 380px !important;
+  }
+}
+@media (max-width: 1710px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -10px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 1130px) {
+  .pools_container .pools_card_list .pool_card {
+    width: 300px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card.stake-pool {
+    width: 380px !important;
+  }
 }

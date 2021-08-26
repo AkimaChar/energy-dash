@@ -794,8 +794,543 @@ h3 {
         right: px-to-vw(220);
         top: 115px;
     }
+
     .tickets-actions .tickets-button {
         padding: 3.833333vw 17.291667vw;
     }
 
+}
+
+.popup-input-cont {
+    input {
+        background: transparent;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        margin-bottom: 10px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+
+        color: #FFFFFF;
+        outline: none;
+        text-decoration: none;
+        border: none;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:checked {
+            outline: none;
+            text-decoration: none;
+        }
+
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00A3FF;
+    }
+}
+
+
+.view-ticket-popup {
+    box-shadow: 0px 0px 1000px black;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: calc(50% - 452px);
+    display: flex;
+    opacity: 0 !important;
+    transition: 0.2s ease-in;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 904px;
+
+    .view-popup-title {
+        padding: 28px 60px;
+        display: flex;
+        align-items: center;
+
+        .view-popup-hr {
+            height: 1px;
+            width: 100%;
+            border: none;
+            background: linear-gradient(270deg, rgba(19, 16, 69, 0) 2.15%, #FFA114 47.35%, rgba(19, 16, 69, 0) 97.52%);
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 35px;
+            line-height: 43px;
+            white-space: nowrap;
+        }
+
+        background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .view-popup-body {
+        backdrop-filter: blur(25px);
+        padding: 24px 0;
+        padding-bottom: 0;
+
+        tr.view-popup-tr {
+            td {
+                padding: 26px 0;
+                text-align: center;
+
+                .round-result {
+                    color: #00A3FF;
+
+                }
+
+                &:not(:last-of-type) {
+                    width: 150px;
+                }
+
+                &:last-of-type {
+                    width: 200px;
+                }
+            }
+
+            &:not(:first-of-type) {
+
+                td {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 24px;
+
+                    &:first-of-type {
+                        color: #00A3FF;
+                    }
+
+                    &:nth-of-type(4) {
+                        color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+
+            &:first-of-type {
+                td {
+                    padding: 0;
+
+                }
+            }
+
+            &:last-of-type {
+
+                td {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .title-tr {
+        td {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+}
+
+.view-ticket-popup-active {
+    top: 45px;
+    z-index: 1000000;
+    opacity: 1 !important;
+    transition: 0.2s ease-out;
+}
+
+.buy-ticket-popup {
+    box-shadow: 0px 0px 1000px black;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    border-radius: 15px;
+    left: calc(50% - 480px);
+    display: flex;
+    opacity: 0 !important;
+    transition: 0.2s ease-in;
+
+    .popup-body {
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-button {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .add-account {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin: 0 10px;
+        }
+
+        span:last-of-type {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+
+    .title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+
+        opacity: 0.3;
+    }
+
+    .add-button .set-max {
+        width: 170px;
+        margin: 0;
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        position: relative;
+
+        &:active {
+            top: 2px;
+        }
+
+        &.orange:hover::before {
+            content: "";
+            background: #FFA114;
+            filter: blur(35px);
+            border-radius: 15px;
+            width: 100%;
+            opacity: 0.1;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            transition: 0.2s ease;
+            top: 0;
+        }
+    }
+
+    .set-50 {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        width: 120px;
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        position: relative;
+
+        &:active {
+            top: 2px;
+        }
+    }
+}
+
+.buy-ticket-popup-active {
+    top: 45px;
+    z-index: 1000000;
+    opacity: 1 !important;
+    transition: 0.2s ease-out;
+}
+
+.popup-title {
+    padding: 35px 60px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 43px;
+    background: linear-gradient(93.58deg, #3C3F98 -19.17%, #191A51 95.81%);
+    box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.popup-buy-body {
+    backdrop-filter: blur(25px);
+    display: flex;
+    align-items: center;
+    padding: 40px 60px;
+    justify-content: space-between;
+    position: relative;
+
+    .popup-input-cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popup-add-cont {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.popup-info {
+    background: linear-gradient(93.47deg, #3C3F98 1.9%, #191A51 95.83%);
+    box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 15px 15px;
+    display: flex;
+    padding: 22px 60px;
+    justify-content: space-between;
+
+    .info-energy-lost {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(45px);
+
+        /* Note: backdrop-filter has minimal browser support */
+        span {
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 37px;
+
+            /* identical to box height */
+            &:first-of-type {
+                color: #FFA114;
+            }
+
+            &:last-of-type {
+                margin-right: 10px;
+            }
+        }
+
+        border-radius: 15px;
+        padding: 12px 24px;
+    }
+
+    .info-tooltip {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+
+
+}
+
+
+
+.confirm-btn {
+    width: 270px;
+    height: auto;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+    background: #00A3FF;
+}
+
+@media(max-width: 1010px) {
+
+    .buy-ticket-popup {
+        width: 80%;
+        left: calc(50% - 40%);
+
+        .popup-body {
+            width: 100%;
+
+        }
+    }
+
+    .popup-title {
+        font-size: 25px;
+    }
+
+    .popup-input-cont input {
+        width: 50%;
+    }
+
+    .confirm-btn {
+        width: 150px;
+    }
+
+    .popup-info .info-tooltip p {
+        font-size: 10px;
+    }
+
+    .buy-ticket-popup .add-button .set-max {
+        width: px-to-vw(340);
+    }
+
+    .buy-ticket-popup .set-50 {
+        width: px-to-vw(200);
+    }
+}
+
+@media(max-width: 805px) {
+    .popup-info .info-energy-lost {
+        padding: 14px;
+        height: fit-content;
+        align-self: center;
+    }
+
+    .popup-input-cont input {
+        width: 70%;
+    }
+
+    .confirm-btn {
+        width: 100px;
+        font-size: 15px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .popup-info {
+        padding: 22px 30px;
+    }
+
+    .popup-buy-body {
+        padding: 40px 30px;
+    }
+
+    .popup-title {
+        padding: 35px 30px;
+    }
+
+    .buy-ticket-popup .title {
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 660px) {
+    .popup-info .info-tooltip {
+        flex-direction: unset;
+
+        svg {
+            align-self: center;
+        }
+
+        margin-bottom: 15px;
+    }
+
+    .popup-info .info-tooltip p {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .popup-info {
+        flex-direction: column;
+    }
+
+    .popup-info .info-energy-lost {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .confirm-btn {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px 0px;
+    }
+}
+
+@media(max-width: 600px) {
+    .popup-buy-body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    .popup-buy-body .popup-input-cont {
+        width: 100%;
+        align-items: center;
+    }
+
+    .popup-buy-body .popup-add-cont {
+        margin-top: 20px;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .buy-ticket-popup .add-button {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buy-ticket-popup .add-button .set-max {
+        padding: 10px 20px;
+        width: 170px;
+    }
+
+    .buy-ticket-popup .set-50 {
+        padding: 10px 15px;
+        width: 120px;
+    }
+
+    .popup-input-cont input {
+        width: 100%;
+    }
+}
+
+@media(max-width: 930px) {
+    .view-ticket-popup {
+        width: 80%;
+        left: calc(50% - 40%);
+    }
+
+    .view-ticket-popup .view-popup-body tr.view-popup-tr:not(:first-of-type) td {
+        font-size: px-to-vw(40);
+    }
+}
+
+@media(max-width: 605px) {
+    .view-ticket-popup .view-popup-title span {
+        font-size: 25px;
+    }
+
+    .view-ticket-popup .view-popup-title {
+        padding: 18px 30px;
+    }
+
+    .view-ticket-popup .view-popup-body tr.view-popup-tr:not(:first-of-type) td {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 382px) {
+    .view-ticket-popup .title-tr td {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 345px) {
+    .view-ticket-popup {
+        width: 90%;
+        left: calc(50% - 45%);
+
+    }
 }

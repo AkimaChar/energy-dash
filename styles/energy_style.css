@@ -228,7 +228,7 @@
 }
 .energy_token_action_graph__action_block .action__stats .stat .count {
   font-weight: 500;
-  font-size: 0.625vw;
+  font-size: 0.525vw;
   line-height: 167%;
 }
 .energy_token_action_graph__action_block .action__stats .stat .count span {

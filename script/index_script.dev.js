@@ -124,9 +124,6 @@ document.querySelectorAll('.pools-article_button').forEach(function (el) {
     });
     el.classList.toggle('active_article_btn');
   });
-});
-document.querySelectorAll('.pools-article_button').forEach(function (el) {
-  if (el.classList.contains('show-active')) {} else if (el.classList.contains('show-non-active')) {}
 }); // Change task visibility 
 
 var cont = document.querySelector('.assigments-list');

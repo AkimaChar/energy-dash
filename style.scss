@@ -640,7 +640,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 20px;
       margin-right: 20px;
 
       .token-cont {
@@ -1025,7 +1024,7 @@ body {
     margin-top: px-to-vw(25);
 
     .pool_card {
-      max-width: px-to-vw(410);
+      max-width: 18.3125vw;
       overflow: hidden;
       width: 100%;
       display: flex;
@@ -2207,9 +2206,7 @@ input.stack-amount {
   }
 }
 
-.stack_stat .energy_account-container {
-  flex-direction: column;
-}
+
 
 .bar-percents {
   position: relative;
@@ -2292,6 +2289,7 @@ input[type='radio']:disabled+.plan-tip {
   background: linear-gradient(94.9deg, #292B76 0.81%, #1A1C52 95.55%) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .confirm-btn-cont {
   display: flex;
@@ -2418,6 +2416,7 @@ body {
 
 
 }
+
 .token-img {
   height: 34px;
   width: 32px;
@@ -2425,17 +2424,24 @@ body {
 
 @media(max-width: 520px) {
   .pools_container .pools_card_list .pool_card {
-    & .card-pool-earned, & .card-pool-stack ,& .card-title, .card-token-progress {
+
+    & .card-pool-earned,
+    & .card-pool-stack,
+    & .card-title,
+    .card-token-progress {
       padding: 11px 17px !important;
     }
+
     &.locked-pool .card-token-progress {
-      padding: 0 ;
+      padding: 0;
     }
   }
 }
-.news_container .line-article-container{
+
+.news_container .line-article-container {
   flex-wrap: nowrap;
 }
+
 .pools_container .pools_card_list .pool_card {
 
   .card-pool-multipliers,
@@ -2447,3 +2453,49 @@ body {
     padding: 13px 14px !important;
   }
 }
+
+
+@media(max-width: 1880px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -30px;
+    font-size: 14px !important;
+  }
+}
+
+@media(max-width: 1810px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -15px;
+    font-size: 14px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 320px !important;
+    max-width: unset;
+  }
+  .pools_container .pools_card_list .pool_card.stake-pool {
+    width: 380px !important;
+  }
+}
+
+@media(max-width: 1710px) {
+  .card-token-progress.closed-pool .token-profit .profit-title {
+    margin: 0;
+    position: relative;
+    left: -10px;
+    font-size: 14px !important;
+  }
+
+}
+
+@media(max-width: 1130px) {
+  .pools_container .pools_card_list .pool_card {
+    width: 300px !important;
+  }.pools_container .pools_card_list .pool_card.stake-pool {
+    width: 380px !important;
+  }
+}
+

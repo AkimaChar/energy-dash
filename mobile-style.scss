@@ -19,9 +19,7 @@ $screen-width: 1920;
     }
   }
 
-  .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
-    font-size: 25px;
-  }
+
 
   .pools_container .pools_card_list .pool_card {
     width: 40%;
@@ -84,6 +82,14 @@ $screen-width: 1920;
     p {
       margin: 0;
     }
+  }
+}
+
+@media(max-width: 1400px) {
+  .stack_stat .energy_account-container .energy-actions {
+    align-items: unset;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -152,6 +158,11 @@ $screen-width: 1920;
     flex-direction: column;
   }
 
+  .stack_stat .energy_account-container .energy-spot .spot-body .spot-wrapper svg {
+    height: 2.5625vw;
+    width: 2.666667vw;
+  }
+
   .assigments_container .assigment-item .as-title .as-title--img .title-circle .third-stake--fig {
     padding-left: 0;
   }
@@ -203,9 +214,6 @@ $screen-width: 1920;
       flex-grow: 1;
     }
 
-    .active_pools-cont {
-      width: 100%;
-    }
 
     .article_text {
       font-size: px-to-vw(75);
@@ -216,6 +224,7 @@ $screen-width: 1920;
   .assigments_container .assigment-item .as-prize span {
     font-size: 15px;
   }
+
 
   .stack_stat .stack-graph .stack-graph--body .graph-info .graph-pending,
   .stack_stat .stack-graph .stack-graph--body .graph-info .graph-worth {
@@ -239,7 +248,7 @@ $screen-width: 1920;
   }
 
   .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   .card-token-progress.closed-pool .token-profit .profit-title {
@@ -269,6 +278,8 @@ $screen-width: 1920;
   .stack_stat .stack-graph .stack-graph--body .graph-info button.graph-button {
     display: none;
   }
+
+
 
   .assigments_container .assigment-item .as-prize span {
     font-size: 13px;
@@ -360,6 +371,14 @@ $screen-width: 1920;
     .blue {
       padding: 14px 60px;
     }
+  }
+
+  .pools_container .pools_card_list .pool_card {
+    width: 280px !important;
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-title .stat-with-turbo {
+    font-size: 10px;
   }
 }
 
@@ -993,12 +1012,6 @@ $screen-width: 1920;
   }
 }
 
-@media(max-width: 1600px) {
-  .card-token-progress.closed-pool .token-profit .profit-title {
-    margin-right: 0.904167vw;
-  }
-}
-
 .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
   white-space: nowrap;
 }
@@ -1006,5 +1019,9 @@ $screen-width: 1920;
 @media(max-width: 350px) {
   .turbo-pool-active {
     left: px-to-vw(200);
+  }
+
+  .pools_container .pools_card_list .pool_card .card-token-progress .profit-percents {
+    font-size: 24px;
   }
 }

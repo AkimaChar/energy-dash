@@ -105,7 +105,7 @@ mixin _dashboard
                             .card-title-token
                                 img.token-img(src="../img/gex.png")
                                 | BNB
-                                .token-fox-tag +
+                                a.token-fox-tag(href="https://metamask.io/") +
                                     img(src="../img/foxy.png")
                             button.shaded-button.full-blue Buy a coin
                         .closed-pool-progress
@@ -169,7 +169,7 @@ mixin _dashboard
                             .card-title-token
                                 img.token-img(src="../img/gex.png")
                                 | BNB
-                                .token-fox-tag +
+                                a.token-fox-tag(href="https://metamask.io/") +
                                     img(src="../img/foxy.png")
                             button.shaded-button.full-blue Buy a coin
                         .closed-pool-progress
@@ -235,7 +235,7 @@ mixin _dashboard
                             .card-title-token
                                 img.token-img(src="../img/gex.png")
                                 | BNB
-                                .token-fox-tag +
+                                a.token-fox-tag(href="https://metamask.io/") +
                                     img(src="../img/foxy.png")
                             button.shaded-button.full-blue Buy a coin 
                         .card-token-progress
@@ -410,14 +410,14 @@ mixin _dashboard
                                     button.set-value-btn(type="button" data-range-value="100") 100%
                         .choose-stake-plan
                             div
-                                input.plan-tip-input#first-plan(type="radio" name="plan" checked)
-                                label.plan-tip(for="first-plan") Profit 122,5% for 15 days (152,5% with Turbo)
+                                input.plan-tip-input#first-plan-b(type="radio" name="plan" checked)
+                                label.plan-tip(for="first-plan-b") Profit 122,5% for 15 days (152,5% with Turbo)
                             div
-                                input.plan-tip-input#second-plan(type="radio" name="plan") 
-                                label.plan-tip(for="second-plan") Profit 160% for 30 days (220% with Turbo)
+                                input.plan-tip-input#second-plan-b(type="radio" name="plan") 
+                                label.plan-tip(for="second-plan-b") Profit 160% for 30 days (220% with Turbo)
                             div
-                                input.plan-tip-input#third-plan(type="radio" name="plan" disabled) 
-                                label.plan-tip(for="third-plan") Profit 122,5% for 15 days (152,5% with Turbo)
+                                input.plan-tip-input#third-plan-b(type="radio" name="plan" disabled) 
+                                label.plan-tip(for="third-plan-b") Profit 122,5% for 15 days (152,5% with Turbo)
                         .card-pool-multipliers
                             .multiplier
                                 div

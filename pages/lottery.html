@@ -13,6 +13,7 @@
     <title>BSC Lottery</title>
   </head>
   <body>
+    <div class="popup-bg"></div>
     <div class="wrapper">
           <header class="header" id="header"><a href="index.html"><img src="../img/main-logo.png" alt="BSC_Energy-logo"></a>
             <div> 
@@ -43,7 +44,7 @@
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.0526 0H12.1579C14.503 0 16.752 0.931576 18.4102 2.58979C20.0684 4.24801 21 6.49703 21 8.8421V9.94737H11.0526V0ZM12.1579 8.8421H19.8947C19.8947 6.79017 19.0796 4.82227 17.6287 3.37133C16.1777 1.92039 14.2098 1.10526 12.1579 1.10526V8.8421ZM8.84211 12.1579H17.6842C17.6842 13.9067 17.1656 15.6162 16.194 17.0703C15.2225 18.5244 13.8415 19.6577 12.2258 20.3269C10.6102 20.9962 8.8323 21.1713 7.1171 20.8301C5.4019 20.4889 3.82639 19.6468 2.5898 18.4102C1.35321 17.1736 0.511077 15.5981 0.169903 13.8829C-0.171272 12.1677 0.00383112 10.3898 0.673069 8.77417C1.34231 7.15848 2.47562 5.77754 3.9297 4.80595C5.38377 3.83437 7.09331 3.31579 8.84211 3.31579V12.1579ZM7.73685 13.2632V4.49842C5.80379 4.78168 4.04939 5.78557 2.82575 7.30862C1.60212 8.83166 0.999808 10.7612 1.1397 12.7098C1.27959 14.6585 2.15133 16.4822 3.57997 17.8148C5.00861 19.1475 6.88841 19.8905 8.84211 19.8947C10.7028 19.895 12.5013 19.2247 13.9081 18.0068C15.3148 16.7888 16.2355 15.1048 16.5016 13.2632H7.73685Z" fill="white"></path>
                     </svg>
-                  </div><span class="button_title">Dashboard</span></a><a class="nav_button stacking" href="#">
+                  </div><span class="button_title">Dashboard</span></a><a class="nav_button stacking" href="stacking.html">
                   <div class="button_icon">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 7.00005H15.06C14.9903 6.99058 14.9197 6.99058 14.85 7.00005H14.68C14.6277 7.02987 14.5776 7.06328 14.53 7.10005C14.4743 7.13681 14.4209 7.17689 14.37 7.22005C14.3366 7.26094 14.3065 7.30441 14.28 7.35005C14.2342 7.41304 14.194 7.47997 14.16 7.55005L12.56 11.96L8.39 0.660046C8.31993 0.466995 8.19212 0.3002 8.02394 0.182327C7.85577 0.0644539 7.65537 0.0012207 7.45 0.0012207C7.24463 0.0012207 7.04423 0.0644539 6.87605 0.182327C6.70788 0.3002 6.58007 0.466995 6.51 0.660046L4.2 7.00005H1C0.734784 7.00005 0.48043 7.1054 0.292893 7.29294C0.105357 7.48048 0 7.73483 0 8.00005C0 8.26526 0.105357 8.51962 0.292893 8.70715C0.48043 8.89469 0.734784 9.00005 1 9.00005H5.3C5.35684 8.97268 5.4105 8.93915 5.46 8.90005C5.51568 8.86328 5.56911 8.82321 5.62 8.78005L5.71 8.65005C5.75766 8.58829 5.79794 8.52117 5.83 8.45005L7.45 3.92005L11.61 15.34C11.6799 15.5333 11.8076 15.7004 11.9758 15.8185C12.144 15.9366 12.3445 16 12.55 16C12.7555 16 12.956 15.9366 13.1242 15.8185C13.2924 15.7004 13.4201 15.5333 13.49 15.34L15.79 9.00005H19C19.2652 9.00005 19.5196 8.89469 19.7071 8.70715C19.8946 8.51962 20 8.26526 20 8.00005C20 7.73483 19.8946 7.48048 19.7071 7.29294C19.5196 7.1054 19.2652 7.00005 19 7.00005Z" fill="white"></path>
@@ -132,8 +133,8 @@
                       </div>
                       <div class="pot-tickets-container"><span class="pot-title">Your tickets for this round</span><span class="tickets-amount">16</span>
                         <div class="tickets-actions">
-                          <button class="tickets-button buy-ticket">Buy Tickets</button>
-                          <button class="tickets-button view-tickets">View Tickets</button>
+                          <button class="tickets-button buy-ticket" onclick="openBuyPopup()">Buy Tickets</button>
+                          <button class="tickets-button view-tickets" onclick="openViewPopup()">View Tickets</button>
                         </div>
                       </div>
                     </div>
@@ -145,6 +146,70 @@
                         <button class="collect-energy tickets-button view-tickets">Collect 151,32 Energy</button>
                       </div>
                     </div>
+                    <form class="buy-ticket-popup">
+                      <div class="popup-body">
+                        <div class="popup-title">Enter amount of tickets to buy </div>
+                        <div class="popup-buy-body"> 
+                          <div class="popup-input-cont"> 
+                            <input type="number" min="0" max="9999" required step="any" autofocus><span class="title">1 Ticket = 1 Energy</span>
+                          </div>
+                          <div class="popup-add-cont">
+                            <div class="add-account"><span class="title">My coin</span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.45 0C2.535 0 1.65748 0.365977 1.01048 1.01742C0.363481 1.66886 0 2.55241 0 3.47368V18.5263C0 19.4476 0.363481 20.3311 1.01048 20.9826C1.65748 21.634 2.535 22 3.45 22H18.4C19.315 22 20.1925 21.634 20.8395 20.9826C21.4865 20.3311 21.85 19.4476 21.85 18.5263V16.4768C22.2109 16.1518 22.4998 15.7539 22.698 15.309C22.8961 14.8642 22.999 14.3823 23 13.8947V8.10526C22.999 7.61771 22.8961 7.13583 22.698 6.69096C22.4998 6.24609 22.2109 5.84819 21.85 5.52316V3.47368C21.85 2.55241 21.4865 1.66886 20.8395 1.01742C20.1925 0.365977 19.315 0 18.4 0H3.45ZM3.45 1.15789H18.4C19.01 1.15789 19.595 1.40188 20.0263 1.83617C20.4577 2.27047 20.7 2.8595 20.7 3.47368V4.83305C20.3308 4.70061 19.9419 4.63248 19.55 4.63158H12.65C11.735 4.63158 10.8575 4.99756 10.2105 5.649C9.56348 6.30044 9.2 7.18398 9.2 8.10526V13.8947C9.2 14.816 9.56348 15.6996 10.2105 16.351C10.8575 17.0024 11.735 17.3684 12.65 17.3684H19.55C19.9419 17.3675 20.3308 17.2994 20.7 17.1669V18.5263C20.7 19.1405 20.4577 19.7295 20.0263 20.1638C19.595 20.5981 19.01 20.8421 18.4 20.8421H3.45C2.84 20.8421 2.25499 20.5981 1.82365 20.1638C1.39232 19.7295 1.15 19.1405 1.15 18.5263V3.47368C1.15 2.8595 1.39232 2.27047 1.82365 1.83617C2.25499 1.40188 2.84 1.15789 3.45 1.15789ZM12.65 5.78947H19.55C20.16 5.78947 20.745 6.03346 21.1763 6.46775C21.6077 6.90205 21.85 7.49108 21.85 8.10526V13.8947C21.85 14.5089 21.6077 15.098 21.1763 15.5322C20.745 15.9665 20.16 16.2105 19.55 16.2105H12.65C12.04 16.2105 11.455 15.9665 11.0237 15.5322C10.5923 15.098 10.35 14.5089 10.35 13.8947V8.10526C10.35 7.49108 10.5923 6.90205 11.0237 6.46775C11.455 6.03346 12.04 5.78947 12.65 5.78947ZM15.525 8.10526C14.7625 8.10526 14.0312 8.41024 13.4921 8.95311C12.9529 9.49598 12.65 10.2323 12.65 11C12.65 11.7677 12.9529 12.504 13.4921 13.0469C14.0312 13.5898 14.7625 13.8947 15.525 13.8947C16.2875 13.8947 17.0188 13.5898 17.5579 13.0469C18.0971 12.504 18.4 11.7677 18.4 11C18.4 10.2323 18.0971 9.49598 17.5579 8.95311C17.0188 8.41024 16.2875 8.10526 15.525 8.10526ZM15.525 9.26316C15.7515 9.26316 15.9758 9.30808 16.1851 9.39537C16.3944 9.48265 16.5846 9.61059 16.7448 9.77187C16.9049 9.93315 17.032 10.1246 17.1187 10.3353C17.2054 10.5461 17.25 10.7719 17.25 11C17.25 11.2281 17.2054 11.4539 17.1187 11.6647C17.032 11.8754 16.9049 12.0669 16.7448 12.2281C16.5846 12.3894 16.3944 12.5173 16.1851 12.6046C15.9758 12.6919 15.7515 12.7368 15.525 12.7368C15.0675 12.7368 14.6287 12.5539 14.3052 12.2281C13.9817 11.9024 13.8 11.4606 13.8 11C13.8 10.5394 13.9817 10.0976 14.3052 9.77187C14.6287 9.44615 15.0675 9.26316 15.525 9.26316Z" fill="#00A3FF" />
+</svg><span>9.222</span>
+                            </div>
+                            <div class="add-button">
+                              <button class="set-50 shaded-btn orange grey" type="button">50%</button>
+                              <button class="set-max shaded-btn orange" type="button">Max</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-info">
+                          <div class="info-tooltip"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 0C15.8152 0 18.9946 1.31696 21.3388 3.66116C23.683 6.00537 25 9.18479 25 12.5C25 15.8152 23.683 18.9946 21.3388 21.3388C18.9946 23.683 15.8152 25 12.5 25C9.18479 25 6.00537 23.683 3.66116 21.3388C1.31696 18.9946 0 15.8152 0 12.5C0 9.18479 1.31696 6.00537 3.66116 3.66116C6.00537 1.31696 9.18479 0 12.5 0ZM12.5 1.31579C9.53376 1.31579 6.68902 2.49412 4.59157 4.59157C2.49412 6.68902 1.31579 9.53376 1.31579 12.5C1.31579 15.4662 2.49412 18.311 4.59157 20.4084C6.68902 22.5059 9.53376 23.6842 12.5 23.6842C15.4662 23.6842 18.311 22.5059 20.4084 20.4084C22.5059 18.311 23.6842 15.4662 23.6842 12.5C23.6842 9.53376 22.5059 6.68902 20.4084 4.59157C18.311 2.49412 15.4662 1.31579 12.5 1.31579ZM11.8421 6.57895V9.21053H13.1579V6.57895H11.8421ZM11.8421 11.8421V18.4211H13.1579V11.8421H11.8421Z" fill="#FFA114" />
+</svg>
+                            <p>Ticket purchases are final. Your Energy <br>cannot be returned to you after buying tickets.</p>
+                          </div>
+                          <div class="info-energy-lost"> <span>-</span><span>10</span><img class="total-energy-img" src="../img/gex.png"></div>
+                          <button class="confirm-btn blue">Confirm</button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="view-ticket-popup">
+                      <div class="view-popup-title"><span>Your Tickets</span>
+                        <hr class="view-popup-hr">
+                      </div>
+                      <table class="view-popup-body">
+                        <tr class="view-popup-tr title-tr">
+                          <td class="view-popup-td">Round #</td>
+                          <td class="view-popup-td">Your ticket</td>
+                          <td class="view-popup-td">Winner tickets</td>
+                          <td class="view-popup-td">No.Match</td>
+                          <td class="view-popup-td">Result</td>
+                        </tr>
+                        <tr class="view-popup-tr">
+                          <td class="view-popup-td round-numb">#4</td>
+                          <td class="view-popup-td">5,6,8,2</td>
+                          <td class="view-popup-td">1,5,4,2</td>
+                          <td class="view-popup-td no-match-numb">1 </td>
+                          <td class="view-popup-td td-result"><span class="round-result">Lose</span></td>
+                        </tr>
+                        <tr class="view-popup-tr">
+                          <td class="view-popup-td round-numb">#4</td>
+                          <td class="view-popup-td">5,6,8,2</td>
+                          <td class="view-popup-td">1,5,4,2</td>
+                          <td class="view-popup-td no-match-numb">1 </td>
+                          <td class="view-popup-td td-result"><span class="round-result">Lose</span></td>
+                        </tr>
+                        <tr class="view-popup-tr">
+                          <td class="view-popup-td round-numb">#4</td>
+                          <td class="view-popup-td">5,6,8,2</td>
+                          <td class="view-popup-td">1,5,4,2</td>
+                          <td class="view-popup-td no-match-numb">1 </td>
+                          <td class="view-popup-td td-result">75,4 Energy <span class="round-result">Win</span></td>
+                        </tr>
+                      </table>
+                    </form>
                   </div>
                 </div>
                 <div class="pools_container last_rounds_container">
